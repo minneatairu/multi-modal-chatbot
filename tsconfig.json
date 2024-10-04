@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "noImplicitAny": false, // Disable this to allow implicit any types
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
