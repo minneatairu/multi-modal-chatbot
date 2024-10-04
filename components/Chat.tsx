@@ -85,33 +85,6 @@ export default function Chat() {
         {introWords}
       </h1>
 
-      <div className="chat-box">
-        {conversation.map((message, index) => (
-          <div
-            key={index}
-            className={`message ${message.sender === "user" ? "user" : "ai"}`}
-          >
-            {message.content}
-          </div>
-        ))}
-      </div>
-
-      <form
-        onSubmit={handleSubmit}
-        className={`chat-input-form ${formVisible ? "visible" : "hidden"}`}
-      >
-        <textarea
-          className="chat-textarea"
-          value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
-          placeholder="Type your question..."
-          required
-        />
-        <button type="submit" className="chat-button" disabled={loading}>
-          {loading ? "Loading..." : "ASK UR QUESTION"}
-        </button>
-      </form>
-
       {/* Add your CSS styles here */}
       <style jsx>{`
         .fade-word {
