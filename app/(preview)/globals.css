@@ -1,4 +1,3 @@
-
 /* Load custom font using @font-face */
 @font-face {
   font-family: "DuFont";
@@ -195,6 +194,15 @@ html {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+}
+
+
+.chattext {
+  font-size: 1.3rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: "Kode Mono", monospace;
+  line-height: 1;
 }
 
 button {
@@ -1028,13 +1036,28 @@ button.right-zoom {
   outline: none; /* Ensure outline is removed */
 }
 
+.chat-textarea {
+  font-size: 3rem;
+  font-family: "DuFont";
+}
+
+
 .modal-overlay {
   opacity: 1;
   transition: opacity 0.9s ease, visibility 0.3s ease;
 }
 
 .chat-button {
+
   margin-top: 3rem;
+
+  align-self: center; /* Ensures the button is centered */
+}
+.chat-input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This will center all children (textarea and button) */
+
 }
 
 .modal-overlay.show {
@@ -1278,6 +1301,14 @@ button.info {
   font-size: 3rem;
 }
 
+.chat-response {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid;
+}
+
+
 /* Styles when the form is expanded */
 .genebtt.expanded {
   color: white; /* White background when expanded */
@@ -1356,10 +1387,12 @@ button.info {
   align-items: center;
   background-color: #000;
 }
+
 .button-container {
   display: flex;
   justify-content: center;
 }
+
 
 .gpt-drag-subtext {
   font-size: 0.875rem;
@@ -1368,7 +1401,9 @@ button.info {
 
 .gpt-message-container {
   display: flex;
+
   width: 100%;
+
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
@@ -1421,7 +1456,12 @@ button.info {
 }
 
 .gpt-image {
+
   width: 30%;
+
+  width: 10rem;
+  margin-bottom: 12px;
+
 }
 
 .gpt-text-preview {
@@ -1434,6 +1474,7 @@ button.info {
   padding: 8px;
   background-color: #ffff;
 }
+
 .gpt-input-form {
   display: flex;
   flex-direction: column;
@@ -1445,6 +1486,7 @@ button.info {
   width: 100%; /* Ensures button is centered relative to the form */
   margin-top: 16px; /* Adds some space above the button */
 }
+
 .gpt-input {
   background-color: #000;
   padding: 3rem;
@@ -1452,7 +1494,9 @@ button.info {
   outline: none;
   color: #fff;
   font-size: 3rem;
+
   min-height: 300px;
+
   text-align: CENTER;
   border: 2px SOLID;
 }
@@ -1462,7 +1506,11 @@ button.info {
   flex-direction: row;
   gap: 8px;
 
+
   padding: 3rem 0;
+
+  padding: 20px 0;
+
   width: 100%;
 }
 
@@ -1470,10 +1518,13 @@ button.info {
   width: 40%;
   border: 2px solid white;
 }
+
 .uploadtips {
   color: white;
   font-family: "Kode Mono", monospace;
 }
+
+
 .gpt-file-text-preview {
   font-size: 0.5rem;
   width: 7rem;
@@ -1484,6 +1535,7 @@ button.info {
   padding: 8px;
   background-color: #000;
 }
+
 
 
 .fade-word {
@@ -1517,3 +1569,4 @@ button.info {
   opacity: 0;
   visibility: hidden;
 }
+

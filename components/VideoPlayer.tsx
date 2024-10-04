@@ -12,7 +12,7 @@ export default function VideoPlayer() {
   return (
     <div className="video-container">
       <video width="100%" muted={muted} autoPlay loop>
-        <source src="/v.mp4" type="video/mp4" />
+
       </video>
       <div className="video-controls">
         <span onClick={toggleMute} className="material-symbols-outlined">
