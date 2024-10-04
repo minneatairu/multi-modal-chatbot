@@ -85,40 +85,9 @@ export default function Chat() {
         {introWords}
       </h1>
 
-      {/* Add your CSS styles here */}
-      <style jsx>{`
-        .fade-word {
-          animation: fadeIn 0.5s forwards;
-        }
+   
 
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        /* Form visibility classes */
-        .chat-input-form {
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 0.3s ease, visibility 0.5s ease;
-        }
-
-        .chat-input-form.visible {
-          opacity: 1;
-          visibility: visible;
-        }
-
-        .chat-input-form.hidden {
-          opacity: 0;
-          visibility: hidden;
-        }
-      `}</style>
+   
     </div>
   );
 }
