@@ -11,7 +11,6 @@ import { useChat } from "ai/react";
 import { DragEvent, useEffect, useRef, useState } from "react";
 import Modal from "@/components/Modal";
 import Chat from "@/components/Chat";
-
 import VideoPlayer from "@/components/VideoPlayer";
 import PrintButton from "@/components/PrintButton";
 import { AnimatePresence, motion } from "framer-motion";
