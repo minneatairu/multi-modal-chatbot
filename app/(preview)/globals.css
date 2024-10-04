@@ -64,7 +64,7 @@ body {
     text-align: center;
   }
 
-  Adjust grid styles for printing */ .grid-section {
+.grid-section {
     border-top: 2px solid black !important;
   }
 
