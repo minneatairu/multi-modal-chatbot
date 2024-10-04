@@ -203,12 +203,7 @@ export default function Home() {
                 <span>+</span>
                 <AttachmentIcon />
               </p>
-              <p>
-                The useChat hook supports sending attachments along with
-                messages as well as rendering previews on the client. This can
-                be useful for building applications that involve sending images,
-                files, and other media content to the AI provider.
-              </p>
+    
               <p>
                 {" "}
                 Learn more about the{" "}
