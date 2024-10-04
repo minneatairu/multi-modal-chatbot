@@ -85,6 +85,7 @@ export default function Chat() {
         {introWords}
       </h1>
 
+
       {/* Add your CSS styles here */}
       <style jsx>{`
         .fade-word {
@@ -119,6 +120,7 @@ export default function Chat() {
           visibility: hidden;
         }
       `}</style>
+
     </div>
   );
 }

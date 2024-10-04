@@ -413,7 +413,7 @@ export default function Home() {
                 braid, ultimately, affect the quality of care a patient
                 receives?
               </p>
-
+\
               <p>
                 What happens when these critical decisions between the braider
                 and the braided are replaced by generative systems that
@@ -433,6 +433,7 @@ export default function Home() {
             </div>
             <div className="modal-column  border">
               <h2>NOTES ON MODEL FINE-TUNING</h2>
+
               <p>
                 The image generation system is fine-tuned using marketing
                 language and visual references inspired by West African Braiders
