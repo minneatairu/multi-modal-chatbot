@@ -567,13 +567,13 @@ VIDEO {
 /* Media query for mobile */
 @media (max-width: 480px) {
   .grid-section , .modal-grid{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr!important;
   }
-
+video{width: auto;height: 100vh;}
   .modal-column {
-    padding: 20px;
+    padding: 20px!important;
 }
-.video-overlay-text-two, .video-overlay-text-four, .video-overlay-text-three, .video-overlay-text  {
+div.video-overlay-text-two, div.video-overlay-text-four, div.video-overlay-text-three, div.video-overlay-text  {
 position: relative;
 }
 }
