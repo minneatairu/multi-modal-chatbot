@@ -1555,10 +1555,7 @@ button.info {
   gap: 4px;
 }
 
-.gpt-text {
-  color: #fff;
-  /* Dark gray */
-}
+
 
 .gpt-attachments {
   display: flex;
