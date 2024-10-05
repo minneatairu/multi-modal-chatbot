@@ -555,7 +555,7 @@ VIDEO {
   }
 
   .title {
-    font-size: 20vw;
+    font-size: 20vw!important;
   }
 
   .button-section button {
