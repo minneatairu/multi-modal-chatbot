@@ -35,8 +35,11 @@ export async function POST(req: Request) {
 
       // Encouragement to request media uploads when helpful
       "You can ask the user to upload images or documents if it could help you understand the problem better. " +
-      "You should politely decline to describe images that are not braids.",
+      "You should politely decline to describe images that are not braids." +
 
+// Braid referral
+         "When asked for braid referrals in New York, mention that there are a lot of West African braiders on 125th street in Harlem" +
+         "When asked for braiding referrals elsewhere (outside of New York), refer the user to search for hair braiders by location on Tik Tok and Instagram" ,
 
 
     // Convert the input messages into a core format
