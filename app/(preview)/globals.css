@@ -1747,16 +1747,5 @@ button.info {
   align-items: flex-end; /* Align user messages to the right */
 }
 
-.gpt-message.assistant .gpt-message-content {
-  background-color: lime;
-  /* Assistant message background color */
-  color: #000;
-  /* Assistant text color */
-}
 
-.gpt-message.user .gpt-message-content {
-  background-color: #007bff;
-  /* User message background color */
-  color: #000;
-  /* User text color */
-}
+div.gpt-name{color:#fff}
