@@ -12,7 +12,7 @@ export default function PrintButton({
   return (
     <div className="button-container">
       <button onClick={onPrintClick} className="print-button">
-        {isFromGptChatModal ? "PRINT UR CHAT" : "PRINT UR IMAGES"}
+        {isFromGptChatModal ? "PRINT UR CHAT" : "PRINT UR BRAIDS"}
       </button>
       <button onClick={onCloseClick} className="close-print-button">
         X
