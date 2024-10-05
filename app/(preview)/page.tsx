@@ -550,49 +550,45 @@ export default function Home() {
               <div className="gpt-message-container">
                 {messages.length > 0 ? (
                   <div className="gpt-message-list">
-                    {messages.map((message, index) => (
-                      <motion.div
-                        key={message.id}
-                        className={`gpt-message ${
-                          index === 0 ? "gpt-first-message" : ""
-                        }`}
-                        initial={{ y: 5, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                      >
-                        <div className="gpt-icon-container">
-                          {message.role === "assistant" ? (
-                            <BotIcon />
-                          ) : (
-                            <UserIcon />
-                          )}
-                        </div>
+                   {messages.map((message, index) => (
+  <motion.div
+    key={message.id}
+    className={`gpt-message ${message.role === "assistant" ? "assistant" : "user"}`}
+    initial={{ y: 5, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+  >
+    <div className="gpt-icon-container">
+      {message.role === "assistant" ? (
+        <span>Da Braidr</span> // Display "Da Braidr" instead of BotIcon
+      ) : (
+        <span>You</span> // Display "You" instead of UserIcon
+      )}
+    </div>
 
-                        <div className="gpt-message-content">
-                          <div className="gpt-text">
-                            <Markdown>{message.content}</Markdown>
-                          </div>
-                          <div className="gpt-attachments">
-                            {message.experimental_attachments?.map(
-                              (attachment) =>
-                                attachment.contentType?.startsWith("image") ? (
-                                  <img
-                                    className="gpt-image"
-                                    key={attachment.name}
-                                    src={attachment.url}
-                                    alt={attachment.name}
-                                  />
-                                ) : attachment.contentType?.startsWith(
-                                    "text"
-                                  ) ? (
-                                  <div className="gpt-text-preview">
-                                    {getTextFromDataUrl(attachment.url)}
-                                  </div>
-                                ) : null
-                            )}
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
+    <div className="gpt-message-content">
+      <div className="gpt-text">
+        <Markdown>{message.content}</Markdown>
+      </div>
+      <div className="gpt-attachments">
+        {message.experimental_attachments?.map(attachment =>
+          attachment.contentType?.startsWith("image") ? (
+            <img
+              className="gpt-image"
+              key={attachment.name}
+              src={attachment.url}
+              alt={attachment.name}
+            />
+          ) : attachment.contentType?.startsWith("text") ? (
+            <div className="gpt-text-preview">
+              {getTextFromDataUrl(attachment.url)}
+            </div>
+          ) : null
+        )}
+      </div>
+    </div>
+  </motion.div>
+))}
+
 
                     {isLoading &&
                       messages[messages.length - 1].role !== "assistant" && (
