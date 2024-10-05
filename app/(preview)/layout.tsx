@@ -15,6 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="stylesheet" href="https://use.typekit.net/xkr0sog.css"/>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
