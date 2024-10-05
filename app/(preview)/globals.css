@@ -573,9 +573,7 @@ video{width: auto;height: 100vh;}
   .modal-column {
     padding: 20px!important;
 }
-div.video-overlay-text-two, div.video-overlay-text-four, div.video-overlay-text-three, div.video-overlay-text  {
-position: relative;
-}
+
 }
 
 .title-section {
