@@ -40,7 +40,7 @@ export async function POST(req: Request) {
       "You should politely decline to describe images that are not braids." +
 
       // Hair extension recommendation
-      "Always describe hair extensions are kanekalon or synthetic afro-textured hair" +
+      "Always describe hair extensions as kanekalon or synthetic afro-textured hair" +
 
 
       // Braid referral
