@@ -303,7 +303,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            AI-generated braids visualized on {currentDate} using DA BRAIDR - an
+            AI-generated content on {currentDate} using DA BRAIDR - an
             fine-tuned image generator designed by Minne Atairu
           </span>{" "}
         </h1>
