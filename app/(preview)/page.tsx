@@ -339,7 +339,7 @@ export default function Home() {
             {/* Modal content */}
             <div className="modal-column">
               <h2>WHAT IS DA BRAIDR?</h2>
-              <p>
+              <p className="body-text">
                 Da Braidr is a conceptual AI startup developed to investigate
                 the socioeconomic impact of Generative AI on Black hair braiding
                 communities. The system utilizes a multimodal generative
@@ -358,7 +358,7 @@ export default function Home() {
                 craft, with chronic back, neck, and wrist pain—unrelenting
                 reminders of the labor that sustains their livelihood.
               </p>
-              <p>
+              <p className="body-text">
                 The art of braiding cannot be divorced from its origins in
                 resistance and survival. West African women, stripped of all
                 belongings as they traversed the horrors of the Middle Passage,
@@ -373,7 +373,7 @@ export default function Home() {
                 braid’s path, reflection ensures symmetry, and dilation controls
                 expansion/ contraction.
               </p>
-              <p>
+              <p className="body-text">
                 Currently valued at $529.3 million, and projected to grow to
                 $625.3 million by 2032, the Black hair braiding industry is a
                 low-cost, high-return ecosystem. This economy, primarily driven
@@ -392,7 +392,7 @@ export default function Home() {
                 coily synthetic fiber.
               </p>
 
-              <p>
+              <p className="body-text">
                 Though the 2019 U.S. CROWN Act prohibits hair-based
                 discrimination, the transactions between the braider and the
                 braided remain tethered to the enduring weight of Eurocentric
@@ -415,7 +415,7 @@ export default function Home() {
                 receives?
               </p>
 \
-              <p>
+<p className="body-text">
                 What happens when these critical decisions between the braider
                 and the braided are replaced by generative systems that
                 abstract, optimize, and commodify them? What happens when the
@@ -435,7 +435,7 @@ export default function Home() {
             <div className="modal-column  border">
               <h2>NOTES ON MODEL FINE-TUNING</h2>
 
-              <p>
+              <p className="body-text">
                 The image generation system is fine-tuned using marketing
                 language and visual references inspired by West African Braiders
                 in Harlem. Inspired by the marketing language of West African
@@ -446,16 +446,12 @@ export default function Home() {
                 salon posters, which traditionally depict a variety of intricate
                 braided styles.
               </p>
-              <div>
-                <Link href="/data" className="link-style">
-                  Explore the dataset library
-                </Link>
-              </div>
-              <p>
+   
+              <p className="body-text">
                 The image recognition system is fine-tuned to dissect generated
                 styles.
               </p>
-              <p>
+              <p className="body-text">
                 The conversational interface masquerades as a "PsychoHairapist"
                 for clients seeking makeovers. The system is finetuned with
                 research about psychohairapy-a community health model created to
@@ -465,50 +461,50 @@ export default function Home() {
               <br></br>
               <br></br>
               <h2>REFERENCES</h2>
-              <p>
+              <p className="body-text">
                 Ashley, W., & Brown, J. C. (2015). Attachment tHAIRapy: A
                 culturally relevant treatment paradigm for African American
                 foster youth. Journal of Black Studies, 46(6), 587-604.
               </p>
-              <p>
+              <p className="body-text">
                 Gilmer, G. (2007). Mathematical patterns in African American
                 hairstyles. State University of New York at Buffalo, Mathematics
                 Department.
               </p>
-              <p>
+              <p className="body-text">
                 Iromuanya, J. (2018). Are we all feminists? The global black
                 hair industry and marketplace in Chimamanda Ngozi Adichie's
                 Americanah. Meridians, 16(1), 163-183.
               </p>
-              <p>
+              <p className="body-text">
                 Jones, R. M. (2020). What the hair: Employment discrimination
                 against Black people based on hairstyles. Harv. BL Law J., 36,
                 27.
               </p>
-              <p>
+              <p className="body-text">
                 Joseph-Salisbury, R., & Connelly, L. (2018). ‘If your hair is
                 relaxed, white people are relaxed. If your hair is nappy,
                 they’re not happy’: Black hair as a site of ‘post-racial’ social
                 control in English schools. Social Sciences, 7(11), 219.
               </p>
-              <p>
+              <p className="body-text">
                 Mbilishaka, A. (2018). PsychoHairapy: Using hair as an entry
                 point into Black women’s spiritual and mental health. Meridians,
                 16(2), 382-392.
               </p>
-              <p>
+              <p className="body-text">
                 Mbilishaka, A. M. (2018). Black Lives (and stories) Matter: Race
                 narrative therapy in Black hair care spaces. Community
                 Psychology in Global Perspective, 4(2), 22-33.
               </p>
-              <p>
+              <p className="body-text">
                 Mbilishaka, A. M. (2021). PsychoHairapy through beauticians and
                 barbershops: The healing relational triad of Black hair care
                 professionals, mothers, and daughters. Therapeutic Cultural
                 Routines to Build Family Relationships: Talk, Touch & Listen
                 While Combing Hair©, 173-181.
               </p>
-              <p>
+              <p className="body-text">
                 Thomas C. G. (2023). Carcinogenic materials in synthetic braids:
                 An unrecognized risk of hair products for Black women. Lancet
                 regional health. Americas, 22, 100517.
