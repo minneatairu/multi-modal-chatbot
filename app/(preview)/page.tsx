@@ -12,8 +12,6 @@ import { useChat } from "ai/react";
 import { DragEvent, useEffect, useRef, useState } from "react";
 import Modal from "@/components/Modal";
 import Chat from "@/components/Chat";
-import PrintChat from '@/components/PrintChat'; // Adjust the path based on your project structure
-
 import VideoPlayer from "@/components/VideoPlayer";
 import PrintButton from "@/components/PrintButton";
 import { AnimatePresence, motion } from "framer-motion";
@@ -521,7 +519,6 @@ export default function Home() {
             className="modal-bottom-right"
           >
             <Chat />
-            <PrintChat chatId="chat-section" />
 
             <div
               className="gpt-container"
