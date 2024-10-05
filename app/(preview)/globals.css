@@ -31,7 +31,7 @@ body {
   .video-container,
   .close-print-button,
   .title-wrapper,
-  .title-section, .chat-title , .button-container, .gpt-input-form{
+  .title-section, .chat-title , .button-container, .gpt-input-form, .psycho a{
     display: none !important;
   }
 
