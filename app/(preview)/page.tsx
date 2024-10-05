@@ -563,7 +563,19 @@ export default function Home() {
 
     <div className="gpt-message-content">
       <div className="gpt-text">
-        <Markdown>{message.content}</Markdown>
+      <Markdown
+  options={{
+    overrides: {
+      p: {
+        component: (props) => (
+          <p className="double-text" {...props}>{props.children}</p>
+        ),
+      },
+    },
+  }}
+>
+  {message.content}
+</Markdown>
       </div>
       <div className="gpt-attachments">
         {message.experimental_attachments?.map(attachment =>
