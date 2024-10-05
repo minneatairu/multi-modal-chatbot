@@ -566,9 +566,13 @@ VIDEO {
 
 /* Media query for mobile */
 @media (max-width: 480px) {
-  .grid-section {
+  .grid-section , .modal-grid{
     grid-template-columns: 1fr;
   }
+
+  .modal-column {
+    padding: 20px;
+}
 }
 
 .title-section {
