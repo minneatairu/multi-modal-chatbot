@@ -1602,28 +1602,30 @@ button.info {
   padding: 10px;
   border-radius: 10px;
 }
+.gpt-message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between messages */
+}
 
-
-.gpt-message.assistant {
+ .gpt-message.user {
   display: flex;
   justify-content: flex-start; /* Align GPT messages to the left */
   flex-direction: row; /* Ensure GPT icon appears on the left */
 }
 
-.gpt-message.user {
+.gpt-message.assistant {
   display: flex;
   justify-content: flex-end; /* Align user messages to the right */
   flex-direction: row-reverse; /* Ensure user icon appears on the right */
 }
 
 .gpt-message.assistant .gpt-message-content {
-  background-color: #f1f1f1; /* Assistant message background color */
+  background-color: lime; /* Assistant message background color */
   color: #000; /* Assistant text color */
-  border-radius: 10px 10px 10px 0; /* Custom border-radius for GPT */
 }
 
 .gpt-message.user .gpt-message-content {
   background-color: #007bff; /* User message background color */
-  color: white; /* User text color */
-  border-radius: 10px 10px 0 10px; /* Custom border-radius for user */
+  color: #000; /* User text color */
 }
