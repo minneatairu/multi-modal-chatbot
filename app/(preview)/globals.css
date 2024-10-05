@@ -1453,8 +1453,9 @@ button.info {
 
 .gpt-image {
 
-  width: 30%;
+  width: 30%!important;
 
+  border: 2px solid #fff;
   width: 10rem;
   margin-bottom: 12px;
 
@@ -1485,7 +1486,7 @@ button.info {
 
 .gpt-input {
   background-color: #000;
-  padding: 3rem;
+
   width: 100%;
   outline: none;
   color: #fff;

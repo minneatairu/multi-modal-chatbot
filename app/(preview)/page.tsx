@@ -682,9 +682,12 @@ export default function Home() {
                 </form>
               </div>
             </div>
-            <button type="submit" className="chat-button">
-              SUBMIT
-            </button>
+             {/* Centered Submit Button */}
+             <div className="button-container">
+                    <button type="submit" className="chat-button">
+                      SUBMIT
+                    </button>
+                  </div>
           </Modal>
         )}
 
