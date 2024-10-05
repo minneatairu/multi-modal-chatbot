@@ -34,7 +34,7 @@ body {
   .title-section, .chat-title , .button-container, .gpt-input-form, .psycho a{
     display: none !important;
   }
-  .gpt-container{MARGIN:AUTO!important}
+  .gpt-container, div.modal-overlay {MARGIN:AUTO!important}
   .grid-section {
     padding: 0 !important;
   }
@@ -500,7 +500,7 @@ VIDEO {
   top: 30px;
   right: 10px;
   padding: 30px 20px;
-  background-color: lime;
+  background-color: yellow;
   color: black;
   border: none;
   border-radius: 50%;
