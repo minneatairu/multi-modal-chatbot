@@ -96,7 +96,7 @@ div.gallery-item {
 }
 
 p {
-  margin-block-end: 0;
+  margin-block-end: 0;  margin-block-start: 0;font-size: 20px;
   font-family: "t26-carbon", monospace;
   text-align: justify;
 }
@@ -1552,7 +1552,7 @@ button.info {
 .gpt-message-content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+
 }
 
 
@@ -1748,7 +1748,7 @@ button.info {
 }
 
 .gpt-message.assistant .gpt-message-content {
-  background-color: lime;
+  background-color: #006633;
   /* Assistant message background color */
   color: #000;
   /* Assistant text color */
@@ -1756,7 +1756,7 @@ button.info {
 .gpt.-text{font-size: 2rem;}
 
 .gpt-message.user .gpt-message-content {
-  background-color: #007bff;
+  background-color: #0099FF;
   /* User message background color */
   color: #000;
   /* User text color */
