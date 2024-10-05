@@ -34,7 +34,7 @@ body {
   .title-section, .chat-title , .button-container, .gpt-input-form, .psycho a{
     display: none !important;
   }
-
+  .gpt-container{MARGIN:AUTO!important}
   .grid-section {
     padding: 0 !important;
   }
