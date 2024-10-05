@@ -1367,7 +1367,7 @@ button.info {
 
 .psycho a {
   color: white !important;
-  text-decoration: none;
+  text-decoration: none;font-size: 20px;
       font-family: t26-carbon, monospace;
 }
 
@@ -1633,7 +1633,7 @@ border-radius: 5px;
 }
 
 .uploadtips {margin-top: 3rem;
-  color: white;
+  color: white;font-size: 20px;
   font-family: t26-carbon, monospace;}
 
 
