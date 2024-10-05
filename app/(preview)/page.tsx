@@ -557,11 +557,11 @@ export default function Home() {
     initial={{ y: 5, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
   >
-    <div className="gpt-icon-container">
+  <div className="gpt-name">
       {message.role === "assistant" ? (
-        <span>Da Braidr</span> // Display "Da Braidr" instead of BotIcon
+        <span>Da Braidr</span>
       ) : (
-        <span>You</span> // Display "You" instead of UserIcon
+        <span>You</span>
       )}
     </div>
 

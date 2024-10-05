@@ -18,17 +18,15 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 
 
 @media print {
+
   /* Hide elements that shouldn't appear in the print */
   .print-button,
   div.button-section,
@@ -39,13 +37,16 @@ body {
   .title-section {
     display: none !important;
   }
+
   .grid-section {
     padding: 0 !important;
   }
+
   .overlay-text {
     font-size: 0.8rem !important;
     padding: 10px !important;
   }
+
   /* /* Replace with a static title for print */
   .print-title {
     display: block !important;
@@ -64,7 +65,7 @@ body {
     text-align: center;
   }
 
-.grid-section {
+  .grid-section {
     border-top: 2px solid black !important;
   }
 
@@ -79,32 +80,40 @@ body {
     display: block;
   }
 }
+
 div.gallery-item {
   padding-bottom: 4px;
   width: 100%;
 }
+
 /* Grid container */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* 8 columns */
+  grid-template-columns: repeat(8, 1fr);
+  /* 8 columns */
   justify-items: center;
   padding: 0 10px;
 }
+
 p {
   margin-block-end: 0;
   font-family: "Kode Mono", monospace;
   text-align: justify;
 }
+
 .image-info {
   font-family: "Kode Mono", monospace;
 }
+
 h2,
 .gallery-title {
   font-family: "DuFont", serif;
 }
+
 ol {
   font-family: Kode Mono;
 }
+
 .close-print-button {
   position: fixed;
   top: 20px;
@@ -135,9 +144,11 @@ ol {
   top: -10px;
   left: 0;
 }
+
 div.modal-column.border {
   border-left: 2px solid;
 }
+
 /* Custom checkbox */
 input[type="checkbox"] {
   /* Hide the default checkbox */
@@ -178,9 +189,11 @@ input[type="checkbox"]:checked:after {
   margin-left: -3px;
   max-width: 50px;
 }
+
 .button-border {
   border-left: 2px solid;
 }
+
 body,
 html {
   margin: 0;
@@ -226,9 +239,11 @@ button {
 button {
   font-family: "DuFont", serif;
 }
+
 button {
   font-size: 2rem;
 }
+
 h2 {
   font-size: 2rem;
   line-height: 0.8;
@@ -245,6 +260,7 @@ h2 {
   right: 20px;
   color: #fff;
 }
+
 div.braidtag {
   background: lime;
 }
@@ -298,6 +314,7 @@ input#image-link.datasub {
   padding-top: 10px;
   width: 100%;
 }
+
 div.modal-overlay {
   border-bottom: none;
   margin: 0 10px;
@@ -378,9 +395,11 @@ span.close-button {
   position: relative;
   width: 100%;
 }
+
 .gennbtt {
   padding: 0 2rem;
 }
+
 button.submit-button {
   width: 100%;
 }
@@ -393,10 +412,12 @@ button.submit-button {
   box-sizing: border-box;
   text-align: center;
 }
+
 button.genebtt {
   padding-top: 8px;
   line-height: 1;
 }
+
 textarea.genetext {
   border: none;
   background: transparent;
@@ -439,6 +460,7 @@ span.material-symbols-outlined {
 VIDEO {
   margin-bottom: -5px;
 }
+
 #muteButton {
   position: absolute;
   top: 10px;
@@ -676,7 +698,8 @@ label {
 
 .braidtag {
   display: flex;
-  align-items: center; /* Align checkbox and label vertically */
+  align-items: center;
+  /* Align checkbox and label vertically */
   justify-content: space-between;
   padding-right: 18px;
   background-color: lime;
@@ -686,6 +709,7 @@ label {
 .braidtag input[type="checkbox"] {
   margin-right: 5px;
 }
+
 form.braid-form {
   margin-top: 20px;
 }
@@ -693,6 +717,7 @@ form.braid-form {
 input.datasub.url {
   border-top: none;
 }
+
 .gallery-item img {
   width: 100%;
   height: auto;
@@ -702,6 +727,7 @@ input.datasub.email {
   border-top: none;
   border-bottom: none;
 }
+
 .submit-button {
   margin-top: 30px;
   padding: 20px 40px;
@@ -714,21 +740,26 @@ input.datasub.email {
   text-transform: uppercase;
   transition: background-color 0.3s, transform 0.2s;
 }
+
 button.right-zoom {
   border-left: 2px solid;
 }
+
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
   .gallery-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for tablets */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns for mobile */
   }
 }
+
 /* Help button with ? */
 .help-button {
   border-left: 2px solid;
@@ -737,6 +768,7 @@ button.right-zoom {
 
   cursor: pointer;
 }
+
 .zoom-controls {
   position: fixed;
   bottom: 10px;
@@ -746,9 +778,11 @@ button.right-zoom {
   display: flex;
   z-index: 99999;
 }
+
 .gallery-item {
   position: relative;
 }
+
 .zoom-controls button {
   font-family: Kode Mono;
   background-color: lime;
@@ -757,6 +791,7 @@ button.right-zoom {
   cursor: pointer;
   font-size: 1rem;
 }
+
 .image-index {
   top: 0;
   position: absolute;
@@ -793,11 +828,13 @@ button.right-zoom {
   cursor: pointer;
   position: absolute;
 }
+
 .modal-data {
   padding: 6rem;
   border: 2px solid;
   margin: 0 10px;
 }
+
 /* Custom dropdown toggle button */
 .dropdown-toggle {
   padding: 10px;
@@ -813,9 +850,12 @@ button.right-zoom {
   font-family: Kode Mono;
   position: fixed;
 }
+
 .data-link {
-  width: fit-content; /* Set width to fit the content */
-  margin: 0 auto; /* Center the div horizontally */
+  width: fit-content;
+  /* Set width to fit the content */
+  margin: 0 auto;
+  /* Center the div horizontally */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -829,8 +869,10 @@ button.right-zoom {
   border: 2px solid black;
   cursor: pointer;
   font-size: 1rem;
-  animation: pulse 4.5s infinite; /* Apply animation with 1.5s duration, repeating infinitely */
+  animation: pulse 4.5s infinite;
+  /* Apply animation with 1.5s duration, repeating infinitely */
 }
+
 .checkbox-section {
   margin-top: 2rem;
 }
@@ -839,28 +881,39 @@ button.right-zoom {
 /* Pulsing Animation */
 @keyframes pulse {
   0% {
-    transform: scale(1); /* Normal size */
-    opacity: 1; /* Fully visible */
+    transform: scale(1);
+    /* Normal size */
+    opacity: 1;
+    /* Fully visible */
   }
+
   50% {
-    transform: scale(1.06); /* Slightly larger */
-    opacity: 0.8; /* Slightly transparent */
+    transform: scale(1.06);
+    /* Slightly larger */
+    opacity: 0.8;
+    /* Slightly transparent */
   }
+
   100% {
-    transform: scale(1); /* Back to normal size */
-    opacity: 1; /* Fully visible */
+    transform: scale(1);
+    /* Back to normal size */
+    opacity: 1;
+    /* Fully visible */
   }
 }
+
 .container {
   display: flex;
-  justify-content: center; /* Horizontally center */
+  justify-content: center;
+  /* Horizontally center */
   align-items: center;
   margin: 3rem 0;
 }
 
 .link-style {
   color: black;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
+  /* Remove underline */
   display: block;
   padding: 20px;
 }
@@ -893,9 +946,12 @@ button.right-zoom {
 
 .video-overlay-text {
   position: absolute;
-  left: 20px; /* Position from the left */
-  top: 10%; /* Position from the top */
-  transform: rotate(-10deg); /* Rotate the text by -10 degrees */
+  left: 20px;
+  /* Position from the left */
+  top: 10%;
+  /* Position from the top */
+  transform: rotate(-10deg);
+  /* Rotate the text by -10 degrees */
   cursor: pointer;
   box-shadow: 0 0 20px 3px LIME;
   color: LIME;
@@ -907,7 +963,8 @@ button.right-zoom {
   font-weight: 400;
   text-align: center;
   transform: rotate(-20deg);
-  animation: pulse-shadow-lime 2s infinite ease-in-out; /* Apply the pulsing animation */
+  animation: pulse-shadow-lime 2s infinite ease-in-out;
+  /* Apply the pulsing animation */
 
   backdrop-filter: blur(10px);
 }
@@ -920,7 +977,8 @@ button.right-zoom {
   transform: rotate(10deg);
   color: YELLOW;
   border-radius: 50%;
-  animation: pulse-shadow-yellow 5s infinite ease-in-out; /* Apply the pulsing animation */
+  animation: pulse-shadow-yellow 5s infinite ease-in-out;
+  /* Apply the pulsing animation */
 
   padding: 3rem;
 
@@ -929,6 +987,7 @@ button.right-zoom {
 
   backdrop-filter: blur(10px);
 }
+
 .video-overlay-text-three {
   position: absolute;
   top: 30%;
@@ -937,12 +996,14 @@ button.right-zoom {
   color: blue;
   border-radius: 50%;
   padding: 3rem;
-  animation: pulse-shadow-blue 4s infinite ease-in-out; /* Apply the pulsing animation */
+  animation: pulse-shadow-blue 4s infinite ease-in-out;
+  /* Apply the pulsing animation */
 
   /* Apply gradient shadow */
   box-shadow: 0 0 20px 3px BLUE;
   backdrop-filter: blur(10px);
 }
+
 .video-overlay-text-four {
   position: absolute;
   top: 60%;
@@ -956,15 +1017,19 @@ button.right-zoom {
   /* Apply gradient shadow */
   box-shadow: 0 0 20px 3px RED;
   backdrop-filter: blur(10px);
-  animation: pulse-shadow 3s infinite ease-in-out; /* Apply the pulsing animation */
+  animation: pulse-shadow 3s infinite ease-in-out;
+  /* Apply the pulsing animation */
 }
+
 @keyframes pulse-shadow {
   0% {
     box-shadow: 0 0 20px 3px red;
   }
+
   50% {
     box-shadow: 0 0 40px 10px red;
   }
+
   100% {
     box-shadow: 0 0 20px 3px red;
   }
@@ -974,9 +1039,11 @@ button.right-zoom {
   0% {
     box-shadow: 0 0 20px 3px lime;
   }
+
   50% {
     box-shadow: 0 0 40px 10px lime;
   }
+
   100% {
     box-shadow: 0 0 20px 3px lime;
   }
@@ -986,9 +1053,11 @@ button.right-zoom {
   0% {
     box-shadow: 0 0 20px 3px blue;
   }
+
   50% {
     box-shadow: 0 0 40px 10px blue;
   }
+
   100% {
     box-shadow: 0 0 20px 3px blue;
   }
@@ -998,13 +1067,16 @@ button.right-zoom {
   0% {
     box-shadow: 0 0 20px 3px yellow;
   }
+
   50% {
     box-shadow: 0 0 40px 10px yellow;
   }
+
   100% {
     box-shadow: 0 0 20px 3px yellow;
   }
 }
+
 .video-overlay-text h2,
 .video-overlay-text-two h2,
 .video-overlay-text-three h2,
@@ -1015,9 +1087,12 @@ button.right-zoom {
   font-weight: 400;
   cursor: pointer;
 }
+
 .text-prompt-form {
-  height: 3rem; /* Default height */
-  transition: height 1s ease; /* Smooth transition */
+  height: 3rem;
+  /* Default height */
+  transition: height 1s ease;
+  /* Smooth transition */
 }
 
 .text-prompt-form.expanded {
@@ -1027,9 +1102,11 @@ button.right-zoom {
   vertical-align: middle;
   flex-direction: column;
 }
+
 .genetext:focus,
 .chat-textarea:focus {
-  outline: none; /* Ensure outline is removed */
+  outline: none;
+  /* Ensure outline is removed */
 }
 
 .chat-textarea {
@@ -1047,12 +1124,15 @@ button.right-zoom {
 
   margin-top: 3rem;
 
-  align-self: center; /* Ensures the button is centered */
+  align-self: center;
+  /* Ensures the button is centered */
 }
+
 .chat-input-form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* This will center all children (textarea and button) */
+  align-items: center;
+  /* This will center all children (textarea and button) */
 
 }
 
@@ -1077,33 +1157,41 @@ button.right-zoom {
 .grid-section .image-container:nth-child(1) {
   animation-delay: 0.1s;
 }
+
 .grid-section .image-container:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .grid-section .image-container:nth-child(3) {
   animation-delay: 0.3s;
 }
+
 /* Add more if necessary */
 /* Add this to your CSS */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px); /* Slight upwards movement */
+    transform: translateY(20px);
+    /* Slight upwards movement */
   }
+
   to {
     opacity: 1;
-    transform: translateY(0); /* Original position */
+    transform: translateY(0);
+    /* Original position */
   }
 }
 
 .grid-section .image-container {
   animation: fadeIn 1s ease-in-out;
 }
+
 .print-button,
 div.gallery-item,
 .dropdown-menu {
   animation: fadeIn 0.8s ease-in-out;
 }
+
 .animated-textarea-container {
   position: relative;
   width: 100%;
@@ -1159,12 +1247,15 @@ div.gallery-item,
   0% {
     opacity: 0;
   }
+
   20% {
     opacity: 1;
   }
+
   80% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -1173,19 +1264,23 @@ div.gallery-item,
 @keyframes fadeInWords {
   0% {
     opacity: 0;
-    transform: translateY(10px); /* Optional: subtle upward motion */
+    transform: translateY(10px);
+    /* Optional: subtle upward motion */
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 /* styles in globals.css */
 @keyframes fadeInWord {
   0% {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -1193,8 +1288,10 @@ div.gallery-item,
 }
 
 .fade-word {
-  opacity: 0; /* Initially invisible */
-  animation: fadeInWord 0.6s ease-in-out forwards; /* Apply fade-in effect */
+  opacity: 0;
+  /* Initially invisible */
+  animation: fadeInWord 0.6s ease-in-out forwards;
+  /* Apply fade-in effect */
   display: inline-block;
 }
 
@@ -1218,6 +1315,7 @@ div.gallery-item,
   flex-direction: column;
   margin-bottom: 20px;
 }
+
 .psycho {
   position: absolute;
   left: 0 !important;
@@ -1225,18 +1323,22 @@ div.gallery-item,
   bottom: 0;
   color: white;
 }
+
 .message {
   max-width: 60%;
   padding: 10px;
   margin: 20px 0;
   word-wrap: break-word;
-  animation: messagefadeIn 0.8s forwards; /* Smooth fade-in effect */
+  animation: messagefadeIn 0.8s forwards;
+  /* Smooth fade-in effect */
 }
+
 @keyframes messagefadeIn {
   0% {
     opacity: 0;
     transform: translateY(10px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -1249,6 +1351,7 @@ div.gallery-item,
   font-family: "DuFont";
   font-size: 3rem;
 }
+
 button.info {
   position: absolute;
   top: 10px;
@@ -1261,11 +1364,13 @@ button.info {
   left: 10px;
   z-index: 99999;
 }
+
 .psycho a {
   color: white !important;
   text-decoration: none;
   font-family: "Kode Mono", monospace;
 }
+
 .message.user {
   font-family: "DuFont";
   font-size: 3rem;
@@ -1307,12 +1412,15 @@ button.info {
 
 /* Styles when the form is expanded */
 .genebtt.expanded {
-  color: white; /* White background when expanded */
+  color: white;
+  /* White background when expanded */
   padding: 3rem;
-  border-radius: 50%; /* Rounder button */
+  border-radius: 50%;
+  /* Rounder button */
   border: 2px solid;
   font-size: 3rem;
 }
+
 .genebtt {
   margin: 0 2rem;
 }
@@ -1326,15 +1434,18 @@ button.info {
   align-items: center;
   justify-content: center;
   z-index: 999999;
-  opacity: 0; /* Start invisible */
+  opacity: 0;
+  /* Start invisible */
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease; /* Smooth transition */
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  /* Smooth transition */
 }
 
 /* Modal Content */
 .dataa-modal-content {
   background: white;
-  transition: opacity 0.4s ease; /* Simple fade transition */
+  transition: opacity 0.4s ease;
+  /* Simple fade transition */
   opacity: 0;
   font-family: "DuFont", serif;
   border: 2px solid;
@@ -1353,14 +1464,18 @@ button.info {
   font-size: 2rem;
   cursor: pointer;
 }
+
 /* When the modal is shown */
 .dataa-modal-overlay.show {
-  opacity: 1; /* Make the overlay visible */
-  visibility: visible; /* Ensure the overlay is visible */
+  opacity: 1;
+  /* Make the overlay visible */
+  visibility: visible;
+  /* Ensure the overlay is visible */
 }
 
 .dataa-modal-content.show {
-  opacity: 1; /* Make the modal content visible */
+  opacity: 1;
+  /* Make the modal content visible */
 }
 
 .gpt-container {
@@ -1392,7 +1507,8 @@ button.info {
 
 .gpt-drag-subtext {
   font-size: 0.875rem;
-  color: #718096; /* Gray */
+  color: #718096;
+  /* Gray */
 }
 
 .gpt-message-container {
@@ -1440,7 +1556,8 @@ button.info {
 }
 
 .gpt-text {
-  color: #fff; /* Dark gray */
+  color: #fff;
+  /* Dark gray */
 }
 
 .gpt-attachments {
@@ -1451,7 +1568,7 @@ button.info {
 
 .gpt-image {
 
-  width: 30%!important;
+  width: 30% !important;
 
   border: 2px solid #fff;
   width: 10rem;
@@ -1465,7 +1582,8 @@ button.info {
   height: 6rem;
   overflow: hidden;
   color: #fff;
-  border: 2px solid; /* Light gray */
+  border: 2px solid;
+  /* Light gray */
   padding: 8px;
   background-color: #ffff;
 }
@@ -1475,11 +1593,14 @@ button.info {
   flex-direction: column;
   align-items: center;
 }
+
 .button-container {
   display: flex;
   justify-content: center;
-  width: 100%; /* Ensures button is centered relative to the form */
-  margin-top: 16px; /* Adds some space above the button */
+  width: 100%;
+  /* Ensures button is centered relative to the form */
+  margin-top: 16px;
+  /* Adds some space above the button */
 }
 
 .gpt-input {
@@ -1542,6 +1663,7 @@ button.info {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1574,6 +1696,7 @@ button.info {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1598,34 +1721,45 @@ button.info {
 }
 
 .gpt-message-content {
-  max-width: 60%; /* Limit message bubble width */
+  max-width: 60%;
+  /* Limit message bubble width */
 
-padding: 3rem;
+  padding: 3rem;
 }
+
 .gpt-message-list {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Space between messages */
+  gap: 10px;
+  /* Space between messages */
 }
 
- .gpt-message.user {
-  display: flex;
-  justify-content: flex-start; /* Align GPT messages to the left */
-  flex-direction: row; /* Ensure GPT icon appears on the left */
+.gpt-message.user .gpt-name {
+  text-align: right;
 }
 
-.gpt-message.assistant {
+.gpt-message.assistant .gpt-name {
+  text-align: left;
+}
+.gpt-message {
   display: flex;
-  justify-content: flex-end; /* Align user messages to the right */
-  flex-direction: row-reverse; /* Ensure user icon appears on the right */
+  flex-direction: column;
+  align-items: flex-start;
+}
+.gpt-message.user {
+  align-items: flex-end; /* Align user messages to the right */
 }
 
 .gpt-message.assistant .gpt-message-content {
-  background-color: lime; /* Assistant message background color */
-  color: #000; /* Assistant text color */
+  background-color: lime;
+  /* Assistant message background color */
+  color: #000;
+  /* Assistant text color */
 }
 
 .gpt-message.user .gpt-message-content {
-  background-color: #007bff; /* User message background color */
-  color: #000; /* User text color */
+  background-color: #007bff;
+  /* User message background color */
+  color: #000;
+  /* User text color */
 }
