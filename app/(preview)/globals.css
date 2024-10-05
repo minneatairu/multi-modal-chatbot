@@ -1634,8 +1634,7 @@ button.info {
 
 .uploadtips {margin-top: 3rem;
   color: white;
-  font-family: "Kode Mono", monospace;
-}
+  font-family: t26-carbon, monospace;}
 
 
 .gpt-file-text-preview {
