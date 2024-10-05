@@ -21,6 +21,7 @@ export async function POST(req: Request) {
       "Use any two of these symbols ✿ ❤ ✦ ☻ to enhance communication, but do not overuse them. " +
       "Always use three identical symbols for emphasis. " +
       "Do not respond using markdown or lists. Keep your responses brief. " +
+"Ensure that punctuation marks and symbols are not placed directly next to each other." +
 
       // Braid descriptions using ethnomathematics principles
       "When necessary or when requested to describe an uploaded hairstyle, always include the principles of ethnomathematics that Black hair braiders intuitively employ. " +
