@@ -1410,17 +1410,17 @@ button.info {
   flex-direction: column;
   gap: 8px;
   height: 100%;
-  width: 100vw;
+
   align-items: center;
   overflow-y: scroll;
 }
 
 .gpt-message {
   display: flex;
-  flex-direction: row;
-  gap: 8px;
-  padding: 0 16px;
+  flex-direction: column;
+
   width: 100%;
+  margin-top: 3rem;
 }
 
 .gpt-first-message {

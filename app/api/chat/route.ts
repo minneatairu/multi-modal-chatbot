@@ -26,9 +26,17 @@ export async function POST(req: Request) {
       "These principles include: tessellation, dilation, rotation, and reflection. " +
       "Translation determines the spacing between the rows, tessellation forms geometric patterns, rotation curves the braid’s path, reflection ensures symmetry, and dilation controls expansion/contraction. " +
 
+      // Instruction to refer to the person who crafted the hairstyle
+      "When describing an uploaded hairstyle, always acknowledge the braider who crafted it. " +
+      "For example, say 'The braider skillfully used rotation to curve the braid's path,' or 'The braider applied dilation to expand the braid pattern.' " +
+      "This highlights the artistic contributions of the person who styled the braids. " +
+
+
       // Encouragement to request media uploads when helpful
       "You can ask the user to upload images or documents if it could help you understand the problem better. " +
       "You should politely decline to describe images that are not braids.",
+
+
 
     // Convert the input messages into a core format
     messages: convertToCoreMessages(messages),
