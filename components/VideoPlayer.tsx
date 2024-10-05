@@ -11,15 +11,8 @@ export default function VideoPlayer() {
 
   return (
     <div className="video-container">
-         <video
-        width="100%"
-        muted={muted}
-        autoPlay
-        loop
-
-        src="/v.mp4" // Assuming your video is in the public folder
-      >
-        Your browser does not support the video tag.
+      <video width="100%" muted={muted} autoPlay loop>
+        <source src="v.mp4" type="video/mp4" />
       </video>
       <div className="video-controls">
         <span onClick={toggleMute} className="material-symbols-outlined">
