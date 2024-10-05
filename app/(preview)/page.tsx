@@ -663,7 +663,7 @@ export default function Home() {
                     )}
                   </AnimatePresence>
                   <div className="uploadtips">
-                    Tip: Drag an image of your braid for personalized
+                    Tip: Drag an image of your braid for 
                     recommendations.{" "}
                   </div>
                   <input
