@@ -573,7 +573,7 @@ video{width: auto;height: 100vh;}
   .modal-column {
     padding: 20px!important;
 }
-
+.video-container {overflow: hidden;}
 }
 
 .title-section {
