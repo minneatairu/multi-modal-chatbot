@@ -675,15 +675,16 @@ export default function Home() {
                     onChange={handleInputChange}
                     onPaste={handlePaste}
                   />
-                </form>
-              </div>
-            </div>
-             {/* Centered Submit Button */}
+                      {/* Centered Submit Button */}
              <div className="button-container">
                     <button type="submit" className="chat-button">
                       SUBMIT
                     </button>
                   </div>
+                </form>
+              </div>
+            </div>
+         
           </Modal>
         )}
 
