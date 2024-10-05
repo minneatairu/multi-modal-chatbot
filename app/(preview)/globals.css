@@ -1588,7 +1588,7 @@ button.info {
 .gpt-input-form {
   display: flex;
   flex-direction: column;
-  align-items: center;border-radius: 5px;
+  align-items: center;
 }
 
 .button-container {
@@ -1602,7 +1602,7 @@ button.info {
 
 .gpt-input {
   background-color: #000;
-
+border-radius: 5px;
   width: 100%;
   outline: none;
   color: #fff;
@@ -1731,11 +1731,11 @@ button.info {
 }
 
 .gpt-message.user .gpt-name {padding-right: 5px;
-  text-align: right;
+  text-align: right;font-size: 20px;  font-family: t26-carbon, monospace;
 }
 
 .gpt-message.assistant .gpt-name {padding-left: 5px;
-  text-align: left;
+  text-align: left;font-size: 20px;  font-family: t26-carbon, monospace;
 }
 .gpt-message {
   display: flex;
@@ -1748,8 +1748,7 @@ button.info {
 
 .gpt-message.assistant .gpt-message-content {
   background-color: #006633;
-  /* Assistant message background color */
-  color: #000;
+border:2px solid;  color: #fff;
   /* Assistant text color */
 }
 .gpt.-text{font-size: 2rem;}
@@ -1757,8 +1756,7 @@ button.info {
 .gpt-message.user .gpt-message-content {
   background-color: #0099FF;
   /* User message background color */
-  color: #000;
-  /* User text color */
+  border:2px solid;  color: #fff;
 }
 
 div.gpt-name{color:#fff}
