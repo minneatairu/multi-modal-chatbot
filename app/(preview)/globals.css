@@ -102,7 +102,7 @@ p {
 }
 
 .image-info {
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
 }
 
 h2,
@@ -184,7 +184,7 @@ input[type="checkbox"]:checked:after {
   text-align: center;
   font-size: 50px;
   margin-top: -8px;
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
   width: 50px;
   margin-left: -3px;
   max-width: 50px;
@@ -210,7 +210,7 @@ html {
   font-size: 1.3rem;
   margin-block-start: 0;
   margin-block-end: 0;
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
   line-height: 1;
 }
 
@@ -384,7 +384,7 @@ span.close-button {
   font-size: 1.3rem;
   line-height: 1.2;
   text-align: justify;
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
 }
 
 .modal-column {
@@ -618,7 +618,7 @@ VIDEO {
   width: 20vw;
   height: 20vw;
   border-radius: 50%;
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
   background: lime;
   font-size: 1.3rem;
   display: flex;
@@ -629,7 +629,7 @@ VIDEO {
 }
 
 label {
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
   font-size: 1rem;
 }
 
@@ -646,7 +646,7 @@ label {
 
   border: 2px solid black;
   background-color: lime;
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
   font-size: 1rem;
   text-align: center;
 }
@@ -665,7 +665,7 @@ label {
   border-radius: 50%;
   background-color: lime;
   color: black;
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
   text-align: center;
   border: 2px solid black;
   cursor: pointer;
@@ -703,7 +703,7 @@ label {
   justify-content: space-between;
   padding-right: 18px;
   background-color: lime;
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
 }
 
 .braidtag input[type="checkbox"] {
@@ -864,7 +864,7 @@ button.right-zoom {
   border-radius: 50%;
   background-color: lime;
   color: black;
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
   text-align: center;
   border: 2px solid black;
   cursor: pointer;
@@ -1368,7 +1368,7 @@ button.info {
 .psycho a {
   color: white !important;
   text-decoration: none;
-  font-family: "Kode Mono", monospace;
+      font-family: t26-carbon, monospace;
 }
 
 .message.user {
