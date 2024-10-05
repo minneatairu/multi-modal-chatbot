@@ -20,14 +20,6 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-.double-text {
-  background-color: red; /* Example background color */
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  max-width: 80%;
-  display: inline-block;
-}
 
 
 @media print {

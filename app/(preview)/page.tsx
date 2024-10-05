@@ -19,12 +19,6 @@ import { toast } from "sonner";
 import Link from "next/link";
 import { Markdown } from "@/components/markdown";
 
-// Define the custom component to render paragraphs with a class
-const CustomParagraph = (props: any) => {
-  return <p className="double-text" {...props} />;
-};
-
-
 const getTextFromDataUrl = (dataUrl: string) => {
   const base64 = dataUrl.split(",")[1];
   return window.atob(base64);
@@ -569,14 +563,7 @@ export default function Home() {
 
     <div className="gpt-message-content">
       <div className="gpt-text">
-      <ReactMarkdown
-                    components={{
-                      // Override the default <p> element rendering with a custom one
-                      p: CustomParagraph,
-                    }}
-                  >
-                    {message.content}
-                  </ReactMarkdown>
+        <Markdown>{message.content}</Markdown>
       </div>
       <div className="gpt-attachments">
         {message.experimental_attachments?.map(attachment =>
