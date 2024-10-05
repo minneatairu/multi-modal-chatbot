@@ -297,13 +297,13 @@ export default function Home() {
             style={{
               position: "absolute",
               bottom: 0,
-              left: 0,
+             
               fontSize: "10px",
               fontFamily: "Kode Mono",
               textAlign: "center",
             }}
           >
-            AI-generated content produced on {currentDate} using DA BRAIDR - a multimodal system designed by Minne Atairu
+           This AI-generated content was produced on {currentDate} using DA BRAIDR - a multimodal system designed by Minne Atairu
           </span>{" "}
         </h1>
 
