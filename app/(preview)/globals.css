@@ -1599,8 +1599,8 @@ button.info {
 
 .gpt-message-content {
   max-width: 60%; /* Limit message bubble width */
-  padding: 10px;
-  border-radius: 10px;
+
+padding: 3rem;
 }
 .gpt-message-list {
   display: flex;
