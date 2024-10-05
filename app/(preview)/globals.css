@@ -1428,11 +1428,9 @@ button.info {
 }
 
 .gpt-icon-container {
-  width: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff; /* Light gray */
+  width: 100%;
+
+  color: #fff;
 }
 
 .gpt-message-content {
@@ -1597,4 +1595,35 @@ button.info {
 .chat-input-form.hidden {
   opacity: 0;
   visibility: hidden;
+}
+
+.gpt-message-content {
+  max-width: 60%; /* Limit message bubble width */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+.gpt-message.assistant {
+  display: flex;
+  justify-content: flex-start; /* Align GPT messages to the left */
+  flex-direction: row; /* Ensure GPT icon appears on the left */
+}
+
+.gpt-message.user {
+  display: flex;
+  justify-content: flex-end; /* Align user messages to the right */
+  flex-direction: row-reverse; /* Ensure user icon appears on the right */
+}
+
+.gpt-message.assistant .gpt-message-content {
+  background-color: #f1f1f1; /* Assistant message background color */
+  color: #000; /* Assistant text color */
+  border-radius: 10px 10px 10px 0; /* Custom border-radius for GPT */
+}
+
+.gpt-message.user .gpt-message-content {
+  background-color: #007bff; /* User message background color */
+  color: white; /* User text color */
+  border-radius: 10px 10px 0 10px; /* Custom border-radius for user */
 }
