@@ -519,6 +519,8 @@ export default function Home() {
             className="modal-bottom-right"
           >
             <Chat />
+            <PrintButton onPrintClick={handlePrint} onCloseClick={handleClose} />
+
 
             <div
               className="gpt-container"
