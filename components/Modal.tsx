@@ -43,7 +43,7 @@ const Modal: React.FC<ModalProps> = ({
 
   // Conditionally apply inline styles for the black background
   const overlayStyle = {
-    backgroundColor: className === "modal-bottom-right" ? "blue" : "white",
+    backgroundColor: className === "modal-bottom-right" ? "black" : "white",
     ...(className === "modal-bottom-right" && {
       display: "flex", // Ensure flexbox is applied
       justifyContent: "center", // Horizontally center the content
