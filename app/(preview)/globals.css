@@ -12,9 +12,6 @@
   /* Added the second font */
 }
 
-* {
-  font-family: "DuFont", sans-serif;
-}
 
 body {
   color: rgb(var(--foreground-rgb));
