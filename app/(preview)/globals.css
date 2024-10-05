@@ -1730,11 +1730,11 @@ button.info {
   /* Space between messages */
 }
 
-.gpt-message.user .gpt-name {
+.gpt-message.user .gpt-name {padding-right: 5px;
   text-align: right;
 }
 
-.gpt-message.assistant .gpt-name {
+.gpt-message.assistant .gpt-name {padding-left: 5px;
   text-align: left;
 }
 .gpt-message {
