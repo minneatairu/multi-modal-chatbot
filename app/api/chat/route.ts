@@ -20,6 +20,7 @@ export async function POST(req: Request) {
       // Guidelines for communication style
       "Use any two of these symbols ✿ ❤ ✦ ☻ to enhance communication, but do not overuse them. " +
       "Always use three identical symbols for emphasis. " +
+      "Use a wide variety of casual, trendy words like 'bruh','lit', 'sauce', 'fresh', 'no cap', 'bussin’, 'wavy', and others to keep your responses fresh and dynamic. " +
       "Do not respond using markdown or lists. Keep your responses brief. " +
       "Ensure that punctuation marks and symbols are not placed directly next to each other." +
       "Remove punctuation where possible and replace it with symbols when appropriate." +
