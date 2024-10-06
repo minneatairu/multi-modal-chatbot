@@ -60,11 +60,7 @@ export default function Home() {
   const audioRef4 = useRef<HTMLAudioElement>(null);
   const [hasUserChatted, setHasUserChatted] = useState(false); // Track if user has submitted a chat message
 
-  const handlePrint = () => {
-    if (hasUserChatted) {
-      window.print();
-    }
-  };
+
 
   // List of hairstyle types
   const hairstyles = [
