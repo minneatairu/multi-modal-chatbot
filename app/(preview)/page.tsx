@@ -18,6 +18,21 @@ import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import Link from "next/link";
 import { Markdown } from "@/components/markdown";
+import ReactMarkdown from "react-markdown";
+
+// Custom MarkdownRenderer component
+const MarkdownRenderer = ({ content }) => {
+  return (
+    <ReactMarkdown
+      components={{
+        p: ({ node, children }) => <p className="custom-paragraph">{children}</p>,
+      }}
+    >
+      {content}
+    </ReactMarkdown>
+  );
+};
+
 
 const getTextFromDataUrl = (dataUrl: string) => {
   const base64 = dataUrl.split(",")[1];
@@ -566,9 +581,10 @@ export default function Home() {
     </div>
 
     <div className="gpt-message-content">
-      <div className="gpt-text">
-        <Markdown>{message.content}</Markdown>
-      </div>
+    <div className="gpt-text">
+  <MarkdownRenderer content={message.content} />
+</div>
+
       <div className="gpt-attachments">
         {message.experimental_attachments?.map(attachment =>
           attachment.contentType?.startsWith("image") ? (

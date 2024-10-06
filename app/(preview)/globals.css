@@ -819,6 +819,13 @@ button.right-zoom {
   z-index: 99999;
   align-items: center;
 }
+.custom-paragraph {
+  background-color: #f0f0f0; /* Change to your desired background color */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
 
 .filter-controls select {
   z-index: 99999;
