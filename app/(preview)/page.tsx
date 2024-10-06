@@ -478,7 +478,7 @@ export default function Home() {
    
        
               <p className="body-text">
-                The conversational interface masquerades as a "PsychoHairapist"
+                The multimodal conversational interface includes an image recognition system. The system is finetuned to masquerades as a "PsychoHairapist"
                 for clients seeking makeovers. The system is finetuned with
                 research about psychohairapy-a community health model created to
                 secure space for Black women to address mental health and
