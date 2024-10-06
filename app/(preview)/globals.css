@@ -1753,9 +1753,7 @@ border-radius: 5px;
 }
 
 .gpt-message.assistant .gpt-message-content {
-  
-border:2px solid;  color: #fff;
-  /* Assistant text color */
+ color: #fff;
 }
 .gpt.-text{font-size: 2rem;}
 
