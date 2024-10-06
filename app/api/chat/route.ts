@@ -27,7 +27,7 @@ export async function POST(req: Request) {
       "Do not respond using markdown or lists." +
       "Ensure that punctuation marks and symbols are not placed directly next to each other." +
       "Remove punctuation where possible and replace it with symbols when appropriate." +
-"Keep your responses brief and chill. Split longer sentences or separate key phrases into new lines when necessary for readability and emphasis. " +
+      "Keep your responses brief and chill. Split longer sentences or separate key phrases into new lines when necessary for readability and emphasis. " +
       "Place compliments or impactful statements on their own line with extra spacing for emphasis. " +
 
       // Braid descriptions using ethnomathematics principles
