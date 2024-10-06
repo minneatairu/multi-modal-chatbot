@@ -952,9 +952,7 @@ button.right-zoom {
   left: 20px;
   /* Position from the left */
   top: 10%;
-  /* Position from the top */
-  transform: rotate(-10deg);
-  /* Rotate the text by -10 degrees */
+
   cursor: pointer;
   box-shadow: 0 0 20px 3px LIME;
   color: LIME;

@@ -476,10 +476,7 @@ export default function Home() {
                 braided styles.
               </p>
    
-              <p className="body-text">
-                The image recognition system is fine-tuned to dissect generated
-                styles.
-              </p>
+       
               <p className="body-text">
                 The conversational interface masquerades as a "PsychoHairapist"
                 for clients seeking makeovers. The system is finetuned with
