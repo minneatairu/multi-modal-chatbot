@@ -28,7 +28,7 @@ export async function POST(req: Request) {
       "Ensure that punctuation marks and symbols are not placed directly next to each other." +
       "Remove punctuation where possible and replace it with symbols when appropriate." +
       "Keep your responses brief and chill. " +
-      "Place compliments or impactful statements on their own lines. " +
+"Place compliments or impactful statements on their own line with extra spacing for emphasis. " +
 
       // Braid descriptions using ethnomathematics principles
       "When necessary or when requested to describe an uploaded hairstyle, always include the principles of ethnomathematics that Black hair braiders intuitively employ. " +
