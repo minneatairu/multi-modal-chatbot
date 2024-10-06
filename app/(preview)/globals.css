@@ -820,8 +820,8 @@ button.right-zoom {
   align-items: center;
 }
 .custom-paragraph {
-  background-color: #f0f0f0; /* Change to your desired background color */
-  padding: 10px;
+  background-color: #006633; /* Change to your desired background color */
+  padding:2rem 3rem 3rem;border:2px solid;  color: #fff;
   border-radius: 5px;
   margin-bottom: 10px; /* Space between paragraphs */
 }
@@ -1726,9 +1726,7 @@ border-radius: 5px;
 
 .gpt-message-content {
   max-width: 60%;
-  /* Limit message bubble width */
-
-  padding: 3rem;padding-top: 2rem;
+  
 }
 
 .gpt-message-list {
@@ -1755,7 +1753,7 @@ border-radius: 5px;
 }
 
 .gpt-message.assistant .gpt-message-content {
-  background-color: #006633;
+  
 border:2px solid;  color: #fff;
   /* Assistant text color */
 }
