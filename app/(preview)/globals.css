@@ -1308,7 +1308,7 @@ div.gallery-item,
   color: #fff;
   margin-bottom: 20px;
   font-family: "DuFont", serif;
-  font-size: 3rem;
+  font-size: 3rem;padding-top: 10px;
 }
 
 .chat-box {
