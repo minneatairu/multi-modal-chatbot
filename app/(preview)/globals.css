@@ -819,12 +819,6 @@ button.right-zoom {
   z-index: 99999;
   align-items: center;
 }
-.custom-paragraph {
-  background-color: #006633; /* Change to your desired background color */
-  padding:2rem 3rem 3rem;border:2px solid;  color: #fff;
-  border-radius: 5px;
-  margin-bottom: 10px; /* Space between paragraphs */
-}
 
 
 .filter-controls select {
@@ -1764,3 +1758,23 @@ border-radius: 5px;
 }
 
 div.gpt-name{color:#fff}
+
+
+
+/* Styling for bot/assistant messages */
+.bot-message {
+  background-color: #006633; 
+  padding:2rem 3rem 3rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Styling for user messages */
+.user-message {
+  background-color:#0099FF;/* Different background for user messages */
+  padding:2rem 3rem 3rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: #fff;
+}

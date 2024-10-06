@@ -17,21 +17,25 @@ import PrintButton from "@/components/PrintButton";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import Link from "next/link";
-import { Markdown } from "@/components/markdown";
 import ReactMarkdown from "react-markdown";
 
-// Custom MarkdownRenderer component
-const MarkdownRenderer = ({ content }) => {
+// Custom Markdown renderer based on user or bot role
+const MarkdownRenderer = ({ content, role }) => {
   return (
     <ReactMarkdown
       components={{
-        p: ({ node, children }) => <p className="custom-paragraph">{children}</p>,
+        p: ({ node, children }) => (
+          <p className={role === "assistant" ? "bot-message" : "user-message"}>
+            {children}
+          </p>
+        ),
       }}
     >
       {content}
     </ReactMarkdown>
   );
 };
+
 
 
 const getTextFromDataUrl = (dataUrl: string) => {
@@ -582,7 +586,8 @@ export default function Home() {
 
     <div className="gpt-message-content">
     <div className="gpt-text">
-  <MarkdownRenderer content={message.content} />
+    <MarkdownRenderer content={message.content} role={message.role} />
+
 </div>
 
       <div className="gpt-attachments">
