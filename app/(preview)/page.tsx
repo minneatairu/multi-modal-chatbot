@@ -751,8 +751,12 @@ export default function Home() {
 
         {/* Print and Close Button */}
         {isGridVisible && (
-          <PrintButton onPrintClick={handlePrint} onCloseClick={handleClose} />
-        )}
+   <PrintButton
+   onPrintClick={handlePrint}
+   onCloseClick={handleClose}
+   isFromGptChatModal={true} // Still passing the modal type
+   isPrintEnabled={hasUserChatted} // Pass the state to enable/disable print
+ />        )}
         {/* Video with Overlay Text */}
         {isVideoVisible && (
           <div className="video-container">
