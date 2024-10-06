@@ -58,6 +58,9 @@ export default function Home() {
   const audioRef2 = useRef<HTMLAudioElement>(null);
   const audioRef3 = useRef<HTMLAudioElement>(null);
   const audioRef4 = useRef<HTMLAudioElement>(null);
+  const [hasUserChatted, setHasUserChatted] = useState(false); // Track if user has submitted a chat message
+
+
 
   // List of hairstyle types
   const hairstyles = [
@@ -67,6 +70,7 @@ export default function Home() {
     "Divine Cornrows",
     "Blessed Braids",
     "Miracle Braids",
+    "Miracle Corn Rolls",
     "Anointed Braids",
     "Expert Braids",
     "Divine Twists",
@@ -152,7 +156,9 @@ export default function Home() {
   };
 
   const handlePrint = () => {
-    window.print();
+    if (hasUserChatted) {
+      window.print();
+    }
   };
 
   const handleClose = () => {
@@ -297,13 +303,13 @@ export default function Home() {
             style={{
               position: "absolute",
               bottom: 0,
-             
+
               fontSize: "10px",
               fontFamily: "Kode Mono",
               textAlign: "center",
             }}
           >
-           This AI-generated content was produced on {currentDate} using DA BRAIDR - a multimodal system designed by Minne Atairu
+            This AI-generated content was produced on {currentDate} using DA BRAIDR - a multimodal system designed by Minne Atairu
           </span>{" "}
         </h1>
 
@@ -412,8 +418,8 @@ export default function Home() {
                 braid, ultimately, affect the quality of care a patient
                 receives?
               </p>
-\
-<p className="body-text">
+              \
+              <p className="body-text">
                 What happens when these critical decisions between the braider
                 and the braided are replaced by generative systems that
                 abstract, optimize, and commodify them? What happens when the
@@ -444,7 +450,7 @@ export default function Home() {
                 salon posters, which traditionally depict a variety of intricate
                 braided styles.
               </p>
-   
+
               <p className="body-text">
                 The image recognition system is fine-tuned to dissect generated
                 styles.
@@ -518,7 +524,12 @@ export default function Home() {
             className="modal-bottom-right"
           >
             <Chat />
-            <PrintButton onPrintClick={handlePrint} onCloseClick={handleClose}     isFromGptChatModal={true}  />
+            <PrintButton
+            onPrintClick={handlePrint}
+            onCloseClick={handleClose}
+            isFromGptChatModal={true} // Still passing the modal type
+            isPrintEnabled={hasUserChatted} // Pass the state to enable/disable print
+          />
 
 
             <div
@@ -546,44 +557,44 @@ export default function Home() {
               <div className="gpt-message-container">
                 {messages.length > 0 ? (
                   <div className="gpt-message-list">
-                   {messages.map((message, index) => (
-  <motion.div
-    key={message.id}
-    className={`gpt-message ${message.role === "assistant" ? "assistant" : "user"}`}
-    initial={{ y: 5, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-  >
-  <div className="gpt-name">
-      {message.role === "assistant" ? (
-        <span>Da Braidr</span>
-      ) : (
-        <span>You</span>
-      )}
-    </div>
+                    {messages.map((message, index) => (
+                      <motion.div
+                        key={message.id}
+                        className={`gpt-message ${message.role === "assistant" ? "assistant" : "user"}`}
+                        initial={{ y: 5, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                      >
+                        <div className="gpt-name">
+                          {message.role === "assistant" ? (
+                            <span>Da Braidr</span>
+                          ) : (
+                            <span>You</span>
+                          )}
+                        </div>
 
-    <div className="gpt-message-content">
-      <div className="gpt-text">
-        <Markdown>{message.content}</Markdown>
-      </div>
-      <div className="gpt-attachments">
-        {message.experimental_attachments?.map(attachment =>
-          attachment.contentType?.startsWith("image") ? (
-            <img
-              className="gpt-image"
-              key={attachment.name}
-              src={attachment.url}
-              alt={attachment.name}
-            />
-          ) : attachment.contentType?.startsWith("text") ? (
-            <div className="gpt-text-preview">
-              {getTextFromDataUrl(attachment.url)}
-            </div>
-          ) : null
-        )}
-      </div>
-    </div>
-  </motion.div>
-))}
+                        <div className="gpt-message-content">
+                          <div className="gpt-text">
+                            <Markdown>{message.content}</Markdown>
+                          </div>
+                          <div className="gpt-attachments">
+                            {message.experimental_attachments?.map(attachment =>
+                              attachment.contentType?.startsWith("image") ? (
+                                <img
+                                  className="gpt-image"
+                                  key={attachment.name}
+                                  src={attachment.url}
+                                  alt={attachment.name}
+                                />
+                              ) : attachment.contentType?.startsWith("text") ? (
+                                <div className="gpt-text-preview">
+                                  {getTextFromDataUrl(attachment.url)}
+                                </div>
+                              ) : null
+                            )}
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
 
 
                     {isLoading &&
@@ -663,7 +674,7 @@ export default function Home() {
                     )}
                   </AnimatePresence>
                   <div className="uploadtips">
-                    Tip: Drag an image of your braid for 
+                    Tip: Drag an image of your braid for
                     recommendations.{" "}
                   </div>
                   <input
@@ -674,8 +685,8 @@ export default function Home() {
                     onChange={handleInputChange}
                     onPaste={handlePaste}
                   />
-                      {/* Centered Submit Button */}
-             <div className="button-container">
+                  {/* Centered Submit Button */}
+                  <div className="button-container">
                     <button type="submit" className="chat-button">
                       SUBMIT
                     </button>
