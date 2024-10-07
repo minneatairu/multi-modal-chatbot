@@ -370,7 +370,7 @@ export default function Home() {
         </div>
         {/* Info Modal */}
         {openModal === "info" && (
-          <Modal onClose={() => setOpenModal(null)} className="modal-grid">
+  <Modal onClose={handleCloseModal} className="modal-grid">
             {/* Modal content */}
             <div className="modal-column">
               <h2>WHAT IS DA BRAIDR?</h2>
@@ -547,10 +547,8 @@ export default function Home() {
         )}
         {/* Text Da Braidr Modal */}
         {openModal === "text" && (
-          <Modal
-            onClose={() => setOpenModal(null)}
-            className="modal-bottom-right"
-          >
+  <Modal onClose={handleCloseModal} className="modal-bottom-right">
+
             <Chat />
             {messages.length > 0 && (
   <PrintButton onPrintClick={handlePrint} onCloseClick={handleClose} isFromGptChatModal={true} />
