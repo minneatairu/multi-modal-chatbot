@@ -234,14 +234,10 @@ export default function Home() {
   }, [openModal]);
 
   const { messages, input, handleSubmit, handleInputChange, isLoading } =
-  useChat({
-    onError: () =>
-      toast.error("You've been rate limited, please try again later!"),
-    onSuccess: () => {
-      setHasUserChatted(true); // Set to true after a message is successfully sent
-    },
-  });
-
+    useChat({
+      onError: () =>
+        toast.error("You've been rate limited, please try again later!"),
+    });
 
   const [files, setFiles] = useState<FileList | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -555,8 +551,7 @@ export default function Home() {
             className="modal-bottom-right"
           >
             <Chat />
-{/* Conditionally render PrintButton only if the user has chatted */}
-{hasUserChatted && (
+            {messages.length > 0 && (
   <PrintButton onPrintClick={handlePrint} onCloseClick={handleClose} isFromGptChatModal={true} />
 )}
 
