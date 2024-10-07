@@ -1124,9 +1124,8 @@ button.right-zoom {
 .text-prompt-form.expanded {
   height:100vh;
   align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  flex-direction: column;padding:8% 10%
+
+  flex-direction: column;padding:8% 0
 }
 
 .genetext:focus,
