@@ -14,12 +14,7 @@ export default function BraidForm() {
   return (
     <form className="braid-form">
       {/* Text Input Fields */}
-      <input className="datasub" type="text" placeholder="Enter your name" />
-      <input
-        className="datasub email"
-        type="email"
-        placeholder="Enter your email"
-      />
+ 
       {/* Braid Type Section */}
 
       <div className="braid-type-container">

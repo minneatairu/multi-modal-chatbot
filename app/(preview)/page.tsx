@@ -160,9 +160,10 @@ export default function Home() {
       setIsVideoVisible(false);
     }, 100); // Delay hiding the video
     const selectedHairstyle = getRandomHairstyle();
-    const text1 = `Let's generate images of`;
-    const text2 = ` ✿✿✿ ${selectedHairstyle} ✿✿✿ `;
-    const text3 = `Type ur description here`;
+    const text1 = `✦✦✦✦✦ I'm Da Braidr ✦✦✦✦✦`;
+    const text2 = `Ur Hairstylist`;
+    const text2 = `Let's generate images of`;
+    const text3 = `✿✿✿ ${selectedHairstyle} ✿✿✿`;
 
     // Split both sentences and concatenate them
     setWords([
