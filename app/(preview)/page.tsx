@@ -23,26 +23,30 @@ import ReactMarkdown from "react-markdown";
 const MarkdownRenderer = ({ content, role }) => {
   return (
     <ReactMarkdown
-    components={{
-      p: ({ node, children }, { index }) => (
-        <motion.p
-          className={role === "assistant" ? "bot-message" : "user-message"}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            delay: index * 0.3, // Delay between paragraphs
-          }}
-        >
-          {children}
-        </motion.p>
-      ),
-    }}
-  >
-    {content}
-  </ReactMarkdown>
+      components={{
+        p: ({ node, children, ...props }) => {
+          const index = props.index; // Assuming index exists here, otherwise you can omit this
+          return (
+            <motion.p
+              className={role === "assistant" ? "bot-message" : "user-message"}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.3, // Delay between paragraphs (if index exists)
+              }}
+            >
+              {children}
+            </motion.p>
+          );
+        }
+      }}
+    >
+      {content}
+    </ReactMarkdown>
   );
 };
+
 
 
 
