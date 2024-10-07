@@ -1122,7 +1122,7 @@ button.right-zoom {
 }
 
 .text-prompt-form.expanded {
-  height: 85vh;
+  height:100vh;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
