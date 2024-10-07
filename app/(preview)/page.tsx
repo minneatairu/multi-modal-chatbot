@@ -641,9 +641,8 @@ export default function Home() {
                   <motion.div className="gpt-empty-message-container">
                     <div className="gpt-empty-message-box">
                       <p className="gpt-empty-message-text">
-                        <VercelIcon />
-                        <span>+</span>
-                        <AttachmentIcon />
+           
+        
                       </p>
                     </div>
                   </motion.div>
@@ -700,8 +699,7 @@ export default function Home() {
                     )}
                   </AnimatePresence>
                   <div className="uploadtips">
-                    Tip: Drag an image of your braid for 
-                    recommendations.{" "}
+                    Tip: Drag an image.{" "}
                   </div>
                   <input
                     ref={inputRef}
