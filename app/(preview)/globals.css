@@ -1126,7 +1126,7 @@ button.right-zoom {
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  flex-direction: column;
+  flex-direction: column;padding:8% 10%
 }
 
 .genetext:focus,
