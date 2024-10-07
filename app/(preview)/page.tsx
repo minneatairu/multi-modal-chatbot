@@ -128,15 +128,17 @@ export default function Home() {
         !formRef.current.contains(event.target as Node)
       ) {
         setIsFormExpanded(false);
+        setIsVideoVisible(true); // Show the video when clicking outside the form
       }
     };
-
+  
     document.addEventListener("mousedown", handleClickOutside);
-
+  
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isFormExpanded]);
+  
 
   // Set current date
   useEffect(() => {
@@ -175,22 +177,20 @@ export default function Home() {
     }
   };
 
-  // Handle form submission: hide video, show grid, and print button
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent the form from reloading the page
-
-    // Hide the video and show the grid
-    setIsVideoVisible(false);
-    setIsGridVisible(true);
+    setIsVideoVisible(false); // Hide the video when submitting the form
+    setIsGridVisible(true); // Show the grid
   };
+  
 
   const handlePrint = () => {
     window.print();
   };
 
   const handleClose = () => {
-    setIsVideoVisible(true);
-    setIsGridVisible(false);
+    setIsGridVisible(false); // Hide the grid
+    setIsVideoVisible(true); // Show the video when grid is closed
   };
 
   // Handle modal opening and ensure form is closed
@@ -202,9 +202,9 @@ export default function Home() {
   };
 
   const handleCloseModal = () => {
-    setOpenModal(null);
-    setActiveButton(null);
-    setIsVideoVisible(true); // Reset active button when modal is closed
+    setOpenModal(null); // Close the modal
+    setActiveButton(null); // Reset active button when modal is closed
+    setIsVideoVisible(true); // Show the video when modal is closed
   };
 
   // Handle each overlay click with different sound
