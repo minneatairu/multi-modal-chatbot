@@ -782,8 +782,9 @@ export default function Home() {
         {isVideoVisible && (
           <div className="video-container">
             <VideoPlayer />
-            <source src="v.mp4" type="video/mp4" />
-
+            <video width="100%" muted={muted} autoPlay loop>
+        <source src="v.mp4" type="video/mp4" />
+      </video>
             <div
               className="video-overlay-text"
               onClick={() => openModalHandler("info")}
