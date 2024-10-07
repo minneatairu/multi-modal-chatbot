@@ -1793,7 +1793,7 @@ button.info {
   font-size: 2rem;
 }
 
-.gpt-message.user .gpt-message-content {
+.gpt-message.user .gpt-message-content, div.gpt-message.assistant {
 padding:20px;
   
 }
