@@ -204,8 +204,9 @@ export default function Home() {
   const handleCloseModal = () => {
     setOpenModal(null); // Close the modal
     setActiveButton(null); // Reset active button when modal is closed
-    setIsVideoVisible(true); 
+    setIsVideoVisible(true); // Ensure the video becomes visible again after closing the modal
   };
+  
 
   // Handle each overlay click with different sound
   const handleOverlayClick = (audioRef: React.RefObject<HTMLAudioElement>) => {
