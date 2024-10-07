@@ -782,7 +782,7 @@ export default function Home() {
         {isVideoVisible && (
           <div className="video-container">
             <VideoPlayer />
-            <video width="100%" muted={muted} autoPlay loop>
+            <video width="100%"  autoPlay loop>
         <source src="v.mp4" type="video/mp4" />
       </video>
             <div
