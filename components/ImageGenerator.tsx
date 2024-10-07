@@ -65,17 +65,14 @@ export default function ImageGenerator() {
 
   return (
     <div className="container max-w-2xl mx-auto p-5">
-      <h1 className="py-6 text-center font-bold text-2xl">
-     IMAGINE A BRAIDED HAIRSTYLE 
-     
-      </h1>
+
 
       <form className="w-full flex" onSubmit={handleSubmit}>
         <input
           type="text"
           className="flex-grow"
           name="prompt"
-          placeholder="Enter a prompt to display an image"
+          placeholder="Type your description"
           ref={promptInputRef}
           disabled={loading}
         />
