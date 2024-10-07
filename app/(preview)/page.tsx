@@ -702,12 +702,12 @@ export default function Home() {
                     )}
                   </AnimatePresence>
                   <div className="uploadtips">
-                 + Drag an image{" "}
+                 + Drag ur braid{" "}
                   </div>
                   <input
                     ref={inputRef}
                     className="gpt-input"
-                    placeholder="Type ur Message"
+                    placeholder="Type ur Message here"
                     value={input}
                     onChange={handleInputChange}
                     onPaste={handlePaste}
