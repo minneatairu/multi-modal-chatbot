@@ -391,7 +391,7 @@ export default function Home() {
                 but also their families-both near and far. A child’s request for
                 yet another pair of limited-edition Air Jordans. A pregnant
                 niece navigating the quiet shame of unmarried motherhood. An
-                imprisoned son’s household. A once-employed daughter, now turned
+                imprisoned child’s household. A once-employed daughter, now turned
                 social media influencer. Tuition for a relative's ESL classes.
                 Medical bills for a brother's partner. An aging parent's care.
                 And in the background, their own bodies bear the costs of the
