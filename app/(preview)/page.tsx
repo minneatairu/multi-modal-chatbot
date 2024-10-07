@@ -18,7 +18,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
-import ImageGenerator from '@/components/ImageGenerator';
+import ImageGenerator from "@/components/ImageGenerator";
 
 // Custom Markdown renderer based on user or bot role
 const MarkdownRenderer = ({ content, role }) => {
@@ -348,7 +348,9 @@ export default function Home() {
            This AI-generated content was produced on {currentDate} using DA BRAIDR - a multimodal system designed by Minne Atairu
           </span>{" "}
         </h1>
-
+        <div>
+      <ImageGenerator />
+    </div>
         {/* Button Section */}
         <div className="button-section">
           <button
@@ -763,7 +765,6 @@ export default function Home() {
                   )
                 )}
               </div>
-              <ImageGenerator />
 
               <textarea
                 className="genetext"
