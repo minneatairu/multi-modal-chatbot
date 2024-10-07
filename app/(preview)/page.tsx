@@ -356,7 +356,7 @@ export default function Home() {
           >
             {" "}
             {"      TEXT DA BRAIDR".split(" ").map((word, index) => (
-              <span key={index} style={{ animationDelay: `${index * 0.3}s` }}>
+              <span key={index} style={{ animationDelay: `${index * 0.5}s` }}>
                 {word}&nbsp;
               </span>
             ))}
@@ -773,7 +773,7 @@ export default function Home() {
           <PrintButton onPrintClick={handlePrint} onCloseClick={handleClose} />
         )}
         {/* Video with Overlay Text */}
-        {isVideoVisible && !isFormExpanded && !openModal && (
+        {isVideoVisible && (
           <div className="video-container">
             <VideoPlayer />
             <div
