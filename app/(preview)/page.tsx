@@ -356,7 +356,7 @@ export default function Home() {
           >
             {" "}
             {"      TEXT DA BRAIDR".split(" ").map((word, index) => (
-              <span key={index} style={{ animationDelay: `${index * 0.5}s` }}>
+              <span key={index} style={{ animationDelay: `${index * 0.3}s` }}>
                 {word}&nbsp;
               </span>
             ))}
