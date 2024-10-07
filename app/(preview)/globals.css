@@ -1097,7 +1097,7 @@ button.right-zoom {
 }
 
 .text-prompt-form.expanded {
-  height: 55%;
+  height: 100%;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
