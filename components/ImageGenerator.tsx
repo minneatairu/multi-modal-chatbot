@@ -70,7 +70,7 @@ export default function ImageGenerator() {
       <form className="image-submit" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="flex-grw"
+            className="gpt-input"
           name="prompt"
           placeholder="Type your description"
           ref={promptInputRef}
