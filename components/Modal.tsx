@@ -42,13 +42,24 @@ const Modal: React.FC<ModalProps> = ({
   };
 
   // Conditionally apply inline styles for the black background
+  const isBlackBackground = className === "modal-bottom-right";
   const overlayStyle = {
-    backgroundColor: className === "modal-bottom-right" ? "black" : "white",
-    ...(className === "modal-bottom-right" && {
+    backgroundColor: isBlackBackground ? "black" : "white",
+    ...(isBlackBackground && {
       display: "flex", // Ensure flexbox is applied
       justifyContent: "center", // Horizontally center the content
       alignItems: "center", // Vertically center the content
     }),
+  };
+
+  // Style for the close button based on background color
+  const closeButtonStyle = {
+    color: isBlackBackground ? "white" : "black", // White text if background is black
+    cursor: "pointer",
+    fontSize: "24px", // Example styling for the close button
+    position: "absolute" as "absolute", // Make it absolute for positioning
+    top: "10px", // Adjust as needed
+    right: "10px", // Adjust as needed
   };
 
   return (
@@ -61,7 +72,7 @@ const Modal: React.FC<ModalProps> = ({
         ref={modalRef} // Ref to modal content for click detection
         className={`modal-content ${className} ${positionClass}`}
       >
-        <span className="close-button" onClick={onClose}>
+        <span className="close-button" style={closeButtonStyle} onClick={onClose}>
           X
         </span>
         {children}
