@@ -773,7 +773,7 @@ export default function Home() {
           <PrintButton onPrintClick={handlePrint} onCloseClick={handleClose} />
         )}
         {/* Video with Overlay Text */}
-        {isVideoVisible && (
+        {isVideoVisible && !isFormExpanded && !openModal && (
           <div className="video-container">
             <VideoPlayer />
             <div
