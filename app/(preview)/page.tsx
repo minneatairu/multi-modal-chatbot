@@ -195,7 +195,7 @@ export default function Home() {
 
   // Handle modal opening and ensure form is closed
   const openModalHandler = (modalType: string) => {
-    setOpenModal(modalType);
+    setOpenModal("modalType");
     setIsFormExpanded(false); 
     setIsVideoVisible(false); // Hide the video
 
@@ -216,20 +216,20 @@ export default function Home() {
   };
 
 // Use effect for form expansion and clicking outside
-useEffect(() => {
-  const handleClickOutside = (event: MouseEvent) => {
-    if (isFormExpanded && formRef.current && !formRef.current.contains(event.target as Node)) {
-      setIsFormExpanded(false);
-      setIsVideoVisible(true); // Show video when clicking outside the form
-    }
-  };
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isFormExpanded && formRef.current && !formRef.current.contains(event.target as Node)) {
+        setIsFormExpanded(false);
+        setIsVideoVisible(true); // Show video when clicking outside the form
+      }
+    };
 
-  document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, [isFormExpanded]);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isFormExpanded]);
 
 
   
