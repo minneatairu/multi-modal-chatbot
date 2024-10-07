@@ -572,7 +572,7 @@ export default function Home() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
-                    <div>Drag and drop files here</div>
+                    <div className="dragfile">Drag and drop files here</div>
                     <div className="gpt-drag-subtext">
                       {"(images and text)"}
                     </div>

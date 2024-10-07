@@ -155,7 +155,7 @@ ol {
 div.modal-column.border {
   border-left: 2px solid;
 }
-
+div.dragfile{color:yellow}
 /* Custom checkbox */
 input[type="checkbox"] {
   /* Hide the default checkbox */
