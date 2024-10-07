@@ -204,7 +204,7 @@ export default function Home() {
   const handleCloseModal = () => {
     setOpenModal(null); // Close the modal
     setActiveButton(null); // Reset active button when modal is closed
-    setIsVideoVisible(true); // Show the video when modal is closed
+    setIsVideoVisible(true); 
   };
 
   // Handle each overlay click with different sound
@@ -384,7 +384,7 @@ export default function Home() {
                 have drawn from my decade-long experience as a client to West
                 African immigrant braiders in Harlem, New York. Through the
                 business of braiding, my braiders sustain not only themselves
-                but also their families—both near and far. A child’s request for
+                but also their families-both near and far. A child’s request for
                 yet another pair of limited-edition Air Jordans. A pregnant
                 niece navigating the quiet shame of unmarried motherhood. An
                 imprisoned son’s household. A once-employed daughter, now turned
@@ -407,7 +407,7 @@ export default function Home() {
                 Translation determines the spacing between the rows,
                 tessellation forms geometric patterns, rotation curves the
                 braid’s path, reflection ensures symmetry, and dilation controls
-                expansion/ contraction.
+                expansion/contraction.
               </p>
               <p className="body-text">
                 Currently valued at $529.3 million, and projected to grow to
@@ -441,7 +441,7 @@ export default function Home() {
                 dress codes or be condemned as "unkempt," "extreme...faddish and
                 out of control"? Is it deemed appropriate in professional
                 settings, for a job interview, or to ensure job security and
-                advancement—or will it foreclose those opportunities? Can it be
+                advancement-or will it foreclose those opportunities? Can it be
                 modified to minimize its association with "criminality" or the
                 stereotype of "the angry Black woman"? Is it deemed "too ghetto"
                 or "too ethnic"? Too "Afrocentric"? Can a particular braid
@@ -450,7 +450,7 @@ export default function Home() {
                 braid, ultimately, affect the quality of care a patient
                 receives?
               </p>
-\
+
 <p className="body-text">
                 What happens when these critical decisions between the braider
                 and the braided are replaced by generative systems that
