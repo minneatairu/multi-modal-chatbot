@@ -20,7 +20,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
 // Custom Markdown renderer based on user or bot role
-const MarkdownRenderer = ({ content, role }) => {
+const MarkdownRenderer = ({ content, role, index }) => {
   return (
     <ReactMarkdown
       components={{
@@ -31,6 +31,7 @@ const MarkdownRenderer = ({ content, role }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.5,
+              delay: index * 0.3, // Delay based on index
             }}
           >
             {children}
@@ -592,7 +593,10 @@ export default function Home() {
 
     <div className="gpt-message-content">
     <div className="gpt-text">
-    <MarkdownRenderer content={message.content} role={message.role} />
+    // Where you use MarkdownRenderer
+{content.split('\n\n').map((paragraph, index) => (
+  <MarkdownRenderer key={index} content={paragraph} role={role} index={index} />
+))}
 
 </div>
 
