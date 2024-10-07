@@ -709,6 +709,8 @@ export default function Home() {
                     onChange={handleInputChange}
                     onPaste={handlePaste}
                   />
+                      <AttachmentIcon className="attachment-icon" onClick={() => inputRef.current?.click()} />
+
                       {/* Centered Submit Button */}
              <div className="button-container">
                     <button type="submit" className="chat-button">
