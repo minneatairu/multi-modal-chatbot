@@ -76,7 +76,7 @@ export default function ImageGenerator() {
           ref={promptInputRef}
           disabled={loading}
         />
-        <button className="button" type="submit" disabled={loading}>
+        <button className="genebtt expanded" type="submit" disabled={loading}>
           {loading ? "Generating..." : "GENERATE!"}
         </button>
       </form>
