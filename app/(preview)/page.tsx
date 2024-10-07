@@ -707,7 +707,7 @@ export default function Home() {
                   <input
                     ref={inputRef}
                     className="gpt-input"
-                    placeholder="✿✿✿ Type ur Message here ✿✿✿"
+                    placeholder="✿ Type ur Message here ✿"
                     value={input}
                     onChange={handleInputChange}
                     onPaste={handlePaste}
