@@ -1809,7 +1809,7 @@ div.gpt-name {
 /* Styling for bot/assistant messages */
 .bot-message {
   background-color: #006633;
-  padding: 20px;
+  padding: 20px;margin-block-start: 0;
   border-radius: 5px;
   margin-bottom: 10px;
   margin-block-start: 0;
@@ -1818,7 +1818,7 @@ div.gpt-name {
 }
 
 /* Styling for user messages */
-.user-message {
+.user-message {margin-block-start: 0;
   background-color: #0099FF;
   /* Different background for user messages */
   padding: 20px;
