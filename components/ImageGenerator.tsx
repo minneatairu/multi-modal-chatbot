@@ -70,7 +70,7 @@ export default function ImageGenerator() {
       <form className="w-full flex" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="flex-grow"
+          className="flex-grw"
           name="prompt"
           placeholder="Type your description"
           ref={promptInputRef}
