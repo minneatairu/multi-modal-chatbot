@@ -1793,10 +1793,7 @@ button.info {
   font-size: 2rem;
 }
 
-.gpt-message.user .gpt-message-content, div.gpt-message.assistant {
-padding:20px;
-  
-}
+
 
 div.gpt-name {
   color: #fff
@@ -1811,7 +1808,7 @@ div.gpt-name {
   border-radius:20px;
   margin-bottom: 10px;
   margin-block-start: 0;
-  color: #fff;
+  color: #fff;margin:20px
 }
 
 /* Styling for user messages */
@@ -1820,5 +1817,5 @@ div.gpt-name {
   padding: 20px;
   border-radius:20px;
   margin-bottom: 10px;
-  color: #fff;
+  color: #fff;margin:20px
 }
