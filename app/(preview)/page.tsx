@@ -153,6 +153,7 @@ export default function Home() {
   const handleFocusOrPlaceholderClick = () => {
     setIsFormExpanded(true); // Expand the form
     setOpenModal(null); // Hide the modal when form is expanded
+    setIsVideoVisible(false); // Hide the video
 
     const selectedHairstyle = getRandomHairstyle();
     const text1 = `Let's generate images of`;
@@ -195,12 +196,15 @@ export default function Home() {
   // Handle modal opening and ensure form is closed
   const openModalHandler = (modalType: string) => {
     setOpenModal(modalType);
-    setIsFormExpanded(false); // Collapse the form when modal is opened
+    setIsFormExpanded(false); 
+    setIsVideoVisible(false); // Hide the video
+
   };
 
   const handleCloseModal = () => {
     setOpenModal(null);
-    setActiveButton(null); // Reset active button when modal is closed
+    setActiveButton(null);
+    setIsVideoVisible(true); // Reset active button when modal is closed
   };
 
   // Handle each overlay click with different sound
