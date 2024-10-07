@@ -1452,7 +1452,7 @@ button.info {
 /* Styles when the form is expanded */
 .genebtt.expanded {
   color: white;
-margin-top:2rem;  padding: 3rem;
+margin-top:3rem;  padding: 3rem;
   border-radius: 50%;
   /* Rounder button */
   border: 2px solid;
