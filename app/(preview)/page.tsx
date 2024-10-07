@@ -446,7 +446,7 @@ export default function Home() {
                 stereotype of "the angry Black woman"? Is it deemed "too ghetto"
                 or "too ethnic"? Too "Afrocentric"? Can a particular braid
                 pattern ensure quicker passage through TSA checkpoints? How will
-                healthcare providers perceive it—unhygienic or unclean? Will the
+                healthcare providers perceive it-unhygienic or unclean? Will the
                 braid, ultimately, affect the quality of care a patient
                 receives?
               </p>
