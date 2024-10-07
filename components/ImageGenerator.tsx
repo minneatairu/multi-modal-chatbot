@@ -72,7 +72,7 @@ export default function ImageGenerator() {
           type="text"
             className="gpt-input"
           name="prompt"
-          placeholder="Type your description"
+          placeholder="✿ Type your description ✿"
           ref={promptInputRef}
           disabled={loading}
         />
