@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -194,7 +195,7 @@ export default function Home() {
 
   // Handle modal opening and ensure form is closed
   const openModalHandler = (modalType: string) => {
-    setOpenModal("modalType");
+    setOpenModal(modalType);
     setIsFormExpanded(false); 
     setIsVideoVisible(false); // Hide the video
 
@@ -202,9 +203,9 @@ export default function Home() {
 
   const handleCloseModal = () => {
     setOpenModal(null); // Close the modal
-    setIsVideoVisible(true); // Ensure the video becomes visible again after closing the modal
+    setActiveButton(null); // Reset active button when modal is closed
+    setIsVideoVisible(true); 
   };
-  
 
   // Handle each overlay click with different sound
   const handleOverlayClick = (audioRef: React.RefObject<HTMLAudioElement>) => {
@@ -214,24 +215,24 @@ export default function Home() {
     handleFocusOrPlaceholderClick(); // Expand form
   };
 
-// Use effect for form expansion and clicking outside
+  // Close the modal when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (isFormExpanded && formRef.current && !formRef.current.contains(event.target as Node)) {
-        setIsFormExpanded(false);
-        setIsVideoVisible(true); // Show video when clicking outside the form
+    const handleClickOutsideModal = (event: MouseEvent) => {
+      if (
+        openModal &&
+        modalRef.current &&
+        !modalRef.current.contains(event.target as Node)
+      ) {
+        setOpenModal(null); // Close the modal when clicking outside
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-
+    document.addEventListener("mousedown", handleClickOutsideModal);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutsideModal);
     };
-  }, [isFormExpanded]);
+  }, [openModal]);
 
-
-  
   const { messages, input, handleSubmit, handleInputChange, isLoading } =
     useChat({
       onError: () =>
@@ -440,12 +441,12 @@ export default function Home() {
                 dress codes or be condemned as "unkempt," "extreme...faddish and
                 out of control"? Is it deemed appropriate in professional
                 settings, for a job interview, or to ensure job security and
-                advancement-or will it foreclose those opportunities? Can it be
+                advancement—or will it foreclose those opportunities? Can it be
                 modified to minimize its association with "criminality" or the
                 stereotype of "the angry Black woman"? Is it deemed "too ghetto"
                 or "too ethnic"? Too "Afrocentric"? Can a particular braid
                 pattern ensure quicker passage through TSA checkpoints? How will
-                healthcare providers perceive it-unhygienic or unclean? Will the
+                healthcare providers perceive it—unhygienic or unclean? Will the
                 braid, ultimately, affect the quality of care a patient
                 receives?
               </p>
@@ -571,7 +572,7 @@ export default function Home() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
-                    <div className="dragfile">Drag and drop files here</div>
+                    <div>Drag and drop files here</div>
                     <div className="gpt-drag-subtext">
                       {"(images and text)"}
                     </div>
