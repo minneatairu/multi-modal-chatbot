@@ -320,9 +320,7 @@ export default function Home() {
         <audio ref={audioRef3} src="/mad.mp3" />
         <audio ref={audioRef4} src="/mad.mp3" />
         {/* Title Section */}
-        <video width="100%"  autoPlay loop>
-        <source src="/v.mp4" type="video/mp4" />
-        </video>
+
         <div className="title-section">
           <div className="title-wrapper">
             <span className="title">DA BRAIDR DA BRAIDR DA BRAIDR...</span>
