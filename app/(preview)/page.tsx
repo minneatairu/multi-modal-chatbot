@@ -698,9 +698,7 @@ export default function Home() {
                       </div>
                     )}
                   </AnimatePresence>
-                  <div className="uploadtips">
-                    Tip: Drag an image.{" "}
-                  </div>
+        
                   <input
                     ref={inputRef}
                     className="gpt-input"
