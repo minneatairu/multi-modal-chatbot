@@ -203,7 +203,6 @@ export default function Home() {
 
   const handleCloseModal = () => {
     setOpenModal(null); // Close the modal
-    setActiveButton(null); // Reset active button when modal is closed
     setIsVideoVisible(true); // Ensure the video becomes visible again after closing the modal
   };
   
@@ -216,24 +215,24 @@ export default function Home() {
     handleFocusOrPlaceholderClick(); // Expand form
   };
 
-  // Close the modal when clicking outside
-  useEffect(() => {
-    const handleClickOutsideModal = (event: MouseEvent) => {
-      if (
-        openModal &&
-        modalRef.current &&
-        !modalRef.current.contains(event.target as Node)
-      ) {
-        setOpenModal(null); // Close the modal when clicking outside
-      }
-    };
+// Use effect for form expansion and clicking outside
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (isFormExpanded && formRef.current && !formRef.current.contains(event.target as Node)) {
+      setIsFormExpanded(false);
+      setIsVideoVisible(true); // Show video when clicking outside the form
+    }
+  };
 
-    document.addEventListener("mousedown", handleClickOutsideModal);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutsideModal);
-    };
-  }, [openModal]);
+  document.addEventListener("mousedown", handleClickOutside);
 
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [isFormExpanded]);
+
+
+  
   const { messages, input, handleSubmit, handleInputChange, isLoading } =
     useChat({
       onError: () =>
