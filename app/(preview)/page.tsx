@@ -348,9 +348,7 @@ export default function Home() {
            This AI-generated content was produced on {currentDate} using DA BRAIDR - a multimodal system designed by Minne Atairu
           </span>{" "}
         </h1>
-        <div>
-      <ImageGenerator />
-    </div>
+
         {/* Button Section */}
         <div className="button-section">
           <button
@@ -765,7 +763,9 @@ export default function Home() {
                   )
                 )}
               </div>
-
+              <div>
+      <ImageGenerator />
+    </div>
               <textarea
                 className="genetext"
                 placeholder=""
