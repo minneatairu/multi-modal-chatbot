@@ -67,7 +67,7 @@ export default function ImageGenerator() {
     <div className="container max-w-2xl mx-auto p-5">
 
 
-      <form className="w-full flex" onSubmit={handleSubmit}>
+      <form className="image-submit" onSubmit={handleSubmit}>
         <input
           type="text"
           className="flex-grw"
@@ -77,7 +77,7 @@ export default function ImageGenerator() {
           disabled={loading}
         />
         <button className="genebtt expanded" type="submit" disabled={loading}>
-          {loading ? "Generating..." : "GENERATE!"}
+          {loading ? "Generating..." : "GENERATE"}
         </button>
       </form>
 

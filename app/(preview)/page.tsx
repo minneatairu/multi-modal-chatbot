@@ -774,9 +774,7 @@ export default function Home() {
               />
             </div>
 
-            <button className="genebtt expanded" type="submit">
-              GENERATE
-            </button>
+      
           </form>
         )}
 
