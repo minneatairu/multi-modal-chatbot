@@ -1761,14 +1761,14 @@ button.info {
 }
 
 .gpt-message.user .gpt-name {
-  padding-right: 5px;
+
   text-align: right;
   font-size: 20px;
   font-family: t26-carbon, monospace;
 }
 
 .gpt-message.assistant .gpt-name {
-  padding-left: 5px;
+
   text-align: left;
   font-size: 20px;
   font-family: t26-carbon, monospace;
@@ -1804,18 +1804,18 @@ div.gpt-name {
 /* Styling for bot/assistant messages */
 .bot-message {
   box-shadow: 0 0 20px 3px #006633;
-  padding: 20px;margin-block-start: 0;
+  padding: 1rem;margin-block-start: 0;
   border-radius:20px;
   margin-bottom: 10px;
   margin-block-start: 0;
-  color: #fff;margin:20px
+  color: #fff;margin:0 20px
 }
 
 /* Styling for user messages */
 .user-message {margin-block-start: 0;
   box-shadow: 0 0 20px 3px #0099FF;
-  padding: 20px;
+  padding:1rem;
   border-radius:20px;
   margin-bottom: 10px;
-  color: #fff;margin:20px
+  color: #fff;margin:0 20px
 }
