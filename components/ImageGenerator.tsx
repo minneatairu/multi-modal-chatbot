@@ -1,58 +1,66 @@
 'use client';
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
 import Image from "next/image";
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+interface Prediction {
+  id: string;
+  status: string;
+  output?: string[];
+  detail?: string;
+}
 
 export default function ImageGenerator() {
-  const [prediction, setPrediction] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);  // Add a loading state
-  const promptInputRef = useRef(null);
+  const [prediction, setPrediction] = useState<Prediction | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const promptInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    promptInputRef.current.focus();
+    if (promptInputRef.current) {
+      promptInputRef.current.focus();
+    }
   }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
-    setLoading(true); // Start loading
+    setLoading(true);
+
+    const prompt = promptInputRef.current?.value || '';
     const response = await fetch("/api/predictions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        prompt: e.target.prompt.value,
+        prompt,
       }),
     });
 
-    let prediction = await response.json();
+    let prediction: Prediction = await response.json();
     if (response.status !== 201) {
-      setError(prediction.detail);
-      setLoading(false); // Stop loading on error
+      setError(prediction.detail || "An error occurred");
+      setLoading(false);
       return;
     }
     setPrediction(prediction);
 
     // Polling the status of the prediction
-    while (
-      prediction.status !== "succeeded" &&
-      prediction.status !== "failed"
-    ) {
+    while (prediction.status !== "succeeded" && prediction.status !== "failed") {
       await sleep(1000);
       const statusResponse = await fetch(`/api/predictions/${prediction.id}`);
       prediction = await statusResponse.json();
       if (statusResponse.status !== 200) {
-        setError(prediction.detail);
+        setError(prediction.detail || "An error occurred");
         setLoading(false);
         return;
       }
       setPrediction(prediction);
     }
-    setLoading(false); // Stop loading when the result is fetched
+    setLoading(false);
   };
 
   return (
@@ -71,10 +79,10 @@ export default function ImageGenerator() {
           name="prompt"
           placeholder="Enter a prompt to display an image"
           ref={promptInputRef}
-          disabled={loading}  // Disable input while loading
+          disabled={loading}
         />
         <button className="button" type="submit" disabled={loading}>
-          {loading ? "Generating..." : "Go!"} {/* Loading state on button */}
+          {loading ? "Generating..." : "Go!"}
         </button>
       </form>
 
