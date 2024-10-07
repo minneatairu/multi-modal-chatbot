@@ -152,6 +152,17 @@ ol {
   left: 0;
 }
 
+.video-container {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade */
+}
+
+.video-container.hidden {
+  opacity: 0; /* Hide with fade */
+  pointer-events: none; /* Disable interaction when hidden */
+}
+
+
 div.modal-column.border {
   border-left: 2px solid;
 }

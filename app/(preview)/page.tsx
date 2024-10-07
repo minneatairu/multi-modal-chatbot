@@ -154,9 +154,10 @@ export default function Home() {
   // Handle form expansion and ensure modal is closed
   const handleFocusOrPlaceholderClick = () => {
     setIsFormExpanded(true); // Expand the form
-    setOpenModal(null); // Hide the modal when form is expanded
-    setIsVideoVisible(false); // Hide the video
-
+    setOpenModal(null); 
+    setTimeout(() => {
+      setIsVideoVisible(false);
+    }, 100); // Delay hiding the video
     const selectedHairstyle = getRandomHairstyle();
     const text1 = `Let's generate images of`;
     const text2 = ` ✿✿✿ ${selectedHairstyle} ✿✿✿ `;
@@ -197,7 +198,9 @@ export default function Home() {
   const openModalHandler = (modalType: string) => {
     setOpenModal(modalType);
     setIsFormExpanded(false); 
-    setIsVideoVisible(false); // Hide the video
+    setTimeout(() => {
+      setIsVideoVisible(false);
+    }, 100); // Delay hiding the video
 
   };
 
