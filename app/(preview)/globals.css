@@ -582,10 +582,6 @@ VIDEO {
     grid-template-columns: 1fr !important;
   }
 
-  video {
-    width: auto;
-    height: 100vh;
-  }
 
   .modal-column {
     padding: 20px !important;
