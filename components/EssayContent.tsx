@@ -34,7 +34,7 @@ Every few weeks, Black women, like myself, engage in this ethnomathematically-gu
             
 
             <p className="body-text">
-            What happens when these critical decisions between the braider and the braided are replaced by generative systems? To what extent might image generation replace the ritual of doomscrolling Instagram for braid inspirations? To what extent can conversational agents exploit and commodify the psychohairapeutic exchanges between braiders and clients-exchanges rooted in the shared navigation of a world that polices Black hair? Can such a system meaningfully model braiding traditions nurtured by Black women in backyards, courtyards, front porches, and stoops? 
+            What happens when these critical decisions between the braider and the braided are replaced by generative systems? To what extent might image generation substitute the ritual of doomscrolling Instagram for braid inspirations? To what extent can conversational agents exploit and commodify the psychohairapeutic exchanges between braiders and clients-exchanges forged in the shared struggle against a world that polices Black hair? Can such a system meaningfully model braiding traditions nurtured by Black women in backyards, courtyards, front porches, stoops, and even in the plantation? 
             </p>
 
         </div>
