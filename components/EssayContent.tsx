@@ -1,3 +1,5 @@
+'use client';
+
 // EssayContent.tsx
 import React from 'react';
 
@@ -7,13 +9,13 @@ const EssayContent: React.FC = () => {
         <div>
             <h2>WHAT IS DA BRAIDR?</h2>
             <p className="body-text">
-                Da Braidr is a conceptual AI Startup designed by Minne Atairu. My goal is to investigate how the deployment of Generative AI systems
-                might socioeconomically impact Black hair braiding communities. To what degree might image generation transform my practice of seeking braid inspirations from beauty influencers on Instagram? 
+                Da Braidr is a conceptual AI Startup, an art intervention designed by Minne Atairu. My goal is to investigate how the deployment of Generative AI systems
+                might socioeconomically impact Black hair braiding communities. To what degree might image generation transform my practice of seeking braid inspirations from beauty influencers on Instagram?
                 To what degree might conversational agents provide the psychohairpeutic services that braiders and my fellow braided through shared positive experiences as well as negative experiences (Black hair bias)?
 
-                </p>
+            </p>
 
-                <p className="body-text">
+            <p className="body-text">
                 To understand these questions, Da Braidr utilizes a multimodal generative
                 architecture that integrates image generation, image
                 recognition, and conversational agents. To design Da Braidr, I

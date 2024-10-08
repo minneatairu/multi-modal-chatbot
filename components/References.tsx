@@ -1,4 +1,5 @@
-// EssayContent.tsx
+'use client';
+
 import React from 'react';
 
 const References: React.FC = () => {
