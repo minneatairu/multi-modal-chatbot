@@ -16,10 +16,7 @@ const EssayContent: React.FC = () => {
           
             <h2 className="heading-text">II<br></br><br></br>WHAT IS DA BRAIDR?</h2>
             <p className="body-text">
-                Da Braidr is a conceptual AI Startup, and art intervention designed by Minne Atairu.
-                The project aims to investigate how the deployment of Generative AI systems, driven primarily by capital interests, could socioeconomically impact Black hair braiding communities.
-                To what degree might image generation transform my practice of seeking braid inspirations from beauty influencers on Instagram?
-                Additionally, how might conversational AI agents deliver psychohairapeutic services that hair braiders and fellow braid enthusiasts currently offer through shared positive and negative experiences?
+            Da Braidr is a conceptual AI startup and art intervention envisioned by Minne Atairu. The mission is to critically examine how Generative AI might reconfigure socioeconomic dynamics within Black hair braiding communities. To what extent might image generation replace the deeply personal ritual of doomscrolling Instagram for braid inspirations? And, to what extent can conversational agents exploit and commodify the psychohairapeutic exchanges between braiders and clients—exchanges rooted in the shared navigation of a world that polices Black hair?
             </p>
 
             <p className="body-text">
