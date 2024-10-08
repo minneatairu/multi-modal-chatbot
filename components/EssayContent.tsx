@@ -68,7 +68,7 @@ const EssayContent: React.FC = () => {
                 beauty standards. What might appear as a simple grooming choice
                 is, in fact, a decision with far-reaching consequences for one’s
                 economic and social mobility. As Joseph-Salisbury & Connelly
-                (2018) remind us: 'If your hair is relaxed, white people are
+                (2018) remind us: "If your hair is relaxed, white people are
                 relaxed. If your hair is nappy, they're not happy". Which braid
                 will pass the test of the White gaze? Will it conform to school
                 dress codes or be condemned as "unkempt," "extreme...faddish and
