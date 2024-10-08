@@ -7,6 +7,8 @@ const EssayContent: React.FC = () => {
     return (
 
         <div>
+            <h2>AI IS A MARKETING TERM
+            </h2>
             <h2>WHAT IS DA BRAIDR?</h2>
             <p className="body-text">
                 Da Braidr is a conceptual AI Startup, and art intervention designed by Minne Atairu.
