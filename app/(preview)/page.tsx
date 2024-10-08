@@ -19,6 +19,8 @@ import { toast } from "sonner";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import ImageGenerator from "@/components/ImageGenerator";
+import EssayContent from "@/components/EssayContent";
+import References from "@/components/References";
 
 // Custom Markdown renderer based on user or bot role
 const MarkdownRenderer = ({ content, role }) => {
@@ -381,175 +383,13 @@ export default function Home() {
   <Modal onClose={handleCloseModal} className="modal-grid">
             {/* Modal content */}
             <div className="modal-column">
-              <h2>WHAT IS DA BRAIDR?</h2>
-              <p className="body-text">
-                Da Braidr is a conceptual AI Startup designed by Minne Atairu. My goal is to investigate how the deployment of Generative AI systems
-               might socioeconomically impact Black hair braiding communities. To what degree might image generation transform my practice of seeking braid inspirations from beauty influencers on Instagram? To what degree might conversational agents provide the psychohairpeutic services that braiders and my fellow braided through shared positive experiences as well as negative experiences (Black hair bias)?
-                
-                
-              To understand these questions, Da Braidr utilizes a multimodal generative
-                architecture that integrates image generation, image
-                recognition, and conversational agents. To design Da Braidr, I
-                have drawn from my decade-long experience as a client to West
-                African immigrant braiders in Harlem, New York. Through the
-                business of braiding, my braiders sustain not only themselves
-                but also their families-both near and far. A child’s request for
-                yet another pair of limited-edition Air Jordans. A pregnant
-                niece navigating the quiet shame of unmarried motherhood. An
-                imprisoned child’s household. A once-employed child, now turned
-                social media influencer. Tuition for a relative's ESL classes.
-                Medical bills for a sibling's partner. An aging parent's care.
-                And in the background, their own bodies bear the costs of the
-                craft, with chronic back, neck, and wrist pain—unrelenting
-                reminders of the labor that sustains their livelihood.
-              </p>
-              <p className="body-text">
-                The art of braiding cannot be divorced from the Black struggle for liberation. West African women, in anticipation for the horrors of the Middle Passage,
-                wove life-sustaining rice, okra, and other seeds into their
-                cornrows. Others braided gold and small valuables 
-              within their cornrows hoping to preserve some wealth even in dire circumstances.
-                Enslaved Afro-Colombian women, too, braided maps and messages of
-                escape into intricate cornrows. The art of braiding is an intergenerational practice guided by intuitive ethnomathematical concepts.
-                Translation determines the spacing between the rows,
-                tessellation forms geometric patterns, rotation curves the
-                braid’s path, reflection ensures symmetry, and dilation controls
-                expansion/contraction.
-              </p>
-              <p className="body-text">
-                Currently valued at $529.3 million, and projected to grow to
-                $625.3 million by 2032, the Black hair braiding industry is a
-                low-cost, high-return ecosystem. This economy, primarily driven
-                by Black women entrepreneurs and sustained by the preferences of
-                Black femme consumers thrives despite operating within "the
-                bounds of the white supremacist patriarchal state,
-                macrocosmically, and the Black male head of the patriarchal
-                family, microcosmically." Hair discrimination—that
-                all-too-familiar form of racial bias characterized by the
-                hyperregulation and hypersurveillance of Black hair
-                textures—plays a critical role in shaping both consumer demand
-                and pricing models. Lightweight, non-voluminous braids made with
-                human-like synthetic hair, often prized for their semblance to
-                non-coily textures, command a median price of $250, double the
-                cost of Afrocentric styles braided with kanekalon, a coarse,
-                coily synthetic fiber.
-              </p>
+            <EssayContent />
 
-              <p className="body-text">
-                Though the 2019 U.S. CROWN Act prohibits hair-based
-                discrimination, the transactions between the braider and the
-                braided remain tethered to the enduring weight of Eurocentric
-                beauty standards. What might appear as a simple grooming choice
-                is, in fact, a decision with far-reaching consequences for one’s
-                economic and social mobility. As Joseph-Salisbury & Connelly
-                (2018) remind us: 'If your hair is relaxed, white people are
-                relaxed. If your hair is nappy, they're not happy". Which braid
-                will pass the test of the White gaze? Will it conform to school
-                dress codes or be condemned as "unkempt," "extreme...faddish and
-                out of control"? Is it deemed appropriate in professional
-                settings, for a job interview, or to ensure job security and
-                advancement—or will it foreclose those opportunities? Can it be
-                modified to minimize its association with "criminality" or the
-                stereotype of "the angry Black woman"? Is it deemed "too ghetto"
-                or "too ethnic"? Too "Afrocentric"? Can a particular braid
-                pattern ensure quicker passage through TSA checkpoints? How will
-                healthcare providers perceive it—unhygienic or unclean? Will the
-                braid, ultimately, affect the quality of care a patient
-                receives?
-              </p>
+           </div>
+           <div className="modal-column">
+            <References />
 
-<p className="body-text">
-                What happens when these critical decisions between the braider
-                and the braided are replaced by generative systems that
-                abstract, optimize, and commodify them? What happens when the
-                labor of hair braiding, long undervalued and overlooked, is
-                severed from the expertise of Black women who have sustained it
-                for centuries? Can such a system meaningfully model braiding
-                traditions nurtured in backyards, courtyards, front porches, and
-                stoops? And to what extent can a system serve the diverse
-                grooming needs of Black femme consumers-from hairstyle
-                selection, braider identification, synthetic fiber sourcing,
-                hairstyle maintenance, hair product reviews, to recommendations?
-                What happens when such a system, designed in the pursuit of
-                capital, is planted within Black communities and harvested for
-                profit?
-              </p>
-            </div>
-            <div className="modal-column  border">
-              <h2>NOTES ON MODEL FINE-TUNING</h2>
-
-              <p className="body-text">
-                The image generation system is fine-tuned using marketing
-                language and visual references inspired by West African Braiders
-                in Harlem. Inspired by the marketing language of West African
-                Braiders in Harlem, the image generation system beckons:
-                "Braiding Miss?" while promising visualizations of "the latest,"
-                "Godly hairstyles," and even "corn rolls." These generated
-                images are further refined using references from West African
-                salon posters, which traditionally depict a variety of intricate
-                braided styles.
-              </p>
-   
-       
-              <p className="body-text">
-                The multimodal conversational interface includes an image recognition system. The system is finetuned to masquerades as a "PsychoHairapist"
-                for clients seeking makeovers. The system is finetuned with
-                research about psychohairapy-a community health model created to
-                secure space for Black women to address mental health and
-                well-being through hair care.
-              </p>
-              <br></br>
-              <br></br>
-              <h2>REFERENCES</h2>
-              <p className="body-text">
-                Ashley, W., & Brown, J. C. (2015). Attachment tHAIRapy: A
-                culturally relevant treatment paradigm for African American
-                foster youth. Journal of Black Studies, 46(6), 587-604.
-              </p>
-              <p className="body-text">
-                Gilmer, G. (2007). Mathematical patterns in African American
-                hairstyles. State University of New York at Buffalo, Mathematics
-                Department.
-              </p>
-              <p className="body-text">
-                Iromuanya, J. (2018). Are we all feminists? The global black
-                hair industry and marketplace in Chimamanda Ngozi Adichie's
-                Americanah. Meridians, 16(1), 163-183.
-              </p>
-              <p className="body-text">
-                Jones, R. M. (2020). What the hair: Employment discrimination
-                against Black people based on hairstyles. Harv. BL Law J., 36,
-                27.
-              </p>
-              <p className="body-text">
-                Joseph-Salisbury, R., & Connelly, L. (2018). ‘If your hair is
-                relaxed, white people are relaxed. If your hair is nappy,
-                they’re not happy’: Black hair as a site of ‘post-racial’ social
-                control in English schools. Social Sciences, 7(11), 219.
-              </p>
-              <p className="body-text">
-                Mbilishaka, A. (2018). PsychoHairapy: Using hair as an entry
-                point into Black women’s spiritual and mental health. Meridians,
-                16(2), 382-392.
-              </p>
-              <p className="body-text">
-                Mbilishaka, A. M. (2018). Black Lives (and stories) Matter: Race
-                narrative therapy in Black hair care spaces. Community
-                Psychology in Global Perspective, 4(2), 22-33.
-              </p>
-              <p className="body-text">
-                Mbilishaka, A. M. (2021). PsychoHairapy through beauticians and
-                barbershops: The healing relational triad of Black hair care
-                professionals, mothers, and daughters. Therapeutic Cultural
-                Routines to Build Family Relationships: Talk, Touch & Listen
-                While Combing Hair©, 173-181.
-              </p>
-              <p className="body-text">
-                Thomas C. G. (2023). Carcinogenic materials in synthetic braids:
-                An unrecognized risk of hair products for Black women. Lancet
-                regional health. Americas, 22, 100517.
-                https://doi.org/10.1016/j.lana.2023.100517
-              </p>
-            </div>
+           </div>
           </Modal>
         )}
         {/* Text Da Braidr Modal */}
