@@ -404,15 +404,12 @@ export default function Home() {
                 reminders of the labor that sustains their livelihood.
               </p>
               <p className="body-text">
-                The art of braiding cannot be divorced from its origins in
-                resistance and survival. West African women, stripped of all
-                belongings as they traversed the horrors of the Middle Passage,
+                The art of braiding cannot be divorced from the Black struggle for liberation. West African women, in anticipation for the horrors of the Middle Passage,
                 wove life-sustaining rice, okra, and other seeds into their
-                cornrows. Some braided gold and other small valuables into their
-                hair hoping to preserve some wealth even in dire circumstances.
+                cornrows. Others braided gold and small valuables 
+              within their cornrows hoping to preserve some wealth even in dire circumstances.
                 Enslaved Afro-Colombian women, too, braided maps and messages of
-                escape into intricate cornrows. This tradition, passed through
-                generations, is guided by intuitive ethnomathematical concepts.
+                escape into intricate cornrows. The art of braiding is an intergenerational practice guided by intuitive ethnomathematical concepts.
                 Translation determines the spacing between the rows,
                 tessellation forms geometric patterns, rotation curves the
                 braid’s path, reflection ensures symmetry, and dilation controls
