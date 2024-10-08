@@ -9,6 +9,10 @@ const EssayContent: React.FC = () => {
         <div>
             <h2>AI IS A MARKETING TERM
             </h2>
+
+            <p>Critical AI researchers have long argued that "AI" is not a neutral or purely technological term,
+                but rather a marketing construct designed to evoke visions of omnipotence.
+                But strip away the myth and what remains is the same predatory arrangement: a scheme that siphons wealth from the most vulnerable and funnels it into the hands of the powerful.  </p>
             <h2>WHAT IS DA BRAIDR?</h2>
             <p className="body-text">
                 Da Braidr is a conceptual AI Startup, and art intervention designed by Minne Atairu.
