@@ -162,8 +162,8 @@ export default function Home() {
     const selectedHairstyle = getRandomHairstyle();
     const text1 = `✦✦✦✦✦ I'm Da Braidr ✦✦✦✦✦`;
     const text2 = `Ur Hairstylist`;
-    const text2 = `Let's generate images of`;
-    const text3 = `✿✿✿ ${selectedHairstyle} ✿✿✿`;
+    const text3 = `Let's generate images of`;
+    const text4 = `✿✿✿ ${selectedHairstyle} ✿✿✿`;
 
     // Split both sentences and concatenate them
     setWords([
@@ -172,6 +172,8 @@ export default function Home() {
       ...text2.split(" "),
       "<br>",
       ...text3.split(" "),
+      "<br>",
+      ...text4.split(" "),
     ]);
 
     // Programmatically focus the textarea when the placeholder or form is clicked
