@@ -19,7 +19,7 @@ const References: React.FC = () => {
       Department.
     </p>
     <p className="body-text">
-      Iromuanya, J. (2018). Are we all feminists? The global black
+      Iromuanya, J. (2018). Are we all feminists? The global black v
       hair industry and marketplace in Chimamanda Ngozi Adichie's
       Americanah. Meridians, 16(1), 163-183.
     </p>

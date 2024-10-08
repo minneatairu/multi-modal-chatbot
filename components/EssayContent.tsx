@@ -7,7 +7,7 @@ const EssayContent: React.FC = () => {
     return (
 
         <div>
-            <h2>AI IS A MARKETING TERM
+            <h2>I<br></br>AI IS A MARKETING TERM
             </h2>
 
             <p>Critical AI researchers have long argued that "AI" is not a neutral or purely technological term,
