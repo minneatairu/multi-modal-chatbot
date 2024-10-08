@@ -1641,7 +1641,7 @@ margin-top:3rem;  padding: 3rem;
 .gpt-input {
   background-color: #000;
   border-radius: 5px;
-  width: 100vh;
+  width: 100vh;display: block;
   outline: none;
   color: #fff;
   font-size: 20px;
