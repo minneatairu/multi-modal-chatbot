@@ -383,7 +383,10 @@ export default function Home() {
               <p className="body-text">
                 Da Braidr is a conceptual AI Startup designed by Minne Atairu. The goal is to investigate
                 the socioeconomic impact of Generative AI on Black hair braiding
-                communities. The system utilizes a multimodal generative
+                communities. To what degree might image generation impact hair braiding practices? To what degree might conversational agents provide the psychohairpeutic services that braiders and the fellow braided experience in Black geographic hair braiding enters?
+                
+                
+               The system utilizes a multimodal generative
                 architecture that integrates image generation, image
                 recognition, and conversational agents. To design Da Braidr, I
                 have drawn from my decade-long experience as a client to West
