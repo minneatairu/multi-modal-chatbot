@@ -385,7 +385,7 @@ export default function Home() {
             <EssayContent />
 
            </div>
-           <div className="modal-column">
+           <div className="modal-column border">
             <References />
 
            </div>
