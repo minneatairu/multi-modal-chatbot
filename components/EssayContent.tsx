@@ -1,14 +1,9 @@
-'use client';
-
-// EssayContent.tsx
 import React from 'react';
 
 const EssayContent: React.FC = () => {
     return (
-
         <div>
-            <h2>AI IS A MARKETING TERM
-            </h2>
+            <h2>AI IS A MARKETING TERM</h2>
             <h2>WHAT IS DA BRAIDR?</h2>
             <p className="body-text">
                 Da Braidr is a conceptual AI Startup, and art intervention designed by Minne Atairu.
@@ -24,12 +19,12 @@ const EssayContent: React.FC = () => {
                 have drawn from my decade-long experience as a client to West
                 African immigrant braiders in Harlem, New York. Through the
                 business of braiding, my braiders sustain not only themselves
-                but also their families-both near and far. A child’s request for
+                but also their families—both near and far. A child&apos;s request for
                 yet another pair of limited-edition Air Jordans. A pregnant
                 niece navigating the quiet shame of unmarried motherhood. An
-                imprisoned child’s household. A once-employed child, now turned
-                social media influencer. Tuition for a relative's ESL classes.
-                Medical bills for a sibling's partner. An aging parent's care.
+                imprisoned child&apos;s household. A once-employed child, now turned
+                social media influencer. Tuition for a relative&apos;s ESL classes.
+                Medical bills for a sibling&apos;s partner. An aging parent&apos;s care.
                 And in the background, their own bodies bear the costs of the
                 craft, with chronic back, neck, and wrist pain—unrelenting
                 reminders of the labor that sustains their livelihood.
@@ -43,7 +38,7 @@ const EssayContent: React.FC = () => {
                 escape into intricate cornrows. The art of braiding is an intergenerational practice guided by intuitive ethnomathematical concepts.
                 Translation determines the spacing between the rows,
                 tessellation forms geometric patterns, rotation curves the
-                braid’s path, reflection ensures symmetry, and dilation controls
+                braid&apos;s path, reflection ensures symmetry, and dilation controls
                 expansion/contraction.
             </p>
             <p className="body-text">
@@ -51,10 +46,10 @@ const EssayContent: React.FC = () => {
                 $625.3 million by 2032, the Black hair braiding industry is a
                 low-cost, high-return ecosystem. This economy, primarily driven
                 by Black women entrepreneurs and sustained by the preferences of
-                Black femme consumers thrives despite operating within "the
+                Black femme consumers thrives despite operating within &quot;the
                 bounds of the white supremacist patriarchal state,
                 macrocosmically, and the Black male head of the patriarchal
-                family, microcosmically." Hair discrimination—that
+                family, microcosmically.&quot; Hair discrimination—that
                 all-too-familiar form of racial bias characterized by the
                 hyperregulation and hypersurveillance of Black hair
                 textures—plays a critical role in shaping both consumer demand
@@ -70,18 +65,18 @@ const EssayContent: React.FC = () => {
                 discrimination, the transactions between the braider and the
                 braided remain tethered to the enduring weight of Eurocentric
                 beauty standards. What might appear as a simple grooming choice
-                is, in fact, a decision with far-reaching consequences for one’s
-                economic and social mobility. As Joseph-Salisbury & Connelly
-                (2018) remind us: "If your hair is relaxed, white people are
-                relaxed. If your hair is nappy, they're not happy". Which braid
+                is, in fact, a decision with far-reaching consequences for one&apos;s
+                economic and social mobility. As Joseph-Salisbury &amp; Connelly
+                (2018) remind us: &quot;If your hair is relaxed, white people are
+                relaxed. If your hair is nappy, they&apos;re not happy.&quot; Which braid
                 will pass the test of the White gaze? Will it conform to school
-                dress codes or be condemned as "unkempt," "extreme...faddish and
-                out of control"? Is it deemed appropriate in professional
+                dress codes or be condemned as &quot;unkempt,&quot; &quot;extreme...faddish and
+                out of control&quot;? Is it deemed appropriate in professional
                 settings, for a job interview, or to ensure job security and
                 advancement—or will it foreclose those opportunities? Can it be
-                modified to minimize its association with "criminality" or the
-                stereotype of "the angry Black woman"? Is it deemed "too ghetto"
-                or "too ethnic"? Too "Afrocentric"? Can a particular braid
+                modified to minimize its association with &quot;criminality&quot; or the
+                stereotype of &quot;the angry Black woman&quot;? Is it deemed &quot;too ghetto&quot;
+                or &quot;too ethnic&quot;? Too &quot;Afrocentric&quot;? Can a particular braid
                 pattern ensure quicker passage through TSA checkpoints? How will
                 healthcare providers perceive it—unhygienic or unclean? Will the
                 braid, ultimately, affect the quality of care a patient
@@ -97,7 +92,7 @@ const EssayContent: React.FC = () => {
                 for centuries? Can such a system meaningfully model braiding
                 traditions nurtured in backyards, courtyards, front porches, and
                 stoops? And to what extent can a system serve the diverse
-                grooming needs of Black femme consumers-from hairstyle
+                grooming needs of Black femme consumers—from hairstyle
                 selection, braider identification, synthetic fiber sourcing,
                 hairstyle maintenance, hair product reviews, to recommendations?
                 What happens when such a system, designed in the pursuit of
