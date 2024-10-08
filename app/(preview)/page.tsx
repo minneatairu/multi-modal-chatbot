@@ -384,10 +384,10 @@ export default function Home() {
               <h2>WHAT IS DA BRAIDR?</h2>
               <p className="body-text">
                 Da Braidr is a conceptual AI Startup designed by Minne Atairu. My goal is to investigate how the deployment of Generative AI systems
-               might socioeconomically impact Black hair braiding communities. I ask: To what degree might image generation transform my practice of seeking braid inspirations from beauty influencers on Instagram? To what degree might conversational agents provide the psychohairpeutic services that braiders and my fellow braided through shared positive experiences as well as negative experiences (Black hair bias)?
+               might socioeconomically impact Black hair braiding communities. To what degree might image generation transform my practice of seeking braid inspirations from beauty influencers on Instagram? To what degree might conversational agents provide the psychohairpeutic services that braiders and my fellow braided through shared positive experiences as well as negative experiences (Black hair bias)?
                 
                 
-               The system utilizes a multimodal generative
+              To understand these questions, Da Braidr utilizes a multimodal generative
                 architecture that integrates image generation, image
                 recognition, and conversational agents. To design Da Braidr, I
                 have drawn from my decade-long experience as a client to West
@@ -396,9 +396,9 @@ export default function Home() {
                 but also their families-both near and far. A child’s request for
                 yet another pair of limited-edition Air Jordans. A pregnant
                 niece navigating the quiet shame of unmarried motherhood. An
-                imprisoned child’s household. A once-employed daughter, now turned
+                imprisoned child’s household. A once-employed child, now turned
                 social media influencer. Tuition for a relative's ESL classes.
-                Medical bills for a brother's partner. An aging parent's care.
+                Medical bills for a sibling's partner. An aging parent's care.
                 And in the background, their own bodies bear the costs of the
                 craft, with chronic back, neck, and wrist pain—unrelenting
                 reminders of the labor that sustains their livelihood.
