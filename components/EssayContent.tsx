@@ -10,9 +10,9 @@ const EssayContent: React.FC = () => {
             <h2>I<br></br>AI IS A MARKETING TERM
             </h2>
 
-            <p>Critical AI researchers have long argued that "AI" is not a neutral or purely technological term,
-                but rather a marketing construct designed to evoke visions of omnipotence.
-                But strip away the myth and what remains is the same predatory arrangement: a scheme that siphons wealth from the most vulnerable and funnels it into the hands of the powerful.  </p>
+            <p>Critical AI researchers have long argued that "AI" is not a technological term, but rather a marketing term wielded by technocrats to conjure visions of near-magical technological capabilities. Strip away the “hype” and what emerges is a familiar predatory system: one that extracts wealth from the vulnerable and consolidates power in the hands of the few. To dissect the capitalist mechanisms behind these developments, I turn to a world closely tied to my own experience—Black hair braiding.  </p>
+          <p>Every few weeks, Black women, like myself, engage in the ritual of braiding and re-braiding. On average, we dedicate six hours per session and invest approximately $250 per appointment.  This microeconomy, sustained by Black women over generations, is structured around decentralized networks of care—finding styles, locating braiders, sourcing products, and maintaining the braid. As generative AI advances, I’m intrigued by how it might encroach on this interdependent economy. Can these networks of care be abstracted, encoded, and modeled into a generative architecture? To what extent can such a system be commodified? What economic model would support its viability? And critically, what price point would users be willing to accept for such a product?</p>
+          
             <h2>II<br></br>WHAT IS DA BRAIDR?</h2>
             <p className="body-text">
                 Da Braidr is a conceptual AI Startup, and art intervention designed by Minne Atairu.
