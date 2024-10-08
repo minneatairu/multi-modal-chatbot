@@ -381,7 +381,7 @@ export default function Home() {
             <div className="modal-column">
               <h2>WHAT IS DA BRAIDR?</h2>
               <p className="body-text">
-                Da Braidr is a research engine developed to investigate
+                Da Braidr is a conceptual AI Startup designed by Minne Atairu. The goal is to investigate
                 the socioeconomic impact of Generative AI on Black hair braiding
                 communities. The system utilizes a multimodal generative
                 architecture that integrates image generation, image
