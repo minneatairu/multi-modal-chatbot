@@ -161,7 +161,7 @@ export default function Home() {
     }, 100); // Delay hiding the video
     const selectedHairstyle = getRandomHairstyle();
     const text1 = `✦✦✦✦✦ I'm Da Braidr ✦✦✦✦✦`;
-    const text2 = `Ur Hairstylist`;
+    const text2 = `♥♥♥ Ur Hairstylist ♥♥♥`;
     const text3 = `Let's generate images of`;
     const text4 = `✿✿✿ ${selectedHairstyle} ✿✿✿`;
 
