@@ -18,9 +18,10 @@ export default function RootLayout({
       <link rel="stylesheet" href="https://use.typekit.net/xkr0sog.css"/>
     
       <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-      />
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=optional"
+/>
+
       <body>
         <Toaster position="top-center" richColors />
         {children}
