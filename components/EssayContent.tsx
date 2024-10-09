@@ -40,8 +40,8 @@ const EssayContent: React.FC = () => {
 
             <p className="body-text">
                 What happens when these critical decisions between the braider and the braided are replaced by generative systems? To what extent might image generation substitute the ritual of doomscrolling Instagram for braid inspirations?
-                To what extent can conversational agents exploit and commodify the psychohairapeutic exchanges between braiders and clients-exchanges forged in the shared struggle against a world that polices Black hair?
-                Can such a system meaningfully model the braiding traditions nurtured by Black women in backyards, courtyards, front porsches and even on plantations? Can it capture the towering elegance of the Nigerian Yoruba "Shuku" hairstyle or the escape routes braided into cornrows by enslaved Afro-Colombian women?           </p>
+                To what extent can conversational agents exploit and commodify the psychohairapeutic<sup>[ 11, 12, 13, 14 ]</sup> exchanges between braiders and clients-exchanges forged in the shared struggle against a world that polices Black hair?
+                Can such a system meaningfully model the braiding traditions nurtured by Black women in backyards, courtyards, front porsches and even on plantations? Can it capture the towering elegance of the Nigerian Yoruba "Shuku" hairstyle or the escape routes<sup>[ 15 ]</sup> braided into cornrows by enslaved Afro-Colombian women?           </p>
 
         </div>
     );
