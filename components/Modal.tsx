@@ -1,6 +1,7 @@
-"use client"; // Ensure this is a client-side component
+"use client";
 
 import { useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ModalProps {
   onClose: () => void;
@@ -63,21 +64,31 @@ const Modal: React.FC<ModalProps> = ({
   };
 
   return (
-    <div
-      className="modal-overlay"
-      style={overlayStyle} // Apply conditional style for background color
-      onClick={handleOverlayClick} // Close the modal when clicking on the overlay
-    >
-      <div
-        ref={modalRef} // Ref to modal content for click detection
-        className={`modal-content ${className} ${positionClass}`}
+    <AnimatePresence>
+      <motion.div
+        className="modal-overlay"
+        style={overlayStyle} // Apply conditional style for background color
+        onClick={handleOverlayClick} // Close the modal when clicking on the overlay
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
       >
-        <span className="close-button" style={closeButtonStyle} onClick={onClose}>
-          X
-        </span>
-        {children}
-      </div>
-    </div>
+        <motion.div
+          ref={modalRef} // Ref to modal content for click detection
+          className={`modal-content ${className} ${positionClass}`}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          <span className="close-button" style={closeButtonStyle} onClick={onClose}>
+            X
+          </span>
+          {children}
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
