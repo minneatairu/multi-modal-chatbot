@@ -585,7 +585,8 @@ h2 {
   .title {
     font-size: 20vw !important;
   }
-
+  .video-overlay-text h2, .video-overlay-text-four h2, .video-overlay-text-three h2, .video-overlay-text-two h2 {
+    font-size: 1.5rem;}
   .button-section button {
     font-size: 1.5rem;
     border-bottom: 2px solid;
