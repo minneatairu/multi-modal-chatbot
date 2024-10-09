@@ -72,7 +72,7 @@ const Modal: React.FC<ModalProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.8 }}
       >
         <motion.div
           ref={modalRef} // Ref to modal content for click detection
@@ -80,7 +80,7 @@ const Modal: React.FC<ModalProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           <span className="close-button" style={closeButtonStyle} onClick={onClose}>
             X
