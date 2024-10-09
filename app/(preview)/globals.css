@@ -118,7 +118,7 @@ h2,
 }
 
 ol {
-  font-family: Kode Mono;
+  font-family: t26-carbon, monospace;font-size: 20px;
 }
 
 .close-print-button {
