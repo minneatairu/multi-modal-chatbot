@@ -566,6 +566,10 @@ VIDEO {
   .grid-section {
     grid-template-columns: repeat(2, 1fr);
   }
+  VIDEO{
+    height: 100vh;
+    object-fit: cover;
+}
 
   .button-section {
     display: block;
