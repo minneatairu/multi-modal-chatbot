@@ -116,7 +116,7 @@ h2,
 .gallery-title {
   font-family: "DuFont", serif;
 }
-li{padding-top: 1rem;}
+li{padding-top: 1rem;text-align: justify;}
 ol {
   font-family: t26-carbon, monospace;font-size: 20px;
 }
