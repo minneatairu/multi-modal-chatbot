@@ -570,7 +570,9 @@ VIDEO {
     height: 100vh;
     object-fit: cover;
 }
-
+.button-border {
+  border-left: none;
+}
   .button-section {
     display: block;
   }
