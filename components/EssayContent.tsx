@@ -14,18 +14,19 @@ const EssayContent: React.FC = () => {
                 Beneath this carefully orchestrated 'hype' lies the familiar machinery of capitalism that thrives on the exploitation of minoritized communities in the Global North. Consider the traumatized and underpaid data workers in Kenya, the unsafe extraction of cobalt from the Democratic Republic of Congo, the uncompensated harvesting of artists' data affecting their livelihoods, and in Chile, water scarcity worsens as data centers devour millions of gallons of fresh water.
                 To trace how Generative AI, as a technocapitalist product, takes root and is cultivated within microcommunities, I turn to a familiar ecosystem-Black hair braiding.</p>
             <p className="body-text">
-             Although celebrated as an art form, Black hair braiding is, in fact, a practice guided by ethnomathematical principles. Translation determines the spacing between rows, tessellation forms geometric patterns on the scalp, rotation curves the braid’s path, reflection ensures symmetry, and dilation controls braid expansion/contraction.
-</p>
-<p>
+                Although celebrated as an art form, Black hair braiding is, in fact, a practice guided by ethnomathematical principles. Translation determines the spacing between rows, tessellation forms geometric patterns on the scalp, rotation curves the braid’s path, reflection ensures symmetry, and dilation controls braid expansion/contraction.
+            </p>
+            <p>
                 Every few weeks, Black women, myself included, engage in this ethnomathematically-guided ritual. We braid, unbraid and re-braid. On average, we devote six hours per session and invest approximately $250 per appointment.  This microeconomy, primarily driven by Black women entrepreneurs and sustained by the preferences of Black femme consumers, is structured around decentralized networks of care: finding styles, locating braiders, sourcing products, and maintaining the braid. Yet, it exists within "the bounds of the white supremacist patriarchal state, macrocosmically, and the Black male head of the patriarchal family, microcosmically." Hair discrimination-that all-too-familiar form of racial bias characterized by the hyperregulation and hypersurveillance of Black hair textures-plays a critical role in shaping both consumer demand and pricing models. For example: lightweight, non-voluminous braids made with human-like synthetic hair, often prized for their semblance to non-coily textures, command higher prices than hairstyles braided with kanekalon, a coarse synthetic fiber.
             </p>
-            <p>As generative AI advances, I find myself drawn to the question of how it might encroach upon and reshape this microeconomy.
-                 Can I possibly abstract, encode, and model these networks of care into a multimodal generative framework?
-                 If such a system were developed, to what extent could it be commodified? What economic model would support its viability? And what price point would users be willing to accept for such a product?
+            <p>As generative AI advances, I find myself drawn to the question of how it might transform this microeconomy.
+                Can I possibly abstract, encode, and model these networks of care into a multimodal generative framework?
+                If such a system were developed, to what extent could it be commodified? What economic model would support its viability? And what price point would users be willing to accept for such a product?
             </p>
             <h2 className="heading-text">II<br></br><br></br>WHAT IS DA BRAIDR?</h2>
             <p className="body-text">
-                Da Braidr is a conceptual AI startup powered by a multimodal generative system that integrates image generation, image recognition, and conversational agents. The vision for Da Braidr emerges from my decade-long experience as a client to West African immigrant braiders in Harlem, New York. Through the often-invisible labor of braiding, these women support their families, both near and distant. A child’s desire for yet another pair of limited-edition Air Jordans. Aid for a niece grappling with the stigma of single motherhood. A household left behind by an incarcerated child. A once-employed child, now a social media influencer. A relative’s ESL tuition. Medical bills for a sibling’s partner. Healthcare for aging parents.
+            Da Braidr is a conceptual AI startup designed to critically examine how multimodal generative systems-specifically visual and conversational agenets-might reconfigure the socioeconomic dynamics of Black hair braiding industry.
+                 The vision for Da Braidr emerges from my decade-long experience as a client to West African immigrant braiders in Harlem, New York. Through the often-invisible labor of braiding, these women support their families, both near and distant. A child’s desire for yet another pair of limited-edition Air Jordans. Aid for a niece grappling with the stigma of single motherhood. A household left behind by an incarcerated child. A once-employed child, now a social media influencer. A relative’s ESL tuition. Medical bills for a sibling’s partner. Healthcare for aging parents.
 
             </p>
 
