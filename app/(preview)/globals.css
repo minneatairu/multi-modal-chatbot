@@ -583,6 +583,10 @@ VIDEO {
     font-size: 2rem;
     border-bottom: 2px solid;
   }
+
+  .gpt-container{margin:0}
+
+  div.modal-content.modal-bottom-right{padding:20px}
 }
 
 /* Media query for mobile */
@@ -1642,7 +1646,7 @@ margin-top:3rem;  padding: 3rem;
 .gpt-input {
   background-color: #000;
   border-radius: 5px;
-  width: 100vh;display: block;
+  width: 100%;display: block;
   outline: none;
   color: #fff;
   font-size: 20px;
