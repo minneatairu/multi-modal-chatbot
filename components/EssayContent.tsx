@@ -19,7 +19,9 @@ const EssayContent: React.FC = () => {
 <p>
                 Every few weeks, Black women, myself included, engage in this ethnomathematically-guided ritual. We braid, unbraid and re-braid. On average, we devote six hours per session and invest approximately $250 per appointment.  This microeconomy, primarily driven by Black women entrepreneurs and sustained by the preferences of Black femme consumers, is structured around decentralized networks of care: finding styles, locating braiders, sourcing products, and maintaining the braid. Yet, it exists within "the bounds of the white supremacist patriarchal state, macrocosmically, and the Black male head of the patriarchal family, microcosmically." Hair discrimination-that all-too-familiar form of racial bias characterized by the hyperregulation and hypersurveillance of Black hair textures-plays a critical role in shaping both consumer demand and pricing models. For example: lightweight, non-voluminous braids made with human-like synthetic hair, often prized for their semblance to non-coily textures, command higher prices than hairstyles braided with kanekalon, a coarse synthetic fiber.
             </p>
-            <p>As generative AI advances, I’m intrigued by how it might encroach on this microeconomy. Can I possibly abstract, encode, and model these networks of care into a multimodal generative framework? To what extent can such a system be commodified? What economic model would support its viability? And what price point would users be willing to accept for such a product?
+            <p>As generative AI advances, I find myself drawn to the question of how it might encroach upon and reshape this microeconomy.
+                 Can I possibly abstract, encode, and model these networks of care into a multimodal generative framework?
+                 If such a system were developed, to what extent could it be commodified? What economic model would support its viability? And what price point would users be willing to accept for such a product?
             </p>
             <h2 className="heading-text">II<br></br><br></br>WHAT IS DA BRAIDR?</h2>
             <p className="body-text">
