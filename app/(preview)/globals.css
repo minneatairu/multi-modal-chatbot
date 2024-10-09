@@ -596,7 +596,7 @@ span.material-symbols-outlined {
     border-bottom: 2px solid;
   }
   .modal-column {
-    padding: 20px;
+    padding: 20px!important;
 }
   .gpt-container{margin:0}
 
