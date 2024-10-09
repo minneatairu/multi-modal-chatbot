@@ -12,7 +12,7 @@ const EssayContent: React.FC = () => {
 
             <p>Critical AI researchers insist that "AI" is not a technological term, but rather a marketing tool wielded by technocapitalists to sustain illusions of near-magical, technological progress.
         This "progress" is, in reality, a system built upon the exploitation and extraction of natural and human resources from minoritized communities in the Global North. Consider the traumatized and underpaid data workers in Kenya, the unsafe extraction of cobalt from the Democratic Republic of Congo, the uncompensated harvesting of artists' data affecting their livelihoods, and in Chile, water scarcity worsens as data centers devour millions of gallons of fresh water.
-                To trace how Generative AI, as a technocapitalist product, takes root and is cultivated within microcommunities, I turn to a familiar ecosystem-Black hair braiding.</p>
+                To trace how Generative AI, as a technocapitalist product, takes root and is cultivated within microcommunities, I turn to a familiar ecosystem-the Black hair braiding industry.</p>
             <p className="body-text">
                 Although celebrated as an art form, Black hair braiding is, in fact, a practice guided by ethnomathematical principles. Translation determines the spacing between rows, tessellation forms geometric patterns on the scalp, rotation curves the braid’s path, reflection ensures symmetry, and dilation controls braid expansion/contraction.
             </p>
