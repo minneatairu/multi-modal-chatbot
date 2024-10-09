@@ -10,8 +10,8 @@ const EssayContent: React.FC = () => {
             <h2>I<br></br><br></br>AI IS A MARKETING TERM
             </h2>
 
-            <p>Critical AI researchers insist that "AI" is not a technological term, but rather a marketing term wielded by technocapitalists to sustain illusions of near-magical, technical capabilities.
-            What is marketed as progress is, in fact, a mechanism that continues the dispossession of resources from minoritized communities in the Global North, all to sustain the relentless growth of Western capital. Consider the traumatized and underpaid data workers in Kenya, the unsafe extraction of cobalt from the Democratic Republic of Congo, the uncompensated harvesting of artists' data affecting their livelihoods, and in Chile, water scarcity worsens as data centers devour millions of gallons of fresh water.
+            <p>Critical AI researchers insist that "AI" is not a technological term, but rather a marketing tool wielded by technocapitalists to sustain illusions of near-magical, technological progress.
+        This "progress" is, in reality, a system that continues the exploitation of natural and human resources in the Global North-all to sustain the engine of Western capital. Consider the traumatized and underpaid data workers in Kenya, the unsafe extraction of cobalt from the Democratic Republic of Congo, the uncompensated harvesting of artists' data affecting their livelihoods, and in Chile, water scarcity worsens as data centers devour millions of gallons of fresh water.
                 To trace how Generative AI, as a technocapitalist product, takes root and is cultivated within microcommunities, I turn to a familiar ecosystem-Black hair braiding.</p>
             <p className="body-text">
                 Although celebrated as an art form, Black hair braiding is, in fact, a practice guided by ethnomathematical principles. Translation determines the spacing between rows, tessellation forms geometric patterns on the scalp, rotation curves the braid’s path, reflection ensures symmetry, and dilation controls braid expansion/contraction.
