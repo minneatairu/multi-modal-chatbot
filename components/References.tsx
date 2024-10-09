@@ -35,8 +35,9 @@ const References: React.FC = () => {
           Thomas C. G. (2023). Carcinogenic materials in synthetic braids: An unrecognized risk of hair products for Black women. Lancet regional health. Americas, 22, 100517. https://doi.org/10.1016/j.lana.2023.100517
         </li>
       </ol>
-      <h2>IV<br></br><br></br>TECHNICAL NOTES</h2>
-
+      <h2 className="heading-text">IV<br></br><br></br>TECHNICAL NOTES</h2>
+<p>          Ashley, W., & Brown, J. C. (2015). Attachment tHAIRapy: A culturally relevant treatment paradigm for African American foster youth. Journal of Black Studies, 46(6), 587-604.
+</p>
     </div>
   );
 };
