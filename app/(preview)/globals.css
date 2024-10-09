@@ -1206,7 +1206,8 @@ button.right-zoom {
     /* Original position */
   }
 }
-
+sup{    font-size: x-small;
+  background: lime;}
 .grid-section .image-container {
   animation: fadeIn 1s ease-in-out;
 }
