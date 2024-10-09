@@ -570,7 +570,7 @@ VIDEO {
   .button-section {
     display: block;
   }
-  .video-overlay-text{position: relative!important;}
+  .video-overlay-text, .video-overlay-text-two, .video-overlay-text-three, .video-overlay-text-four{position: relative!important;}
   .title-section {
     padding-bottom: 12.5vw;
   }
