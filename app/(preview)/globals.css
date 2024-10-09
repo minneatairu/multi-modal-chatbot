@@ -563,9 +563,7 @@ VIDEO {
 
 /* Media query for tablets */
 @media (max-width: 768px) {
-  .grid-section {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .modal-grid {        grid-template-columns: 1fr !important;}
   VIDEO{
     height: 100vh;
     object-fit: cover;
@@ -588,7 +586,9 @@ VIDEO {
     font-size: 2rem;
     border-bottom: 2px solid;
   }
-
+  .modal-column {
+    padding: 20px;
+}
   .gpt-container{margin:0}
 
   div.modal-content.modal-bottom-right{padding:20px}
