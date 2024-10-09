@@ -378,19 +378,29 @@ export default function Home() {
           </button>
         </div>
         {/* Info Modal */}
-        {openModal === "info" && (
-  <Modal onClose={handleCloseModal} className="modal-grid">
-            {/* Modal content */}
-            <div className="modal-column">
-            <EssayContent />
+        {openModal && (
+  <AnimatePresence>
+    <motion.div
+      ref={modalRef}
+      className="modal-grid" // Add your class name here
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.8 }}
+      transition={{ duration: 0.3 }} // Adjust duration as needed
+    >
+      <Modal onClose={handleCloseModal}>
+        {/* Modal content */}
+        <div className="modal-column">
+          <EssayContent />
+        </div>
+        <div className="modal-column border">
+          <References />
+        </div>
+      </Modal>
+    </motion.div>
+  </AnimatePresence>
+)}
 
-           </div>
-           <div className="modal-column border">
-            <References />
-
-           </div>
-          </Modal>
-        )}
         {/* Text Da Braidr Modal */}
         {openModal === "text" && (
        <Modal onClose={handleCloseModal} className="modal-bottom-right">
