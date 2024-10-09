@@ -42,17 +42,20 @@ const Modal: React.FC<ModalProps> = ({
     }
   };
 
-  // Ensure background is black by default and fade in the modal content
+  // Conditionally apply inline styles for the black background
+  const isBlackBackground = className === "modal-bottom-right";
   const overlayStyle = {
-    backgroundColor: "black", // Ensure black background from the start
-    display: "flex", // Ensure flexbox is applied
-    justifyContent: "center", // Horizontally center the content
-    alignItems: "center", // Vertically center the content
+    backgroundColor: isBlackBackground ? "black" : "white",
+    ...(isBlackBackground && {
+      display: "flex", // Ensure flexbox is applied
+      justifyContent: "center", // Horizontally center the content
+      alignItems: "center", // Vertically center the content
+    }),
   };
 
   // Style for the close button based on background color
   const closeButtonStyle = {
-    color: "white", // White text to contrast with black background
+    color: isBlackBackground ? "white" : "black", // White text if background is black
     cursor: "pointer",
     fontSize: "24px", // Example styling for the close button
     position: "absolute" as "absolute", // Make it absolute for positioning
@@ -64,7 +67,7 @@ const Modal: React.FC<ModalProps> = ({
     <AnimatePresence>
       <motion.div
         className="modal-overlay"
-        style={overlayStyle} // Apply the black background immediately
+        style={overlayStyle} // Apply conditional style for background color
         onClick={handleOverlayClick} // Close the modal when clicking on the overlay
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -74,11 +77,10 @@ const Modal: React.FC<ModalProps> = ({
         <motion.div
           ref={modalRef} // Ref to modal content for click detection
           className={`modal-content ${className} ${positionClass}`}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          style={{ backgroundColor: "black" }} // Ensure modal content background is also black
         >
           <span className="close-button" style={closeButtonStyle} onClick={onClose}>
             X
