@@ -77,9 +77,9 @@ const Modal: React.FC<ModalProps> = ({
         <motion.div
           ref={modalRef} // Ref to modal content for click detection
           className={`modal-content ${className} ${positionClass}`}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           <span className="close-button" style={closeButtonStyle} onClick={onClose}>
