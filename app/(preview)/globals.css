@@ -577,7 +577,9 @@ VIDEO {
   .title-section {
     padding-bottom: 12.5vw;
   }
-
+  div.modal-column.border {
+    border-left: none;
+}
   .title {
     font-size: 20vw !important;
   }
