@@ -575,7 +575,8 @@ h2 {
 .button-border {
   border-left: none;
 }
-span.material-symbols-outlined {
+span.material-symbols-outlined,.animated-text 
+  {
  
   font-size: 1.5rem !important;
 }
