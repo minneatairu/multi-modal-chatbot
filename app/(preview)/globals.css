@@ -573,6 +573,10 @@ h2 {
 .button-border {
   border-left: none;
 }
+span.material-symbols-outlined {
+ 
+  font-size: 1.5rem !important;
+}
   .button-section {
     display: block;
   }
