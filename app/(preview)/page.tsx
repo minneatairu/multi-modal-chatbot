@@ -576,12 +576,7 @@ export default function Home() {
 
         {/* Text Prompt Form */}
         {isFormExpanded && (
-          <form
-            className="text-prompt-form expanded"
-            onSubmit={handleFormSubmit}
 
-          >
-                <ImageGenerator />
             <div className="animated-text-container">
               <div className="animated-text">
                 {words.map((word, index) =>
@@ -598,7 +593,7 @@ export default function Home() {
                 )}
               </div>
               <div>
-  
+      <ImageGenerator />
     </div>
               <textarea
                 className="genetext"
@@ -608,8 +603,6 @@ export default function Home() {
               />
             </div>
 
-      
-          </form>
         )}
 
         {/* Print and Close Button */}
