@@ -183,7 +183,11 @@ export default function Home() {
     }
   };
 
-
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent the form from reloading the page
+    setIsVideoVisible(false); // Hide the video when submitting the form
+    setIsGridVisible(true); // Show the grid
+  };
   
 
   const handlePrint = () => {
@@ -659,8 +663,7 @@ export default function Home() {
             </div>
           </div>
         )}
-        {/* Grid Section */}
-        {isGridVisible && <div className="grid-section"></div>}
+       
       </div>
     </>
   );
