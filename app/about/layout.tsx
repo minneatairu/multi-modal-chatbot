@@ -1,6 +1,5 @@
 // app/layout.tsx
 import React from 'react';
-import './globals.css'; // Import your global styles if any
 
 export const metadata = {
   title: 'My App',
