@@ -121,7 +121,7 @@ ol {
   font-family: t26-carbon, monospace;font-size: 20px;
 }
 .loading-img{color: #fff;}
-div.imagesss{background: black;}
+div.imagesss{background: black;height:100%}
 
 .close-print-button {
   position: fixed;
