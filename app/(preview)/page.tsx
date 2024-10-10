@@ -576,7 +576,7 @@ export default function Home() {
 
         {/* Text Prompt Form */}
         {isFormExpanded && (
-
+< div className="imagesss">
             <div className="animated-text-container">
               <div className="animated-text">
                 {words.map((word, index) =>
@@ -595,7 +595,7 @@ export default function Home() {
               <div>
       <ImageGenerator />
     </div>
-            </div>
+            </div>         </div>
 
         )}
 
