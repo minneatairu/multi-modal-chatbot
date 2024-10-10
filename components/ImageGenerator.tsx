@@ -88,7 +88,7 @@ export default function ImageGenerator() {
       {prediction && (
         <>
           {prediction.output && (
-            <div className="image-wrapper mt-5">
+            <div className="image-wrapper">
               <Image
                 fill
                 src={prediction.output[prediction.output.length - 1]}
