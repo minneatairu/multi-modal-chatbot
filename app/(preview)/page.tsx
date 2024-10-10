@@ -576,17 +576,46 @@ export default function Home() {
 
         {/* Text Prompt Form */}
         {isFormExpanded && (
-  <>
-    <div style={{ height: '500px', width: '100%' }}>
-      <iframe
-        src="https://inpainter-stable-diffusion-hazel-xi.vercel.app/"
-        title="Imag Generator"
-        style={{ width: '100%', height: '100%', border: 'none' }}
-      ></iframe>
+          <form
+            className="text-prompt-form expanded"
+            onSubmit={handleFormSubmit}
+            style={{
+              backgroundColor: "black",
+              color: "white",
+              position: "relative",
+              border: "none",
+            }}
+            ref={formRef}
+          >
+            <div className="animated-text-container">
+              <div className="animated-text">
+                {words.map((word, index) =>
+                  word === "<br>" ? (
+                    <br key={index} style={{ marginBottom: "20px" }} />
+                  ) : (
+                    <span
+                      key={index}
+                      style={{ animationDelay: `${index * 0.2}s` }}
+                    >
+                      {word}&nbsp;
+                    </span>
+                  )
+                )}
+              </div>
+              <div>
+      <ImageGenerator />
     </div>
-  </>
-)}
+              <textarea
+                className="genetext"
+                placeholder=""
+                ref={textAreaRef}
+                style={{ minHeight: "100px", width: "100%" }}
+              />
+            </div>
 
+      
+          </form>
+        )}
 
         {/* Print and Close Button */}
         {isGridVisible && (
@@ -595,15 +624,6 @@ export default function Home() {
         {/* Video with Overlay Text */}
         {isVideoVisible && (
           <div className="video-container">
-              <>
-    <div style={{ height: '500px', width: '100%' }}>
-      <iframe
-        src="https://inpainter-stable-diffusion-hazel-xi.vercel.app/"
-        title="Imag Generator"
-        style={{ width: '100%', height: '100%', border: 'none' }}
-      ></iframe>
-    </div>
-  </>
             <VideoPlayer />
     
             <div
@@ -636,7 +656,10 @@ export default function Home() {
               className="video-overlay-text-four"
               onClick={() => handleOverlayClick(audioRef4)}
             >
-             
+              <h2>
+                THE FINGER
+                <br /> OF GOD
+              </h2>
             </div>
           </div>
         )}
