@@ -593,7 +593,12 @@ export default function Home() {
                 )}
               </div>
               <div>
-      <ImageGenerator />
+      <ImageGenerator />       <div className="video-container">
+               <iframe
+                src="https://inpainter-stable-diffusion-hazel-xi.vercel.app/"
+                title="Image Generator"
+                style={{ width: '100%', height: '100%', border: 'none' }}
+            ></iframe>
     </div>
             </div>         </div>
 
