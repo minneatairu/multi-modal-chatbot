@@ -93,7 +93,7 @@ export default function ImageGenerator() {
                 fill
                 src={prediction.output[prediction.output.length - 1]}
                 alt="output"
-                sizes="100vw"
+          
               />
             </div>
           )}

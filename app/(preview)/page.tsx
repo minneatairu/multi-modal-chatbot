@@ -183,11 +183,7 @@ export default function Home() {
     }
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent the form from reloading the page
-    setIsVideoVisible(false); // Hide the video when submitting the form
-    setIsGridVisible(true); // Show the grid
-  };
+
   
 
   const handlePrint = () => {
@@ -576,6 +572,7 @@ export default function Home() {
 
         {/* Text Prompt Form */}
         {isFormExpanded && (
+           <ImageGenerator />
           <form
             className="text-prompt-form expanded"
             onSubmit={handleFormSubmit}
@@ -603,7 +600,7 @@ export default function Home() {
                 )}
               </div>
               <div>
-      <ImageGenerator />
+     
     </div>
               <textarea
                 className="genetext"
