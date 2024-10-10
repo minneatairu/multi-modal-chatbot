@@ -390,7 +390,7 @@ export default function Home() {
         {/* Text Da Braidr Modal */}
         {openModal === "text" && (
        <Modal onClose={handleCloseModal} className="modal-bottom-right">
- <ImageGenerator />
+
             <Chat />
             {messages.length > 0 && (
   <PrintButton onPrintClick={handlePrint} onCloseClick={handleClose} isFromGptChatModal={true} />
