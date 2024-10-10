@@ -1049,7 +1049,7 @@ button.right-zoom {
   /* Apply the pulsing animation */
 
   /* Apply gradient shadow */
-  box-shadow: 0 0 20px 3px BLUE;
+  box-shadow: 0 0 20px 3px  #0099FF;
   backdrop-filter: blur(10px);
 }
 
