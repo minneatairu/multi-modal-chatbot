@@ -593,14 +593,9 @@ export default function Home() {
                 )}
               </div>
               <div>
-      <ImageGenerator />       <div className="video-container">
-               <iframe
-                src="https://inpainter-stable-diffusion-hazel-xi.vercel.app/"
-                title="Image Generator"
-                style={{ width: '100%', height: '100%', border: 'none' }}
-            ></iframe>
+      <ImageGenerator />
     </div>
-            </div>         </div>
+            </div>
 
         )}
 
@@ -611,11 +606,6 @@ export default function Home() {
         {/* Video with Overlay Text */}
         {isVideoVisible && (
           <div className="video-container">
-               <iframe
-                src="https://inpainter-stable-diffusion-hazel-xi.vercel.app/"
-                title="Image Generator"
-                style={{ width: '100%', height: '100%', border: 'none' }}
-            ></iframe>
             <VideoPlayer />
     
             <div
