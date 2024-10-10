@@ -956,7 +956,6 @@ button.right-zoom {
 .container {
   display: flex;
   justify-content: center;
-  /* Horizontally center */
   align-items: center;
   margin: 3rem 0;
 }
@@ -1036,7 +1035,7 @@ button.right-zoom {
 
   backdrop-filter: blur(10px);
 }
-.title-wrapper::before {
+.title-section::before {
   content: "";
   position: absolute;
   top: 0;
