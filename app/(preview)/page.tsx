@@ -577,11 +577,13 @@ export default function Home() {
         {/* Text Prompt Form */}
         {isFormExpanded && (
 
-                 <iframe
-                  src="https://inpainter-stable-diffusion-hazel-xi.vercel.app/"
-                  title="Image Generator"
-                  style={{ width: '100%', height: '100%', border: 'none' }}
-              ></iframe>
+<>
+<iframe
+  src="https://inpainter-stable-diffusion-hazel-xi.vercel.app/"
+  title="Image Generator"
+  style={{ width: '100%', height: '100%', border: 'none' }}
+></iframe>
+</>
 <div>
             <div className="animated-text-container">
               <div className="animated-text">
