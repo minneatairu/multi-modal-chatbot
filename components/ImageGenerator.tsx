@@ -83,7 +83,7 @@ export default function ImageGenerator() {
 
       {error && <div className="text-red-500 mt-3">{error}</div>}
 
-      {loading && <p className="py-3 text-sm opacity-50">Hol' up. Da braidr is generating ur braid.</p>}
+      {loading && <p className="loading-img">Hol' up. Da braidr is generating ur braid.</p>}
 
       {prediction && (
         <>
