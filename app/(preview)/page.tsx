@@ -582,7 +582,7 @@ export default function Home() {
                   title="Image Generator"
                   style={{ width: '100%', height: '100%', border: 'none' }}
               ></iframe>
-< div className="imagesss">
+<div className="imagesss">
             <div className="animated-text-container">
               <div className="animated-text">
                 {words.map((word, index) =>
@@ -598,9 +598,9 @@ export default function Home() {
                   )
                 )}
               </div>
-              <div>
+              </div> 
       <ImageGenerator />
-    </div>
+
             </div>
 
         )}
