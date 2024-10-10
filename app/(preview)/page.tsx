@@ -579,14 +579,9 @@ export default function Home() {
           <form
             className="text-prompt-form expanded"
             onSubmit={handleFormSubmit}
-            style={{
-              backgroundColor: "black",
-              color: "white",
-              position: "relative",
-              border: "none",
-            }}
-            ref={formRef}
+
           >
+                <ImageGenerator />
             <div className="animated-text-container">
               <div className="animated-text">
                 {words.map((word, index) =>
@@ -603,7 +598,7 @@ export default function Home() {
                 )}
               </div>
               <div>
-      <ImageGenerator />
+  
     </div>
               <textarea
                 className="genetext"
@@ -663,7 +658,8 @@ export default function Home() {
             </div>
           </div>
         )}
-       
+        {/* Grid Section */}
+        {isGridVisible && <div className="grid-section"></div>}
       </div>
     </>
   );
