@@ -1036,7 +1036,17 @@ button.right-zoom {
 
   backdrop-filter: blur(10px);
 }
-
+.title-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5); /* Optional: Add a semi-transparent background */
+  backdrop-filter: blur(10px); /* Applies the blur effect */
+  z-index: 1; /* Ensure it is above the text */
+}
 .video-overlay-text-three {
   position: absolute;
   top: 30%;
