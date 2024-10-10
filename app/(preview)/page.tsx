@@ -580,7 +580,7 @@ export default function Home() {
     <div style={{ height: '500px', width: '100%' }}>
       <iframe
         src="https://inpainter-stable-diffusion-hazel-xi.vercel.app/"
-        title="Image Generator"
+        title="Imag Generator"
         style={{ width: '100%', height: '100%', border: 'none' }}
       ></iframe>
     </div>
