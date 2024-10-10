@@ -636,10 +636,7 @@ export default function Home() {
               className="video-overlay-text-four"
               onClick={() => handleOverlayClick(audioRef4)}
             >
-              <h2>
-                THE FINGER
-                <br /> OF GOD
-              </h2>
+             
             </div>
           </div>
         )}
