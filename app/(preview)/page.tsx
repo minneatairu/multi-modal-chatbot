@@ -576,32 +576,18 @@ export default function Home() {
 
         {/* Text Prompt Form */}
         {isFormExpanded && (
-          <form
-            className="text-prompt-form expanded"
-            onSubmit={handleFormSubmit}
-            style={{
-              backgroundColor: "black",
-              color: "white",
-              position: "relative",
-              border: "none",
-            }}
-            ref={formRef}
-          >
-            <div className="animated-text-container">
-              <div className="animated-text">
-                {words.map((word, index) =>
-                  word === "<br>" ? (
-                    <br key={index} style={{ marginBottom: "20px" }} />
-                  ) : (
-                    <span
-                      key={index}
-                      style={{ animationDelay: `${index * 0.2}s` }}
-                    >
-                      {word}&nbsp;
-                    </span>
-                  )
-                )}
-              </div>
+  <>
+    <div style={{ height: '500px', width: '100%' }}>
+      <iframe
+        src="https://inpainter-stable-diffusion-hazel-xi.vercel.app/"
+        title="Image Generator"
+        style={{ width: '100%', height: '100%', border: 'none' }}
+      ></iframe>
+    </div>
+  </>
+)}
+
+         
               <div>
       <ImageGenerator />
     </div>
