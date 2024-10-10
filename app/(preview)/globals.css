@@ -1047,6 +1047,11 @@ button.right-zoom {
   backdrop-filter: blur(10px); /* Applies the blur effect */
   z-index: 1; /* Ensure it is above the text */
 }
+.title-wrapper {
+  position: relative;
+  z-index: 2; /* Keeps the text visible over the blur */
+}
+
 .video-overlay-text-three {
   position: absolute;
   top: 30%;
