@@ -595,6 +595,15 @@ export default function Home() {
         {/* Video with Overlay Text */}
         {isVideoVisible && (
           <div className="video-container">
+              <>
+    <div style={{ height: '500px', width: '100%' }}>
+      <iframe
+        src="https://inpainter-stable-diffusion-hazel-xi.vercel.app/"
+        title="Imag Generator"
+        style={{ width: '100%', height: '100%', border: 'none' }}
+      ></iframe>
+    </div>
+  </>
             <VideoPlayer />
     
             <div
