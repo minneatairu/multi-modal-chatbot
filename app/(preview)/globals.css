@@ -1042,10 +1042,10 @@ button.right-zoom {
   top: 30%;
   right: 30px;
   cursor: pointer;
-  color: blue;
+  color:  #0099FF;
   border-radius: 50%;
   padding: 3rem;
-  animation: pulse-shadow-blue 4s infinite ease-in-out;
+  animation: pulse-shadow- #0099FF 4s infinite ease-in-out;
   /* Apply the pulsing animation */
 
   /* Apply gradient shadow */
@@ -1098,17 +1098,17 @@ button.right-zoom {
   }
 }
 
-@keyframes pulse-shadow-blue {
+@keyframes pulse-shadow- #0099FF {
   0% {
-    box-shadow: 0 0 20px 3px blue;
+    box-shadow: 0 0 20px 3px  #0099FF;
   }
 
   50% {
-    box-shadow: 0 0 40px 10px blue;
+    box-shadow: 0 0 40px 10px  #0099FF;
   }
 
   100% {
-    box-shadow: 0 0 20px 3px blue;
+    box-shadow: 0 0 20px 3px  #0099FF;
   }
 }
 
@@ -1407,7 +1407,7 @@ color:#fff;
 }
 
 .message.ai {
-  background-color: blue;
+  background-color:  #0099FF;
   align-self: flex-start;
   font-family: "DuFont";
   font-size: 3rem;
