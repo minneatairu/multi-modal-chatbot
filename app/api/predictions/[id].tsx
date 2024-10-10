@@ -1,21 +1,27 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+
 const API_HOST = process.env.REPLICATE_API_HOST || "https://api.replicate.com";
 
 console.log({ API_HOST });
 
-export default async function handler(req, res) {
-  const response = await fetch(`${API_HOST}/v1/predictions/${req.query.id}`, {
-    headers: {
-      Authorization: `Token ${process.env.REPLICATE_API_TOKEN}`,
-      "Content-Type": "application/json",
-    },
-  });
-  if (response.status !== 200) {
-    let error = await response.json();
-    res.statusCode = 500;
-    res.end(JSON.stringify({ detail: error.detail }));
-    return;
-  }
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const response = await fetch(`${API_HOST}/v1/predictions/${req.query.id}`, {
+      headers: {
+        Authorization: `Token ${process.env.REPLICATE_API_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+    });
 
-  const prediction = await response.json();
-  res.end(JSON.stringify(prediction));
+    if (response.status !== 200) {
+      const error = await response.json();
+      res.status(500).json({ detail: error.detail });
+      return;
+    }
+
+    const prediction = await response.json();
+    res.status(200).json(prediction);
+  } catch (error) {
+    res.status(500).json({ detail: 'Internal Server Error' });
+  }
 }
