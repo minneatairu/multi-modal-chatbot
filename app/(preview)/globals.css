@@ -1248,7 +1248,7 @@ div.gallery-item,
 
 .animated-text-container {
   position: relative;
-  width: 100%;
+  width: 100%;text-align: center;
 color:#fff;
   vertical-align: middle;
 }
