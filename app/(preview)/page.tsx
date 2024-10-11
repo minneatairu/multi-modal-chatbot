@@ -348,7 +348,7 @@ export default function Home() {
           </span>{" "}
         </h1>
 
-
+ 
         {/* Info Modal */}
         {openModal === "info" && (
   <Modal onClose={handleCloseModal} className="modal-grid">
@@ -606,11 +606,11 @@ export default function Home() {
             </div>
 
             <div
-              className="video-overlay-text-two"
-              onClick={() => handleOverlayClick(audioRef2)}
-            >
+              className="video-overlay-text-two animated-placeholder"
+              onClick={() => openModalHandler("text")}
+                          >
               <h2>
-    TEXT DA BRAIDR
+                CALL AYEESHA
                 <br /> 808-666-3333
               </h2>
             </div>
