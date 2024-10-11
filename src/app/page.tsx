@@ -546,48 +546,7 @@ export default function Home() {
           </Modal>
         )}
 
-        {/* Text Prompt Form */}
-        {isFormExpanded && (
-          <form
-            className="text-prompt-form expanded"
-            onSubmit={handleFormSubmit}
-            style={{
-              backgroundColor: "black",
-              color: "white",
-              position: "relative",
-              border: "none",
-            }}
-            ref={formRef}
-          >
-            <div className="animated-text-container">
-              <div className="animated-text">
-                {words.map((word, index) =>
-                  word === "<br>" ? (
-                    <br key={index} style={{ marginBottom: "20px" }} />
-                  ) : (
-                    <span
-                      key={index}
-                      style={{ animationDelay: `${index * 0.2}s` }}
-                    >
-                      {word}&nbsp;
-                    </span>
-                  )
-                )}
-              </div>
-              <div>
-      <ImageGenerator />
-    </div>
-              <textarea
-                className="genetext"
-                placeholder=""
-                ref={textAreaRef}
-                style={{ minHeight: "100px", width: "100%" }}
-              />
-            </div>
-
-      
-          </form>
-        )}
+       
 
         {/* Print and Close Button */}
         {isGridVisible && (
