@@ -19,6 +19,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from 'next/router';
 import EssayContent from "@/components/EssayContent";
+import References from "@/components/References";
 
 
 // Custom Markdown renderer based on user or bot role
@@ -358,7 +359,7 @@ export default function Home() {
 
            </div>
            <div className="modal-column border">
-
+           <References />
 
            </div>
           </Modal>
