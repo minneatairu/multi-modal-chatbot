@@ -358,7 +358,7 @@ export default function Home() {
 
            </div>
            <div className="modal-column border">
-            <References />
+
 
            </div>
           </Modal>
