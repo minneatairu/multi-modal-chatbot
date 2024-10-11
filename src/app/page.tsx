@@ -605,8 +605,7 @@ TEXT DA BRAIDR
 
           </div>
         )}
-        {/* Grid Section */}
-        {isGridVisible && <div className="grid-section"></div>}
+    
       </div>
     </>
   );
