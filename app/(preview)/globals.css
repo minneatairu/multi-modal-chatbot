@@ -425,7 +425,6 @@ button.submit-button {
 .text-prompt-form {
   display: flex;
 
-  margin: 0 10px;
   box-sizing: border-box;
   text-align: center;
 }
