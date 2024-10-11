@@ -19,7 +19,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from 'next/router';
 import EssayContent from "@/components/EssayContent";
-import Link from 'next/link';
+
 
 // Custom Markdown renderer based on user or bot role
 const MarkdownRenderer = ({ content, role }) => {
