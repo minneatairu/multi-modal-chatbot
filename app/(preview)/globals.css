@@ -335,10 +335,7 @@ input#image-link.datasub {
   width: 100%;
 }
 
-div.modal-overlay {
-  border-bottom: none;
-  margin: 0 10px;
-}
+
 
 input {
   font-family: "DuFont", serif;
