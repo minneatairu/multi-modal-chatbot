@@ -629,8 +629,8 @@ TEXT DA BRAIDR
               onClick={() => handleOverlayClick(audioRef4)}
             >
               <h2>
-                THE FINGER
-                <br /> OF GOD
+            GENERATE 
+                <br /> A BRAID
               </h2>
             </div>
           </div>
