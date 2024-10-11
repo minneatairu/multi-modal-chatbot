@@ -1,4 +1,4 @@
-import "../globals.css";
+import "../styles/globals.css"; // Adjust the path based on where you put `globals.css`
 import { Metadata } from "next";
 import { Toaster } from "sonner";
 
