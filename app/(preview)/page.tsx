@@ -639,10 +639,11 @@ TEXT DA BRAIDR
             >
        <p className="videocap"> 
      To Braid, Or Not To Braid? (2024)
+     <br/>Text-to-Video
               </p>
             </div>
 
-            
+
           </div>
         )}
         {/* Grid Section */}
