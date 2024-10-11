@@ -610,7 +610,7 @@ export default function Home() {
               onClick={() => handleOverlayClick(audioRef2)}
             >
               <h2>
-                CALL AYEESHA
+    TEXT DA BRAIDR
                 <br /> 808-666-3333
               </h2>
             </div>
