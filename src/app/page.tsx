@@ -17,9 +17,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
-import ImageGenerator from "@/components/ImageGenerator";
+import { useRouter } from 'next/router';
 import EssayContent from "@/components/EssayContent";
-import References from "@/components/References";
+import Link from 'next/link';
 
 // Custom Markdown renderer based on user or bot role
 const MarkdownRenderer = ({ content, role }) => {
@@ -593,14 +593,17 @@ TEXT DA BRAIDR
               </h2>
             </div>
 
-            <div
-              className="video-overlay-text-five"
-            >
-       <p className="videocap"> 
-     To Braid, Or Not To Braid? (2024)
-     <br/>Text-to-Video
-              </p>
-            </div>
+    
+<div className="video-overlay-text-four">
+  <Link href="/braiding">
+    <a>
+      <h2>
+        GENERATE
+        <br /> UR BRAIDS
+      </h2>
+    </a>
+  </Link>
+</div>
 
 
           </div>
