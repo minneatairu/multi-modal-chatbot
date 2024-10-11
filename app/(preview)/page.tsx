@@ -606,7 +606,7 @@ export default function Home() {
             </div>
 
             <div
-              className="video-overlay-text-two animated-placeholder"
+              className="video-overlay-text-two "
               onClick={() => openModalHandler("text")}
                           >
               <h2>
