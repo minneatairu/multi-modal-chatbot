@@ -19,7 +19,7 @@ body {
 }
 
 
-a{color:black}
+a{color:black; text-decoration: none;}
 @media print {
 
   /* Hide elements that shouldn't appear in the print */
