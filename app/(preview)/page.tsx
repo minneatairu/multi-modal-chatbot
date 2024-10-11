@@ -327,14 +327,9 @@ export default function Home() {
         <audio ref={audioRef2} src="/mad.mp3" />
         <audio ref={audioRef3} src="/mad.mp3" />
         <audio ref={audioRef4} src="/mad.mp3" />
-        {/* Title Section */}
 
-        <div className="title-section">
-          <div className="title-wrapper">
-            <span className="title">DA BRAIDR DA BRAIDR DA BRAIDR...</span>
 
-          </div>
-        </div>
+
         {/* Static Title for Print */}
         <h1 className="print-title" style={{ display: "none" }}>
           DA BRAIDR
