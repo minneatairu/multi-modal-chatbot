@@ -33,12 +33,7 @@ const AboutPage = () => {
               <div>
       <ImageGenerator />
     </div>
-              <textarea
-                className="genetext"
-                placeholder=""
-                ref={textAreaRef}
-                style={{ minHeight: "100px", width: "100%" }}
-              />
+       
             </div>
 
       
