@@ -630,7 +630,7 @@ TEXT DA BRAIDR
             >
               <h2>
             GENERATE 
-                <br /> UUR BRAIDS
+                <br /> UR BRAIDS
               </h2>
             </div>
 
