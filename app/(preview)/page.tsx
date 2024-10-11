@@ -633,6 +633,14 @@ TEXT DA BRAIDR
                 <br /> UR BRAIDS
               </h2>
             </div>
+
+            <div
+              className="video-overlay-text-five"
+            >
+       <p className="videocap"> 
+     To Braid, Or Not To Braid? (2024)
+              </p>
+            </div>
           </div>
         )}
         {/* Grid Section */}
