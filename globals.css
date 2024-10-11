@@ -1062,7 +1062,6 @@ button.right-zoom {
   text-align: center;
   transform: rotate(-20deg);
   animation: pulse-shadow-lime 2s infinite ease-in-out;
-  /* Apply the pulsing animation */
 
   backdrop-filter: blur(10px);
 }
@@ -1074,8 +1073,6 @@ left: 10px;
 
   color: YELLOW;
 
-
-  box-shadow: 0 0 20px 3px YELLOW;
 
 }
 
