@@ -141,7 +141,7 @@ div.imagesss{background: black;height:100%;   padding: 8% 10%;}
   color: black;
   cursor: pointer;
   display: block;
-  background: lime;
+  background: #08B166;
   border-radius: 50%;
   padding: 5px;
   border: 2px solid;
@@ -197,7 +197,7 @@ div.modal-content.modal-bottom-right {
 
 input[type="checkbox"]:checked:after {
   content: "X";
-  color: lime;
+  color: #08B166;
   display: inline-block;
   text-align: center;
   font-size: 50px;
@@ -280,7 +280,7 @@ h2 {
 }
 
 div.braidtag {
-  background: lime;
+  background: #08B166;
 }
 
 .button-section {
@@ -316,7 +316,7 @@ div.braidtag {
 input#name.datasub,
 input#email.datasub,
 input#image-link.datasub {
-  background: lime;
+  background: #08B166;
   font-family: "Kode Mono", serif;
   text-align: center;
 }
@@ -452,7 +452,7 @@ textarea.genetext {
   font-family: "DuFont", serif;
   color: black;
   cursor: pointer;
-  background: lime;
+  background: #08B166;
 }
 
 /* Spinning Animation for Overlay Text */
@@ -507,7 +507,7 @@ VIDEO {
   font-size: 1.5rem;
   text-transform: uppercase;
   border: 2px solid;
-  background: lime;
+  background: #08B166;
   transition: transform 0.5s ease;
   z-index: 90;
 }
@@ -663,7 +663,7 @@ span.material-symbols-outlined,.animated-text
   height: 20vw;
   border-radius: 50%;
   font-family: t26-carbon, monospace;
-  background: lime;
+  background: #08B166;
   font-size: 1.3rem;
   display: flex;
   align-items: center;
@@ -689,7 +689,7 @@ label {
   padding: 20px 0;
 
   border: 2px solid black;
-  background-color: lime;
+  background-color: #08B166;
   font-family: t26-carbon, monospace;
   font-size: 1rem;
   text-align: center;
@@ -707,7 +707,7 @@ label {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: lime;
+  background-color: #08B166;
   color: black;
   font-family: t26-carbon, monospace;
   text-align: center;
@@ -746,7 +746,7 @@ label {
   /* Align checkbox and label vertically */
   justify-content: space-between;
   padding-right: 18px;
-  background-color: lime;
+  background-color: #08B166;
   font-family: t26-carbon, monospace;
 }
 
@@ -777,7 +777,7 @@ input.datasub.email {
   padding: 20px 40px;
   font-family: "DuFont", serif;
   font-size: 2rem;
-  background-color: lime;
+  background-color: #08B166;
   color: black;
   border: 2px solid black;
   cursor: pointer;
@@ -808,7 +808,7 @@ button.right-zoom {
 .help-button {
   border-left: 2px solid;
 
-  background-color: lime;
+  background-color: #08B166;
 
   cursor: pointer;
 }
@@ -829,7 +829,7 @@ button.right-zoom {
 
 .zoom-controls button {
   font-family: Kode Mono;
-  background-color: lime;
+  background-color: #08B166;
   color: black;
   padding: 10px;
   cursor: pointer;
@@ -844,7 +844,7 @@ button.right-zoom {
   padding: 5px;
   color: black;
   font-size: smaller;
-  background: lime;
+  background: #08B166;
 
   z-index: 9999;
   line-height: 1;
@@ -867,7 +867,7 @@ button.right-zoom {
   z-index: 99999;
   padding: 9px;
   font-size: 1rem;
-  background: lime;
+  background: #08B166;
   font-family: Kode Mono;
   border: 2px solid #000;
   cursor: pointer;
@@ -885,7 +885,7 @@ button.right-zoom {
   padding: 10px;
   font-size: 1rem;
   border: 2px SOLID;
-  background-color: LIME;
+  background-color: #08B166;
   bottom: 10px;
   right: 120px;
   color: BLACK;
@@ -907,7 +907,7 @@ button.right-zoom {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  background-color: lime;
+  background-color: #08B166;
   color: black;
   font-family: t26-carbon, monospace;
   text-align: center;
@@ -965,7 +965,7 @@ button.right-zoom {
 /* Dropdown menu */
 .dropdown-menu {
   position: fixed;
-  background-color: LIME;
+  background-color: #08B166;
   list-style: none;
   padding: 8px;
   margin: 0;
@@ -995,8 +995,8 @@ button.right-zoom {
   top: 10%;
 
   cursor: pointer;
-  box-shadow: 0 0 20px 3px LIME;
-  color: LIME;
+  box-shadow: 0 0 20px 3px #08B166;
+  color: #08B166;
   padding: 3rem;
   border-radius: 50%;
   display: flex;
@@ -1005,7 +1005,7 @@ button.right-zoom {
   font-weight: 400;
   text-align: center;
   transform: rotate(-20deg);
-  animation: pulse-shadow-lime 2s infinite ease-in-out;
+  animation: pulse-shadow-#08B166 2s infinite ease-in-out;
   /* Apply the pulsing animation */
 
   backdrop-filter: blur(10px);
@@ -1092,17 +1092,17 @@ button.right-zoom {
   }
 }
 
-@keyframes pulse-shadow-lime {
+@keyframes pulse-shadow-#08B166 {
   0% {
-    box-shadow: 0 0 20px 3px lime;
+    box-shadow: 0 0 20px 3px #08B166;
   }
 
   50% {
-    box-shadow: 0 0 40px 10px lime;
+    box-shadow: 0 0 40px 10px #08B166;
   }
 
   100% {
-    box-shadow: 0 0 20px 3px lime;
+    box-shadow: 0 0 20px 3px #08B166;
   }
 }
 
@@ -1238,7 +1238,7 @@ button.right-zoom {
   }
 }
 sup{    font-size: x-small;
-  background: lime;}
+  background: #08B166;}
 .grid-section .image-container {
   animation: fadeIn 1s ease-in-out;
 }
@@ -1424,7 +1424,7 @@ color:#fff;
 button.info {
   position: absolute;
   top: 10px;
-  background-color: lime !important;
+  background-color: #08B166 !important;
   color: black;
   padding: 5px 25px;
   padding-top: 10px;
@@ -1444,7 +1444,7 @@ button.info {
 .message.user {
   font-family: "DuFont";
   font-size: 3rem;
-  background-color: lime;
+  background-color: #08B166;
   color: black;
   align-self: flex-end;
   line-height: 1;
