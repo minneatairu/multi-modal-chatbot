@@ -89,7 +89,11 @@ div.gallery-item {
   padding-bottom: 4px;
   width: 100%;
 }
-.heading-text{margin-top:6rem}
+
+.heading-text {
+  margin-top: 6rem
+}
+
 /* Grid container */
 .gallery-grid {
   display: grid;
@@ -114,12 +118,26 @@ h2,
 .gallery-title {
   font-family: "DuFont", serif;
 }
-li{padding-top: 1rem;text-align: justify;}
-ol {
-  font-family: t26-carbon, monospace;font-size: 20px;
+
+li {
+  padding-top: 1rem;
+  text-align: justify;
 }
-.loading-img{color: #fff;}
-div.imagesss{background: black;height:100%;   padding: 8% 10%;}
+
+ol {
+  font-family: t26-carbon, monospace;
+  font-size: 20px;
+}
+
+.loading-img {
+  color: #fff;
+}
+
+div.imagesss {
+  background: black;
+  height: 100%;
+  padding: 8% 10%;
+}
 
 .close-print-button {
   position: fixed;
@@ -154,19 +172,26 @@ div.imagesss{background: black;height:100%;   padding: 8% 10%;}
 
 .video-container {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out; /* Smooth fade */
+  transition: opacity 0.5s ease-in-out;
+  /* Smooth fade */
 }
 
 .video-container.hidden {
-  opacity: 0; /* Hide with fade */
-  pointer-events: none; /* Disable interaction when hidden */
+  opacity: 0;
+  /* Hide with fade */
+  pointer-events: none;
+  /* Disable interaction when hidden */
 }
 
 
 div.modal-column.border {
   border-left: 2px solid;
 }
-div.dragfile{color:yellow}
+
+div.dragfile {
+  color: yellow
+}
+
 /* Custom checkbox */
 input[type="checkbox"] {
   /* Hide the default checkbox */
@@ -191,7 +216,8 @@ input[type="checkbox"]:checked {
 div.modal-content.modal-bottom-right {
   background: black;
   padding: 8% 10%;
-  z-index: 999;width:100%;
+  z-index: 999;
+  width: 100%;
   border: 2px solid;
 }
 
@@ -559,47 +585,77 @@ VIDEO {
 
 /* Media query for tablets */
 @media (max-width: 768px) {
-  .modal-grid {        grid-template-columns: 1fr !important;border-top: none;}
-  VIDEO{
+  .modal-grid {
+    grid-template-columns: 1fr !important;
+    border-top: none;
+  }
+
+  VIDEO {
     height: 100vh;
     object-fit: cover;
-}
-sup{font-size: 10px!important;}
-p{font-size: 16px;}
-h2 {
-  font-size: 1.5rem;}
-.button-border {
-  border-left: none;
-}
-span.material-symbols-outlined,.animated-text 
-  {
- 
-  font-size: 1.5rem !important;
-}
+  }
+
+  sup {
+    font-size: 10px !important;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .button-border {
+    border-left: none;
+  }
+
+  span.material-symbols-outlined,
+  .animated-text {
+
+    font-size: 1.5rem !important;
+  }
+
   .button-section {
     display: block;
   }
+
   .title-section {
     padding-bottom: 12.5vw;
   }
+
   div.modal-column.border {
     border-left: none;
-}
+  }
+
   .title {
     font-size: 20vw !important;
   }
-  .video-overlay-text h2, .video-overlay-text-four h2, .video-overlay-text-three h2, .video-overlay-text-two h2 {
-    font-size: 1.5rem!important;}
+
+  .video-overlay-text h2,
+  .video-overlay-text-four h2,
+  .video-overlay-text-three h2,
+  .video-overlay-text-two h2 {
+    font-size: 1.5rem !important;
+  }
+
   .button-section button {
     font-size: 1.5rem;
     border-bottom: 2px solid;
   }
-  .modal-column {
-    padding: 20px!important;
-}
-  .gpt-container{margin:0}
 
-  div.modal-content.modal-bottom-right{padding:20px}
+  .modal-column {
+    padding: 20px !important;
+  }
+
+  .gpt-container {
+    margin: 0
+  }
+
+  div.modal-content.modal-bottom-right {
+    padding: 20px
+  }
 }
 
 /* Media query for mobile */
@@ -1005,10 +1061,22 @@ button.right-zoom {
   font-weight: 400;
   text-align: center;
   transform: rotate(-20deg);
-  animation: pulse-shadow-#08B166 2s infinite ease-in-out;
+  animation: pulse-shadow-lime 2s infinite ease-in-out;
   /* Apply the pulsing animation */
 
   backdrop-filter: blur(10px);
+}
+
+.video-overlay-text-five {
+  position: absolute;
+bottom: 10px;
+left: 10px;
+
+  color: YELLOW;
+
+
+  box-shadow: 0 0 20px 3px YELLOW;
+
 }
 
 .video-overlay-text-two {
@@ -1029,6 +1097,7 @@ button.right-zoom {
 
   backdrop-filter: blur(10px);
 }
+
 .title-section::before {
   content: "";
   position: absolute;
@@ -1036,13 +1105,18 @@ button.right-zoom {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5); /* Optional: Add a semi-transparent background */
-  backdrop-filter: blur(10px); /* Applies the blur effect */
-  z-index: 1; /* Ensure it is above the text */
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Optional: Add a semi-transparent background */
+  backdrop-filter: blur(10px);
+  /* Applies the blur effect */
+  z-index: 1;
+  /* Ensure it is above the text */
 }
+
 .title-wrapper {
   position: relative;
-  z-index: 2; /* Keeps the text visible over the blur */
+  z-index: 2;
+  /* Keeps the text visible over the blur */
 }
 
 .video-overlay-text-three {
@@ -1050,14 +1124,14 @@ button.right-zoom {
   top: 30%;
   right: 30px;
   cursor: pointer;
-  color:  #0099FF;
+  color: #0099FF;
   border-radius: 50%;
   padding: 3rem;
   animation: pulse-shadow- #0099FF 4s infinite ease-in-out;
   /* Apply the pulsing animation */
 
   /* Apply gradient shadow */
-  box-shadow: 0 0 20px 3px  #0099FF;
+  box-shadow: 0 0 20px 3px #0099FF;
   backdrop-filter: blur(10px);
 }
 
@@ -1092,7 +1166,7 @@ button.right-zoom {
   }
 }
 
-@keyframes pulse-shadow-#08B166 {
+@keyframes pulse-shadow-lime {
   0% {
     box-shadow: 0 0 20px 3px #08B166;
   }
@@ -1108,15 +1182,15 @@ button.right-zoom {
 
 @keyframes pulse-shadow-blue {
   0% {
-    box-shadow: 0 0 20px 3px  #0099FF;
+    box-shadow: 0 0 20px 3px #0099FF;
   }
 
   50% {
-    box-shadow: 0 0 40px 10px  #0099FF;
+    box-shadow: 0 0 40px 10px #0099FF;
   }
 
   100% {
-    box-shadow: 0 0 20px 3px  #0099FF;
+    box-shadow: 0 0 20px 3px #0099FF;
   }
 }
 
@@ -1153,10 +1227,10 @@ button.right-zoom {
 }
 
 .text-prompt-form.expanded {
-  height:100vh;
+  height: 100vh;
 
 
- padding:8% 0
+  padding: 8% 0
 }
 
 .genetext:focus,
@@ -1237,8 +1311,12 @@ button.right-zoom {
     /* Original position */
   }
 }
-sup{    font-size: x-small;
-  background: #08B166;}
+
+sup {
+  font-size: x-small;
+  background: #08B166;
+}
+
 .grid-section .image-container {
   animation: fadeIn 1s ease-in-out;
 }
@@ -1256,8 +1334,9 @@ div.gallery-item,
 
 .animated-text-container {
   position: relative;
-  width: 100%;text-align: center;
-color:#fff;
+  width: 100%;
+  text-align: center;
+  color: #fff;
   vertical-align: middle;
 }
 
@@ -1292,7 +1371,8 @@ color:#fff;
 .animated-text span {
   opacity: 0;
   display: inline-block;
-  animation: fadeInWords 0.6s ease-in-out forwards;line-height: 1;
+  animation: fadeInWords 0.6s ease-in-out forwards;
+  line-height: 1;
 }
 
 .animated-placeholder {
@@ -1374,7 +1454,8 @@ color:#fff;
   margin-bottom: 20px;
   font-family: "DuFont", serif;
   font-size: 3rem;
-  padding-top: 10px;line-height:1
+  padding-top: 10px;
+  line-height: 1
 }
 
 .chat-box {
@@ -1415,7 +1496,7 @@ color:#fff;
 }
 
 .message.ai {
-  background-color:  #0099FF;
+  background-color: #0099FF;
   align-self: flex-start;
   font-family: "DuFont";
   font-size: 3rem;
@@ -1483,7 +1564,8 @@ button.info {
 /* Styles when the form is expanded */
 .genebtt.expanded {
   color: white;
-margin-top:3rem;  padding: 3rem;
+  margin-top: 3rem;
+  padding: 3rem;
   border-radius: 50%;
   /* Rounder button */
   border: 2px solid;
@@ -1673,7 +1755,8 @@ margin-top:3rem;  padding: 3rem;
 .gpt-input {
   background-color: #000;
   border-radius: 5px;
-  width: 100%;display: block;
+  width: 100%;
+  display: block;
   outline: none;
   color: #fff;
   font-size: 20px;
@@ -1850,7 +1933,8 @@ div.gpt-name {
 /* Styling for bot/assistant messages */
 .bot-message {
   background-color: #006633;
-  padding: 20px;margin-block-start: 0;
+  padding: 20px;
+  margin-block-start: 0;
   border-radius: 5px;
   margin-bottom: 10px;
   margin-block-start: 0;
@@ -1859,7 +1943,8 @@ div.gpt-name {
 }
 
 /* Styling for user messages */
-.user-message {margin-block-start: 0;
+.user-message {
+  margin-block-start: 0;
   background-color: #0099FF;
   /* Different background for user messages */
   padding: 20px;
