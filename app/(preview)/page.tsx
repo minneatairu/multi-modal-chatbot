@@ -348,30 +348,7 @@ export default function Home() {
           </span>{" "}
         </h1>
 
-        {/* Button Section */}
-        <div className="button-section">
-          <button
-            className="animated-placeholder"
-            onClick={handleFocusOrPlaceholderClick}
-          >
-            {"GENERATE UR BRAIDS".split(" ").map((word, index) => (
-              <span key={index} style={{ animationDelay: `${index * 0.5}s` }}>
-                {word}&nbsp;
-              </span>
-            ))}
-          </button>
-          <button
-            className="button-border animated-placeholder"
-            onClick={() => openModalHandler("text")}
-          >
-            {" "}
-            {"      TEXT DA BRAIDR".split(" ").map((word, index) => (
-              <span key={index} style={{ animationDelay: `${index * 0.5}s` }}>
-                {word}&nbsp;
-              </span>
-            ))}
-          </button>
-        </div>
+
         {/* Info Modal */}
         {openModal === "info" && (
   <Modal onClose={handleCloseModal} className="modal-grid">
