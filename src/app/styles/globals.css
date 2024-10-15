@@ -477,8 +477,7 @@ button.genebtt {
   z-index: 9999;
   position: fixed;
   bottom: 10px;
-  right: -10px;
-  animation: rotate 15s ease-in-out infinite;
+  right: -50px;
 
 }
 
