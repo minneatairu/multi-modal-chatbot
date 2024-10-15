@@ -4,7 +4,7 @@ import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai-sdk-preview-attachments.vercel.dev"),
-  title: "Da Braidr by Minne",
+  title: "Chat with Da Braidr",
   description: "Experimental preview of attachments in useChat hook",
 };
 
