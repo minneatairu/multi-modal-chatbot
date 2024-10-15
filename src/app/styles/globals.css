@@ -1789,10 +1789,9 @@ button.info {
 }
 
 .gpt-image {
-  width: 30% !important;
-
-  border: 2px solid #f6f4eb;
-  width: 10rem;
+  width: 40% !important;
+border-radius: 50px;    margin-top: 2rem;
+box-shadow: 0 0 20px 3px #08b166;
   margin-bottom: 12px;
 }
 
