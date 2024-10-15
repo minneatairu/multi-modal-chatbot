@@ -1827,7 +1827,7 @@ form.gpt-input-form{margin-top: 3rem;}
   width: 100%;
 }
 
-.gpt-input {
+.gpt-input {width:60vw;
   padding: 2rem;
   background-color: #000;
   border-radius: 50px;
