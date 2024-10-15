@@ -21,6 +21,19 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.image-hair {
+  opacity: 0;
+  animation: fadeIn 2s forwards; /* 2s for a smooth transition, you can adjust */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 @media print {
 

@@ -158,6 +158,7 @@ export default function Home() {
 
   return (
     <>
+    <div className="image-hair">
 
     <Chat />
       <div
