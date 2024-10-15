@@ -315,15 +315,7 @@ export default function Home() {
             </div>
           </form>
         </div>
-        <div className="psycho">
-          <a
-            href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C33&q=pscyhohairapy&btnG="
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn more from human Psychohairapy Researchers
-          </a>
-        </div>
+
 
 
         <div className="video-overlay-text-six">
