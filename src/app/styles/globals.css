@@ -23,7 +23,7 @@ a {
 }
 .image-hair {
   opacity: 0;
-  animation: fadeIn 2s forwards; /* 2s for a smooth transition, you can adjust */
+  animation: fadeIn 2s forwards; display: flex; flex-direction: column;
 }
 
 @keyframes fadeIn {
