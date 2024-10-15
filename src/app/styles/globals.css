@@ -1792,7 +1792,7 @@ button.info {
   padding: 8px;
   background-color: #f6f4eb;
 }
-div.homey{position: absolute;font-size: 3rem; top: 10px;left: 10px;}
+div.homey{position: absolute;font-size: 3rem; top: 10px;left: 10px;  color: yellow;}
 .flower {
   font-size: 3rem;
   margin: 3rem 0;
