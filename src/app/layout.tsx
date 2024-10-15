@@ -16,6 +16,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <link rel="icon" href="/favicon.ico" />
+
         <link rel="stylesheet" href="https://use.typekit.net/xkr0sog.css" />
         <link
           rel="stylesheet"
