@@ -9,17 +9,16 @@ import {
 } from "@/components/icons";
 import { useChat } from "ai/react";
 import { DragEvent, useEffect, useRef, useState } from "react";
-import Modal from "@/components/Modal";
+
 import Chat from "@/components/Chat";
-import VideoPlayer from "@/components/VideoPlayer";
+
 import PrintButton from "@/components/PrintButton";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/router";
-import EssayContent from "@/components/EssayContent";
-import References from "@/components/References";
+
 
 // Custom Markdown renderer based on user or bot role
 const MarkdownRenderer = ({ content, role }) => {
@@ -159,6 +158,8 @@ export default function Home() {
 
   return (
     <>
+
+    <Chat />
       <div
         className="gpt-container"
         onDragOver={handleDragOver}

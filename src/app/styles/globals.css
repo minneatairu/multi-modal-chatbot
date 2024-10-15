@@ -1,25 +1,27 @@
 /* Load custom font using @font-face */
 @font-face {
   font-family: "DuFont";
-  src: url("/bold.ttf") format("truetype");
+  src: url("bold.ttf") format("truetype");
   /* Corrected 'ttf' format to 'truetype' */
 }
 
 /* Second Font Face (Regular) */
 @font-face {
   font-family: "DuFontRegular";
-  src: url("/reg.ttf") format("truetype");
+  src: url("reg.ttf") format("truetype");
   /* Added the second font */
 }
 
-
-body {
- 
-  BACKGROUND: BLACK;
+sup.gtsup {
+  font-family: "t26-carbon", monospace;
+  background: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-a{color:black; text-decoration: none;}
 @media print {
 
   /* Hide elements that shouldn't appear in the print */
@@ -39,7 +41,7 @@ a{color:black; text-decoration: none;}
 
   .gpt-container,
   div.modal-overlay {
-    MARGIN: AUTO !important
+    margin: AUTO !important;
   }
 
   .grid-section {
@@ -70,12 +72,12 @@ a{color:black; text-decoration: none;}
   }
 
   .grid-section {
-    border-top: 2px solid black !important;
+    border-top: 2px solid #000 !important;
   }
 
   a,
   link {
-    color: black !important;
+    color: #000 !important;
     text-decoration: none;
   }
 
@@ -85,22 +87,24 @@ a{color:black; text-decoration: none;}
   }
 }
 
-div.gallery-item {
-  padding-bottom: 4px;
-  width: 100%;
+.heading-text {
+  margin-top: 6rem;
 }
 
-.heading-text {
-  margin-top: 6rem
+p.predicting-image {
+  color: #09f;
+  text-align: center;
+  margin: 3rem 0
+}
+
+img {
+  object-fit: contain;
 }
 
 /* Grid container */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  /* 8 columns */
-  justify-items: center;
-  padding: 0 10px;
 }
 
 p {
@@ -111,6 +115,7 @@ p {
 }
 
 .image-info {
+  color: #fff;
   font-family: t26-carbon, monospace;
 }
 
@@ -130,11 +135,11 @@ ol {
 }
 
 .loading-img {
-  color: #fff;
+  color: #f6f4eb;
 }
 
 div.imagesss {
-  background: black;
+  background: #000;
   height: 100%;
   padding: 8% 10%;
 }
@@ -144,8 +149,8 @@ div.imagesss {
   top: 20px;
   right: 10px;
   padding: 5px 5px 3px 5px;
-  background-color: YELLOW;
-  color: BLACK;
+  background-color: #f6e11f;
+  color: #000;
   border: 2px SOLID;
   border-radius: 50%;
   font-size: 1.2rem;
@@ -156,10 +161,10 @@ div.imagesss {
 /* Styling for the "X" close text */
 .close-text {
   font-size: 1rem;
-  color: black;
+  color: #000;
   cursor: pointer;
   display: block;
-  background: #08B166;
+  background: #08b166;
   border-radius: 50%;
   padding: 5px;
   border: 2px solid;
@@ -183,13 +188,12 @@ div.imagesss {
   /* Disable interaction when hidden */
 }
 
-
 div.modal-column.border {
   border-left: 2px solid;
 }
 
 div.dragfile {
-  color: yellow
+  color: #f6e11f;
 }
 
 /* Custom checkbox */
@@ -200,30 +204,30 @@ input[type="checkbox"] {
   appearance: none;
   width: 50px;
   height: 50px;
-  border: 2px solid black;
+  border: 2px solid #000;
   cursor: pointer;
   outline: none;
   display: inline-block;
   vertical-align: middle;
-  background-color: white;
+  background-color: #f6f4eb;
   min-width: 50px;
 }
 
 input[type="checkbox"]:checked {
-  background-color: black;
+  background-color: #000;
 }
 
 div.modal-content.modal-bottom-right {
-  background: black;
-  padding: 8% 10%;
+  background: #000;
   z-index: 999;
   width: 100%;
+  height: 100vh;
   border: 2px solid;
 }
 
 input[type="checkbox"]:checked:after {
   content: "X";
-  color: #08B166;
+  color: #08b166;
   display: inline-block;
   text-align: center;
   font-size: 50px;
@@ -234,8 +238,31 @@ input[type="checkbox"]:checked:after {
   max-width: 50px;
 }
 
+button.close-btn {
+  font-size: 3rem;
+  background: none;
+  color: #0099ff;
+  padding: 0 !important;
+  border: none !important;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.image-gen::placeholder {
+  color: #0099ff;
+}
+
 .button-border {
   border-left: 2px solid;
+}
+
+::placeholder {
+  color: #f6f4eb;
+  opacity: 1;
+  font-family: t26-carbon, monospace;
+  text-align: center;
+  font-size: 20px;
 }
 
 body,
@@ -246,9 +273,8 @@ html {
   font-family: "DuFont", serif;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  background: #000;
 }
-
 
 .chattext {
   font-size: 1.3rem;
@@ -258,12 +284,6 @@ html {
   line-height: 1;
 }
 
-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .video-container {
   position: relative;
 
@@ -271,7 +291,7 @@ button {
 }
 
 .video-controls button {
-  color: black;
+  color: #000;
   font-family: "DuFont", serif;
   padding-top: 7px;
   text-transform: uppercase;
@@ -282,10 +302,6 @@ button {
 
 button {
   font-family: "DuFont", serif;
-}
-
-button {
-  font-size: 2rem;
 }
 
 h2 {
@@ -302,16 +318,16 @@ h2 {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: #fff;
+  color: #08b166;
 }
 
 div.braidtag {
-  background: #08B166;
+  background: #08b166;
 }
 
 .button-section {
   font-size: 2rem;
-  color: black;
+  color: #000;
   cursor: pointer;
   font-family: "DuFont", serif;
   background: none;
@@ -329,27 +345,17 @@ div.braidtag {
   align-items: center;
 }
 
-::placeholder {
-  color: black;
-  opacity: 1;
-}
-
-::-ms-input-placeholder {
-  /* Edge 12 -18 */
-  color: black;
-}
-
 input#name.datasub,
 input#email.datasub,
 input#image-link.datasub {
-  background: #08B166;
+  background: #08b166;
   font-family: "Kode Mono", serif;
   text-align: center;
 }
 
 .button-section button {
   font-size: 2rem;
-  color: black;
+  color: #000;
   cursor: pointer;
   font-family: "DuFont", serif;
   background: none;
@@ -358,8 +364,6 @@ input#image-link.datasub {
   padding-top: 10px;
   width: 100%;
 }
-
-
 
 input {
   font-family: "DuFont", serif;
@@ -377,7 +381,7 @@ input {
   overflow: auto;
   height: 100%;
 
-  background: white;
+  background: #f6f4eb;
   border: 2px solid;
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
@@ -408,7 +412,7 @@ input {
 
 .modal-content {
   position: relative;
-  background-color: white;
+  background-color: #f6f4eb;
 }
 
 /* Close button (X) */
@@ -416,7 +420,8 @@ span.close-button {
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 2rem;
+  color: #f6e11f;
+  font-size: 3rem !important;
   cursor: pointer;
   font-family: "DuFont", serif;
 }
@@ -449,14 +454,52 @@ button.submit-button {
 .text-prompt-form {
   display: flex;
 
+  margin: 0 10px;
   box-sizing: border-box;
   text-align: center;
 }
 
 button.genebtt {
-  padding-top: 8px;
+  margin-top: 3rem;
   line-height: 1;
+  color: #0099ff;
+  cursor: pointer;
+  box-shadow: inset 0 0 50px #08b166;
 }
+
+.video-overlay-text-six {
+  background-image: url(/afrocomb.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  padding: 100px;
+  color: #fff;
+  z-index: 9999;
+  position: fixed;
+  bottom: 10px;
+  right: -10px;
+  animation: rotate 15s ease-in-out infinite;
+
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+
 
 textarea.genetext {
   border: none;
@@ -476,9 +519,9 @@ textarea.genetext {
   font-size: 3rem;
   border: none;
   font-family: "DuFont", serif;
-  color: black;
+  color: #000;
   cursor: pointer;
-  background: #08B166;
+  background: #08b166;
 }
 
 /* Spinning Animation for Overlay Text */
@@ -497,26 +540,21 @@ span.material-symbols-outlined {
   cursor: pointer;
 }
 
-VIDEO {
-  margin-bottom: -5px;
-}
-
 #muteButton {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: white;
+  color: #f6f4eb;
   border: none;
   cursor: pointer;
   z-index: 10;
 }
 
 /* Two-column grid layout */
-.modal-grid,
-.dataa-modal-content {
+.modal-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100%;
+
   border: 2px solid;
   border-bottom: none;
 }
@@ -528,12 +566,12 @@ VIDEO {
   right: 20px;
   font-family: "DuFont", serif;
   border-radius: 50%;
-  color: black;
+  color: #000;
   padding: 30px;
   font-size: 1.5rem;
   text-transform: uppercase;
   border: 2px solid;
-  background: #08B166;
+  background: #08b166;
   transition: transform 0.5s ease;
   z-index: 90;
 }
@@ -543,8 +581,8 @@ VIDEO {
   top: 30px;
   right: 10px;
   padding: 30px 20px;
-  background-color: yellow;
-  color: black;
+  background-color: #f6e11f;
+  color: #000;
   border: none;
   border-radius: 50%;
   font-size: 1.5rem;
@@ -554,7 +592,7 @@ VIDEO {
   border: 2px solid;
 }
 
-/* The spinning will be triggered when hovering over the image-container */
+/* The spinning will be trigge#D34C4C when hovering over the image-container */
 .image-container:hover .overlay-text {
   animation: spin 5s linear infinite;
 }
@@ -613,7 +651,6 @@ VIDEO {
 
   span.material-symbols-outlined,
   .animated-text {
-
     font-size: 1.5rem !important;
   }
 
@@ -650,11 +687,11 @@ VIDEO {
   }
 
   .gpt-container {
-    margin: 0
+    margin: 0;
   }
 
   div.modal-content.modal-bottom-right {
-    padding: 20px
+    padding: 20px;
   }
 }
 
@@ -666,12 +703,9 @@ VIDEO {
     grid-template-columns: 1fr !important;
   }
 
-
   .modal-column {
     padding: 20px !important;
   }
-
-
 }
 
 .title-section {
@@ -685,6 +719,9 @@ VIDEO {
 }
 
 .title-wrapper {
+  color: #fff;
+  filter: blur(2px);
+
   height: 8vw;
   display: inline-block;
   white-space: nowrap;
@@ -719,7 +756,7 @@ VIDEO {
   height: 20vw;
   border-radius: 50%;
   font-family: t26-carbon, monospace;
-  background: #08B166;
+  background: #08b166;
   font-size: 1.3rem;
   display: flex;
   align-items: center;
@@ -744,8 +781,8 @@ label {
   width: 100%;
   padding: 20px 0;
 
-  border: 2px solid black;
-  background-color: #08B166;
+  border: 2px solid #000;
+  background-color: #08b166;
   font-family: t26-carbon, monospace;
   font-size: 1rem;
   text-align: center;
@@ -763,11 +800,11 @@ label {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: #08B166;
-  color: black;
+  background-color: #08b166;
+  color: #000;
   font-family: t26-carbon, monospace;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid #000;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s;
@@ -792,7 +829,7 @@ label {
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   gap: 2px;
-  background: black;
+  background: #000;
   border: 2px solid;
 }
 
@@ -802,7 +839,7 @@ label {
   /* Align checkbox and label vertically */
   justify-content: space-between;
   padding-right: 18px;
-  background-color: #08B166;
+  background-color: #08b166;
   font-family: t26-carbon, monospace;
 }
 
@@ -821,6 +858,8 @@ input.datasub.url {
 .gallery-item img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
 }
 
 input.datasub.email {
@@ -833,9 +872,9 @@ input.datasub.email {
   padding: 20px 40px;
   font-family: "DuFont", serif;
   font-size: 2rem;
-  background-color: #08B166;
-  color: black;
-  border: 2px solid black;
+  background-color: #08b166;
+  color: #000;
+  border: 2px solid #000;
   cursor: pointer;
   text-transform: uppercase;
   transition: background-color 0.3s, transform 0.2s;
@@ -864,7 +903,7 @@ button.right-zoom {
 .help-button {
   border-left: 2px solid;
 
-  background-color: #08B166;
+  background-color: #08b166;
 
   cursor: pointer;
 }
@@ -884,9 +923,10 @@ button.right-zoom {
 }
 
 .zoom-controls button {
-  font-family: Kode Mono;
-  background-color: #08B166;
-  color: black;
+  border-radius: 10px;
+  font-family: "t26-carbon", monospace;
+  background-color: #08b166;
+  color: #000;
   padding: 10px;
   cursor: pointer;
   font-size: 1rem;
@@ -898,9 +938,9 @@ button.right-zoom {
   right: 0;
   font-family: Kode Mono;
   padding: 5px;
-  color: black;
+  color: #000;
   font-size: smaller;
-  background: #08B166;
+  background: #08b166;
 
   z-index: 9999;
   line-height: 1;
@@ -918,12 +958,11 @@ button.right-zoom {
   align-items: center;
 }
 
-
 .filter-controls select {
   z-index: 99999;
   padding: 9px;
   font-size: 1rem;
-  background: #08B166;
+  background: #08b166;
   font-family: Kode Mono;
   border: 2px solid #000;
   cursor: pointer;
@@ -938,17 +977,18 @@ button.right-zoom {
 
 /* Custom dropdown toggle button */
 .dropdown-toggle {
+  border-radius: 10px;
   padding: 10px;
   font-size: 1rem;
   border: 2px SOLID;
-  background-color: #08B166;
+  background-color: #08b166;
   bottom: 10px;
-  right: 120px;
-  color: BLACK;
+  right: 110px;
+  color: #000;
   padding-top: 12px;
   cursor: pointer;
   z-index: 99999;
-  font-family: Kode Mono;
+  font-family: "t26-carbon", monospace;
   position: fixed;
 }
 
@@ -963,19 +1003,54 @@ button.right-zoom {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  background-color: #08B166;
-  color: black;
+  background-color: #08b166;
+  color: #000;
   font-family: t26-carbon, monospace;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid #000;
   cursor: pointer;
   font-size: 1rem;
   animation: pulse 4.5s infinite;
   /* Apply animation with 1.5s duration, repeating infinitely */
 }
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
 
-.checkbox-section {
-  margin-top: 2rem;
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  backdrop-filter: blur(10px);background: transparent;
+  color: #f6e11f;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the text */
+  left: 40%;
+  margin-left: -90px;
+  opacity: 0;
+  transition: opacity 0.3s;    box-shadow: 0 0 20px 3px #f6e11f;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+button.clear-btn {
+  border-radius: 10px;
+  padding: 10px;
+  color: #08b166;
+  box-shadow: 0 0 20px 3px #08b166;
+  border: none;
+  cursor: pointer;
+  position: absolute;    padding-top: 12px;
+  top: 10px;
+  right: 10px;    animation: pulse-shadow-lime 2s ease-in-out infinite;
+  text-transform: uppercase;
 }
 
 /* Center the div using Flexbox */
@@ -1011,7 +1086,7 @@ button.right-zoom {
 }
 
 .link-style {
-  color: black;
+  color: #000;
   text-decoration: none;
   /* Remove underline */
   display: block;
@@ -1021,14 +1096,15 @@ button.right-zoom {
 /* Dropdown menu */
 .dropdown-menu {
   position: fixed;
-  background-color: #08B166;
+  background-color: #08b166;
   list-style: none;
-  padding: 8px;
+  padding: 20px 5px;
   margin: 0;
   bottom: 56px;
-  min-width: 80px;
-  right: 120px;
-  border: 2px SOLID BLACK;
+  min-width: 70px;
+  border-radius: 10px;
+  right: 110px;
+  border: 2px SOLID #000;
   font-family: Kode Mono;
   overflow-y: auto;
   z-index: 10000;
@@ -1037,6 +1113,7 @@ button.right-zoom {
 
 .dropdown-menu li {
   padding: 10px;
+  font-family: "t26-carbon", monospace;
   cursor: pointer;
 }
 
@@ -1051,8 +1128,8 @@ button.right-zoom {
   top: 10%;
 
   cursor: pointer;
-  box-shadow: 0 0 20px 3px #08B166;
-  color: #08B166;
+  box-shadow: 0 0 20px 3px #08b166;
+  color: #08b166;
   padding: 3rem;
   border-radius: 50%;
   display: flex;
@@ -1062,18 +1139,9 @@ button.right-zoom {
   text-align: center;
   transform: rotate(-20deg);
   animation: pulse-shadow-lime 2s infinite ease-in-out;
+  /* Apply the pulsing animation */
 
   backdrop-filter: blur(10px);
-}
-
-.video-overlay-text-five {
-  position: absolute;
-bottom: 10px;
-left: 10px;
-
-  color: YELLOW;
-
-
 }
 
 .video-overlay-text-two {
@@ -1082,126 +1150,113 @@ left: 10px;
   right: 30px;
   cursor: pointer;
   transform: rotate(10deg);
-  color: YELLOW;
-  border-radius: 50%;
+  color: #f6e11f;
+  border-radius: 50px;
   animation: pulse-shadow-yellow 5s infinite ease-in-out;
   /* Apply the pulsing animation */
 
   padding: 3rem;
 
   /* Apply gradient shadow */
-  box-shadow: 0 0 20px 3px YELLOW;
+  box-shadow: 0 0 20px 3px #f6e11f;
 
-  backdrop-filter: blur(10px);
-}
-
-.title-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  /* Optional: Add a semi-transparent background */
-  backdrop-filter: blur(10px);
-  /* Applies the blur effect */
-  z-index: 1;
-  /* Ensure it is above the text */
-}
-
-.title-wrapper {
-  position: relative;
-  z-index: 2;
-  /* Keeps the text visible over the blur */
-}
-
-.video-overlay-text-three {
-  position: absolute;
-  top: 30%;
-  right: 30px;
-  cursor: pointer;
-  color: #0099FF;
-  border-radius: 50%;
-  padding: 3rem;
-  animation: pulse-shadow- #0099FF 4s infinite ease-in-out;
-  /* Apply the pulsing animation */
-
-  /* Apply gradient shadow */
-  box-shadow: 0 0 20px 3px #0099FF;
   backdrop-filter: blur(10px);
 }
 
 .video-overlay-text-four {
   position: absolute;
-  top: 60%;
-  cursor: pointer;
-  left: 45%;
+  top: 70%;
 
-  color: red;
+  left: 45%;
+  cursor: pointer;
+  color: #0099ff;
+  border-radius: 50%;
+  padding: 3rem;
+  animation: pulse-shadow- #0099ff 4s infinite ease-in-out;
+  /* Apply the pulsing animation */
+
+  /* Apply gradient shadow */
+  box-shadow: 0 0 20px 3px #0099ff;
+  backdrop-filter: blur(10px);
+}
+
+.video-overlay-text-three {
+  position: absolute;
+  cursor: pointer;
+  top: 30%;
+  right: 30px;
+  color: #d34c4c;
   border-radius: 50%;
   padding: 3rem;
 
   /* Apply gradient shadow */
-  box-shadow: 0 0 20px 3px RED;
+  box-shadow: 0 0 20px 3px #d34c4c;
   backdrop-filter: blur(10px);
   animation: pulse-shadow 3s infinite ease-in-out;
   /* Apply the pulsing animation */
 }
 
+.video-overlay-text-five {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  color: #f6e11f;
+}
+
 @keyframes pulse-shadow {
   0% {
-    box-shadow: 0 0 20px 3px red;
+    box-shadow: 0 0 20px 3px #d34c4c;
   }
 
   50% {
-    box-shadow: 0 0 40px 10px red;
+    box-shadow: 0 0 60px 30px #d34c4c;
   }
 
   100% {
-    box-shadow: 0 0 20px 3px red;
+    box-shadow: 0 0 20px 3px #d34c4c;
   }
 }
 
 @keyframes pulse-shadow-lime {
   0% {
-    box-shadow: 0 0 20px 3px #08B166;
+    box-shadow: 0 0 20px 3px #08b166;
   }
 
   50% {
-    box-shadow: 0 0 40px 10px #08B166;
+    box-shadow: 0 0 40px 30px #08b166;
   }
 
   100% {
-    box-shadow: 0 0 20px 3px #08B166;
+    box-shadow: 0 0 20px 3px #08b166;
   }
 }
 
 @keyframes pulse-shadow-blue {
   0% {
-    box-shadow: 0 0 20px 3px #0099FF;
+    box-shadow: 0 0 20px 3px #0099ff;
   }
 
   50% {
-    box-shadow: 0 0 40px 10px #0099FF;
+    box-shadow: 0 0 40px 10px #0099ff;
   }
 
   100% {
-    box-shadow: 0 0 20px 3px #0099FF;
+    box-shadow: 0 0 20px 3px #0099ff;
   }
 }
 
 @keyframes pulse-shadow-yellow {
   0% {
-    box-shadow: 0 0 20px 3px yellow;
+    box-shadow: 0 0 20px 3px #f6e11f;
   }
 
   50% {
-    box-shadow: 0 0 40px 10px yellow;
+    box-shadow: 0 0 40px 30px #f6e11f;
   }
 
   100% {
-    box-shadow: 0 0 20px 3px yellow;
+    box-shadow: 0 0 20px 3px #f6e11f;
   }
 }
 
@@ -1226,12 +1281,12 @@ left: 10px;
 .text-prompt-form.expanded {
   height: 100vh;
 
-
-  padding: 8% 0
+  padding: 8% 0;
 }
 
 .genetext:focus,
-.chat-textarea:focus {
+.chat-textarea:focus,
+input.image-gen:focus {
   outline: none;
   /* Ensure outline is removed */
 }
@@ -1241,18 +1296,16 @@ left: 10px;
   font-family: "DuFont";
 }
 
-
 .modal-overlay {
   opacity: 1;
   transition: opacity 0.9s ease, visibility 0.3s ease;
 }
 
 .chat-button {
-
   margin-top: 3rem;
-
+  box-shadow: inset 0 0 30px #f6e11f;
   align-self: center;
-  /* Ensures the button is centered */
+  /* Ensures the button is cente#D34C4C */
 }
 
 .chat-input-form {
@@ -1260,7 +1313,6 @@ left: 10px;
   flex-direction: column;
   align-items: center;
   /* This will center all children (textarea and button) */
-
 }
 
 .modal-overlay.show {
@@ -1311,7 +1363,7 @@ left: 10px;
 
 sup {
   font-size: x-small;
-  background: #08B166;
+  background: #f6e11f;
 }
 
 .grid-section .image-container {
@@ -1333,8 +1385,10 @@ div.gallery-item,
   position: relative;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: #f6f4eb;
   vertical-align: middle;
+  margin-top: 4%;
+  line-height: 1;
 }
 
 .genetext {
@@ -1347,7 +1401,7 @@ div.gallery-item,
 }
 
 .gpt-input::placeholder {
-  color: white
+  color: #f6e11f;
 }
 
 .animated-text {
@@ -1355,6 +1409,7 @@ div.gallery-item,
   font-size: 3rem;
   pointer-events: none;
   opacity: 1;
+  color: #0099ff;
   font-family: "DuFont", serif;
 }
 
@@ -1442,17 +1497,18 @@ div.gallery-item,
 
 .chat-container {
   display: flex;
+  margin-top: 10%;
   flex-direction: column;
 }
 
 .chat-title {
   text-align: center;
-  color: #fff;
+  color: #f6e11f;
   margin-bottom: 20px;
   font-family: "DuFont", serif;
   font-size: 3rem;
-  padding-top: 10px;
-  line-height: 1
+
+  line-height: 1;
 }
 
 .chat-box {
@@ -1468,7 +1524,18 @@ div.gallery-item,
   left: 0 !important;
   padding: 0 5px;
   bottom: 0;
-  color: white;
+  color: #f6f4eb;
+  font-size: 20px;
+}
+
+.bradininnn {
+  position: absolute;
+  left: 0 !important;
+  padding: 0 5px;
+  bottom: 0;
+  font-size: 20px;
+  color: #0099ff;
+  font-family: "t26-carbon", monospace;
 }
 
 .message {
@@ -1493,17 +1560,18 @@ div.gallery-item,
 }
 
 .message.ai {
-  background-color: #0099FF;
+  background-color: #0099ff;
   align-self: flex-start;
   font-family: "DuFont";
   font-size: 3rem;
 }
 
+
 button.info {
   position: absolute;
   top: 10px;
-  background-color: #08B166 !important;
-  color: black;
+  background-color: #08b166 !important;
+  color: #000;
   padding: 5px 25px;
   padding-top: 10px;
   border-radius: 50%;
@@ -1513,7 +1581,7 @@ button.info {
 }
 
 .psycho a {
-  color: white !important;
+  color: #f6e11f !important;
   text-decoration: none;
   font-size: 20px;
   font-family: t26-carbon, monospace;
@@ -1522,8 +1590,8 @@ button.info {
 .message.user {
   font-family: "DuFont";
   font-size: 3rem;
-  background-color: #08B166;
-  color: black;
+  background-color: #08b166;
+  color: #000;
   align-self: flex-end;
   line-height: 1;
   padding-top: 18px;
@@ -1535,17 +1603,17 @@ button.info {
   height: 300px;
 
   border: 2px solid;
-  color: #fff;
-  background: black;
+  color: #f6f4eb;
+  background: #000;
 }
 
 .chat-button {
   border-radius: 50%;
-  color: #fff;
+  color: #f6e11f;
   cursor: pointer;
   transition: background-color 0.3s ease;
   padding: 3rem;
-  border: 2px solid;
+  border: none;
 
   font-size: 3rem;
 }
@@ -1557,20 +1625,15 @@ button.info {
   border: 2px solid;
 }
 
-
 /* Styles when the form is expanded */
-.genebtt.expanded {
-  color: white;
-  margin-top: 3rem;
+.genebtt {
+  color: #f6f4eb;
+
   padding: 3rem;
   border-radius: 50%;
   /* Rounder button */
-  border: 2px solid;
+  border: none;
   font-size: 3rem;
-}
-
-.genebtt {
-  margin: 0 2rem;
 }
 
 /* Modal Overlay */
@@ -1591,26 +1654,30 @@ button.info {
 
 /* Modal Content */
 .dataa-modal-content {
-  background: white;
+  background: #f6f4eb;
   transition: opacity 0.4s ease;
-  /* Simple fade transition */
+  width: 40%;
+  border-radius: 30px;
   opacity: 0;
   font-family: "DuFont", serif;
   border: 2px solid;
-  width: 100%;
-  text-align: center;
-  position: relative;
+  top: 10px;
+  z-index: 9999999;
+  position: absolute;
+  padding: 6rem;
+  margin: 10%;
 }
 
 /* Close Button */
 .dataa-close-button {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
+  color: black;
 }
 
 /* When the modal is shown */
@@ -1632,7 +1699,6 @@ button.info {
   justify-content: center;
   padding-bottom: 20px;
   margin: 0 15%;
-  background-color: #000;
 }
 
 .gpt-drag-overlay {
@@ -1652,7 +1718,6 @@ button.info {
   justify-content: center;
 }
 
-
 .gpt-drag-subtext {
   font-size: 0.875rem;
   color: #718096;
@@ -1666,7 +1731,6 @@ button.info {
 
   flex-direction: column;
   justify-content: space-between;
-  gap: 16px;
 }
 
 .gpt-message-list {
@@ -1694,17 +1758,14 @@ button.info {
 .gpt-icon-container {
   width: 100%;
 
-  color: #fff;
+  color: #f6f4eb;
 }
 
 .gpt-message-content {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-
 }
-
-
 
 .gpt-attachments {
   display: flex;
@@ -1713,13 +1774,11 @@ button.info {
 }
 
 .gpt-image {
-
   width: 30% !important;
 
-  border: 2px solid #fff;
+  border: 2px solid #f6f4eb;
   width: 10rem;
   margin-bottom: 12px;
-
 }
 
 .gpt-text-preview {
@@ -1727,11 +1786,18 @@ button.info {
   width: 10rem;
   height: 6rem;
   overflow: hidden;
-  color: #fff;
+  color: #f6f4eb;
   border: 2px solid;
   /* Light gray */
   padding: 8px;
-  background-color: #ffff;
+  background-color: #f6f4eb;
+}
+
+.flower {
+  font-size: 3rem;
+  margin: 3rem 0;
+  color: yellow;
+  text-align: center;
 }
 
 .gpt-input-form {
@@ -1744,31 +1810,30 @@ button.info {
   display: flex;
   justify-content: center;
   width: 100%;
-  /* Ensures button is centered relative to the form */
-  margin-top: 16px;
-  /* Adds some space above the button */
 }
 
 .gpt-input {
+  padding: 2rem;
   background-color: #000;
-  border-radius: 5px;
+  border-radius: 50px;
   width: 100%;
   display: block;
+  margin: 1rem;
   outline: none;
-  color: #fff;
+  box-shadow: inset 0 10px 100px #f6e11f;
+  color: #f6e11f;
+  margin-top: 10px;
   font-size: 20px;
   font-family: t26-carbon, monospace;
-  min-height: 150px;
-
+  min-height: 200px;
   text-align: CENTER;
-  border: 2px SOLID;
+  border: none;
 }
 
 .gpt-file-preview {
   display: flex;
   flex-direction: row;
   gap: 8px;
-
 
   padding: 3rem 0;
 
@@ -1779,29 +1844,26 @@ button.info {
 
 .gpt-file-image {
   width: 40%;
-  border: 2px solid white;
+  border: 2px solid #f6f4eb;
 }
 
 .uploadtips {
   margin-top: 3rem;
-  color: white;
+  color: #f6f4eb;
   font-size: 20px;
   font-family: t26-carbon, monospace;
 }
-
 
 .gpt-file-text-preview {
   font-size: 0.5rem;
   width: 7rem;
   height: 4rem;
   overflow: hidden;
-  color: #fff;
+  color: #f6f4eb;
   border: 2px solid;
   padding: 8px;
   background-color: #000;
 }
-
-
 
 .fade-word {
   animation: fadeIn 0.5s forwards;
@@ -1871,7 +1933,6 @@ button.info {
 
 .gpt-message-content {
   max-width: 60%;
-
 }
 
 .gpt-message-list {
@@ -1907,7 +1968,7 @@ button.info {
 }
 
 .gpt-message.assistant .gpt-message-content {
-  color: #fff;
+  color: #f6f4eb;
 }
 
 .gpt.-text {
@@ -1915,17 +1976,15 @@ button.info {
 }
 
 .gpt-message.user .gpt-message-content {
-  background-color: #0099FF;
+  background-color: #0099ff;
   /* User message background color */
   border: 2px solid;
-  color: #fff;
+  color: #f6f4eb;
 }
 
 div.gpt-name {
-  color: #fff
+  color: #f6f4eb;
 }
-
-
 
 /* Styling for bot/assistant messages */
 .bot-message {
@@ -1935,17 +1994,69 @@ div.gpt-name {
   border-radius: 5px;
   margin-bottom: 10px;
   margin-block-start: 0;
-  color: #fff;
+  color: #f6f4eb;
   border: 2px solid;
 }
 
-/* Styling for user messages */
+.p#D34C4Cicting-image {
+  text-align: center;
+  font-size: 12px;
+}
+
+form.image-generation {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15%;
+}
+
+div.image-hair {
+  background: #000;
+  height: 100vh;
+}
+
 .user-message {
   margin-block-start: 0;
-  background-color: #0099FF;
+  background-color: #0099ff;
   /* Different background for user messages */
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 10px;
-  color: #fff;
+  color: #f6f4eb;
+}
+
+input.image-gen {
+  background: #000;
+  color: #0099ff;
+  box-shadow: inset 0 10px 100px #0099ff;
+  border: none;
+  padding: 2rem;
+  margin: 1rem;
+  margin-top: 3rem;
+  border-radius: 30px;
+  text-align: center;
+  min-height: 200px;
+  font-family: t26-carbon, monospace;
+  font-size: 20px;
+}
+
+.video-overlay-text-five p {
+  font-size: 16px;
+}
+
+button {
+  background: #000;
+  color: #f6f4eb;
+  border: 2px solid;
+  padding: 3rem;
+  border-radius: 50%;
+}
+
+div.image-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+  color: #0099ff;
+  margin-top: 3rem;
 }
