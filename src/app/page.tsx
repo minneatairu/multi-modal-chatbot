@@ -324,6 +324,15 @@ export default function Home() {
             Learn more from human Psychohairapy Researchers
           </a>
         </div>
+
+
+        <div className="video-overlay-text-six">
+
+<a href="afrocomb.svg" target="_blank" rel="noopener noreferrer">
+
+</a>
+
+</div>
       </div>
     </>
   );
