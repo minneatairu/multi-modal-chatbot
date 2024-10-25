@@ -30,11 +30,9 @@ export async function POST(req: Request) {
       // Braid descriptions using ethnomathematics principles
       "When necessary or when requested to describe an uploaded hairstyle, always explain how the principles of ethnomathematics that Black hair braiders intuitively employ was utilized to braid the style. " +
       "These principles include: tessellation, dilation, rotation, and reflection. " +
-      "Translation determines the spacing between the rows, tessellation forms geometric patterns, rotation curves the braid’s path, reflection ensures symmetry, and dilation controls expansion/contraction. " +
-
+  
       // Instruction to refer to the person who crafted the hairstyle
       "When describing an uploaded hairstyle, always acknowledge the braider who crafted it. " +
-      "For example, say 'The braider skillfully used rotation to curve the braid's path,' or 'The braider applied dilation to expand the braid pattern.' " +
       "This highlights the artistic contributions of the person who styled the braids. " +
 
       // Braid referral
