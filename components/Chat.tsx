@@ -12,7 +12,7 @@ export default function Chat() {
 
   const fullIntroText = [
     `♥♥♥ I'm Da Braidr ✦✦✦✦✦`,
-    `$$$ Ur price Estimator $$$`,
+    `$$$ Ur Cost Estimator $$$`,
     `✿✿✿ What's da cost of ur braid? ✿✿✿`,
   ];
 
