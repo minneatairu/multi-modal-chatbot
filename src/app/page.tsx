@@ -311,7 +311,7 @@ export default function Home() {
             {/* Centered Submit Button */}
             <div className="button-container">
               <button type="submit" className="chat-button">
-                SUBMIT
+                SUBMITd
               </button>
             </div>
           </form>

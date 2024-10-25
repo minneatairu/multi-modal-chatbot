@@ -1,0 +1,28 @@
+{
+    "styles": {
+      "box_braids": {
+        "short": { "price": 120, "time_hours": 4 },
+        "medium": { "price": 180, "time_hours": 6 },
+        "long": { "price": 250, "time_hours": 8 }
+      },
+      "knotless_braids": {
+        "short": { "price": 150, "time_hours": 5 },
+        "medium": { "price": 220, "time_hours": 7 },
+        "long": { "price": 300, "time_hours": 9 }
+      },
+      "cornrows": {
+        "simple": { "price": 80, "time_hours": 2 },
+        "intricate": { "price": 150, "time_hours": 4 }
+      }
+    },
+    "hair_types": {
+      "4C": { "complexity_multiplier": 1.2 },
+      "3B": { "complexity_multiplier": 1.0 },
+      "2A": { "complexity_multiplier": 0.9 }
+    },
+    "extras": {
+      "extensions": { "price_addition": 50 },
+      "wash_and_detangle": { "price_addition": 30, "time_addition": 1 }
+    }
+  }
+  
