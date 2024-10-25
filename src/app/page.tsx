@@ -324,7 +324,7 @@ export default function Home() {
 <div className="homey">
 
 <a href="https://dabraidr.info" rel="noopener noreferrer">
-XX
+X
 </a>
 
 </div>

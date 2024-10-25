@@ -1787,7 +1787,7 @@ button.info {
   flex-direction: row;
   gap: 8px;
 }
-img.gpt-file-image { box-shadow: inset 0 0 30px #08b166;
+img.gpt-file-image { box-shadow:  0 0 30px #08b166;
   font-family: t26-carbon, monospace;border-radius: 30px;
   color: #08b166 !important}
 
