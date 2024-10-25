@@ -1809,7 +1809,7 @@ box-shadow: 0 0 20px 3px #08b166;
   padding: 8px;
   background-color: #f6f4eb;
 }
-div.homey{position: absolute;font-size: 3rem; top: 10px;left: 10px;  color: yellow;}
+div.homey{position: absolute;font-size: 3rem; top: 10px;left: 10px;  color:#08b166 ;}
 .flower {
   font-size: 3rem;
   margin: 3rem 0;

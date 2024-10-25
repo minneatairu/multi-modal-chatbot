@@ -302,7 +302,7 @@ export default function Home() {
             <input
               ref={inputRef}
               className="gpt-input"
-              placeholder="✿ Ask a question + drag a braid ✿"
+              placeholder="✿ Upload your braid for estimates ✿"
               value={input}
               onChange={handleInputChange}
               onPaste={handlePaste}
