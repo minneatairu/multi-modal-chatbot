@@ -11,8 +11,8 @@ export default function Chat() {
   const [formVisible, setFormVisible] = useState<boolean>(false); // Control form visibility
 
   const fullIntroText = [
-    `✦✦✦✦✦ I'm Da Braidr ✦✦✦✦✦`,
-    `♥♥♥ Ur Braid Co$$$t Estimator ♥♥♥`,
+    `♥♥♥ I'm Da Braidr ✦✦✦✦✦`,
+    `$$$ Ur Braid Cost Estimator $$$`,
     `✿✿✿ Let's analyze those numbers ✿✿✿`,
   ];
 
