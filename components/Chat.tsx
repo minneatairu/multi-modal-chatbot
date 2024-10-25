@@ -12,8 +12,8 @@ export default function Chat() {
 
   const fullIntroText = [
     `♥♥♥ I'm Da Braidr ✦✦✦✦✦`,
-    `$$$ Ur Cost Estimator $$$`,
-    `✿✿✿ What's da cost of ur braid? ✿✿✿`,
+    `✦✦✦ Would you like to know ✦✦✦`,
+    `✿✿✿ How much ur braid will cost? ✿✿✿`,
   ];
 
   useEffect(() => {
