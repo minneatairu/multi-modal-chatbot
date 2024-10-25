@@ -319,18 +319,12 @@ export default function Home() {
 
 
 
-        <div className="video-overlay-text-six">
 
-<a href="afrocomb.svg" target="_blank" rel="noopener noreferrer">
-
-</a>
-
-</div>
 
 <div className="homey">
 
 <a href="https://dabraidr.info" rel="noopener noreferrer">
-X
+XX
 </a>
 
 </div>
