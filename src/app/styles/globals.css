@@ -165,7 +165,7 @@ div.imagesss {
   top: 20px;
   right: 10px;
   padding: 5px 5px 3px 5px;
-  background-color: #f6e11f;
+  background-color: #08b166;
   color: #000;
   border: 2px SOLID;
   border-radius: 50%;
@@ -209,7 +209,7 @@ div.modal-column.border {
 }
 
 div.dragfile {
-  color: #f6e11f;
+  color: #08b166;
 }
 
 /* Custom checkbox */
@@ -436,7 +436,7 @@ span.close-button {
   position: absolute;
   top: 10px;
   left: 10px;
-  color: #f6e11f;
+  color: #08b166;
   font-size: 3rem !important;
   cursor: pointer;
   font-family: "DuFont", serif;
@@ -596,7 +596,7 @@ span.material-symbols-outlined {
   top: 30px;
   right: 10px;
   padding: 30px 20px;
-  background-color: #f6e11f;
+  background-color: #08b166;
   color: #000;
   border: none;
   border-radius: 50%;
@@ -1038,7 +1038,7 @@ button.right-zoom {
   visibility: hidden;
   width: 200px;
   backdrop-filter: blur(10px);background: transparent;
-  color: #f6e11f;
+  color: #08b166;
   border-radius: 5px;
   padding: 5px;
   position: absolute;
@@ -1047,7 +1047,7 @@ button.right-zoom {
   left: 40%;
   margin-left: -90px;
   opacity: 0;
-  transition: opacity 0.3s;    box-shadow: 0 0 20px 3px #f6e11f;
+  transition: opacity 0.3s;    box-shadow: 0 0 20px 3px #08b166;
 }
 
 .tooltip:hover .tooltiptext {
@@ -1165,7 +1165,7 @@ button.clear-btn {
   right: 30px;
   cursor: pointer;
   transform: rotate(10deg);
-  color: #f6e11f;
+  color: #08b166;
   border-radius: 50px;
   animation: pulse-shadow-yellow 5s infinite ease-in-out;
   /* Apply the pulsing animation */
@@ -1173,7 +1173,7 @@ button.clear-btn {
   padding: 3rem;
 
   /* Apply gradient shadow */
-  box-shadow: 0 0 20px 3px #f6e11f;
+  box-shadow: 0 0 20px 3px #08b166;
 
   backdrop-filter: blur(10px);
 }
@@ -1216,7 +1216,7 @@ button.clear-btn {
   bottom: 10px;
   left: 10px;
 
-  color: #f6e11f;
+  color: #08b166;
 }
 
 @keyframes pulse-shadow {
@@ -1263,15 +1263,15 @@ button.clear-btn {
 
 @keyframes pulse-shadow-yellow {
   0% {
-    box-shadow: 0 0 20px 3px #f6e11f;
+    box-shadow: 0 0 20px 3px #08b166;
   }
 
   50% {
-    box-shadow: 0 0 40px 30px #f6e11f;
+    box-shadow: 0 0 40px 30px #08b166;
   }
 
   100% {
-    box-shadow: 0 0 20px 3px #f6e11f;
+    box-shadow: 0 0 20px 3px #08b166;
   }
 }
 
@@ -1318,7 +1318,7 @@ input.image-gen:focus {
 
 .chat-button {
   margin-top: 3rem;
-  box-shadow: inset 0 0 30px #f6e11f;
+  box-shadow: inset 0 0 30px #08b166;
   align-self: center;
   /* Ensures the button is cente#D34C4C */
 }
@@ -1378,7 +1378,7 @@ input.image-gen:focus {
 
 sup {
   font-size: x-small;
-  background: #f6e11f;
+  background: #08b166;
 }
 
 .grid-section .image-container {
@@ -1416,7 +1416,7 @@ div.gallery-item,
 }
 
 .gpt-input::placeholder {
-  color: #f6e11f;
+  color: #08b166;
 }
 
 .animated-text {
@@ -1518,7 +1518,7 @@ div.gallery-item,
 
 .chat-title {
   text-align: center;
-  color: #f6e11f;
+  color: #08b166;
   margin-bottom: 20px;
   font-family: "DuFont", serif;
   font-size: 3rem;
@@ -1596,7 +1596,7 @@ button.info {
 }
 
 .psycho a {
-  color: #f6e11f !important;
+  color: #08b166 !important;
   text-decoration: none;
   font-size: 20px;
   font-family: t26-carbon, monospace;
@@ -1624,7 +1624,7 @@ button.info {
 
 .chat-button {
   border-radius: 50%;
-  color: #f6e11f;
+  color: #08b166;
   cursor: pointer;
   transition: background-color 0.3s ease;
   padding: 3rem;
@@ -1837,8 +1837,8 @@ form.gpt-input-form{margin-top: 3rem;}
   display: block;
   margin: 1rem;
   outline: none;
-  box-shadow: inset 0 10px 100px #f6e11f;
-  color: #f6e11f;
+  box-shadow: inset 0 10px 100px #08b166;
+  color: #08b166;
   margin-top: 10px;
   font-size: 20px;
   font-family: t26-carbon, monospace;
@@ -1969,7 +1969,7 @@ color: #08b166;
 .gpt-message.assistant .gpt-name {
   padding-left: 5px;
   text-align: left;
-color: #f6e11f;
+color: #08b166;
   font-family: t26-carbon, monospace;
 }
 
@@ -2005,9 +2005,9 @@ div.gpt-name {
   margin-bottom: 10px;
   margin-block-start: 0;opacity: 1;
   will-change: auto;
-  color: #f6e11f;
+  color: #08b166;
   transform: none;
-  box-shadow: inset 0 5px 50px #f6e11f;
+  box-shadow: inset 0 5px 50px #08b166;
 }
 
 .p#D34C4Cicting-image {
