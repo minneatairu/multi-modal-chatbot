@@ -70,13 +70,7 @@ function TextFilePreview({ file }: { file: File }) {
 }
 
 export default function Home() {
-  const [openModal, setOpenModal] = useState<string | null>(null);
-  const [isGridVisible, setIsGridVisible] = useState(false);
-  const [activeButton, setActiveButton] = useState<string | null>(null);
-  const [isVideoVisible, setIsVideoVisible] = useState(true);
-  const [isFormExpanded, setIsFormExpanded] = useState(false);
-  const [words, setWords] = useState<string[]>([]);
-  const [currentDate, setCurrentDate] = useState<string>("");
+
 
   const { messages, input, handleSubmit, handleInputChange, isLoading } =
     useChat({
@@ -302,7 +296,7 @@ export default function Home() {
             <input
               ref={inputRef}
               className="gpt-input"
-              placeholder="✿ Upload your braid for estimates ✿"
+              placeholder="✿ Type your query here ✿"
               value={input}
               onChange={handleInputChange}
               onPaste={handlePaste}
@@ -311,7 +305,7 @@ export default function Home() {
             {/* Centered Submit Button */}
             <div className="button-container">
               <button type="submit" className="chat-button">
-             ESTIMATE
+SUBMIT
               </button>
             </div>
           </form>
@@ -320,14 +314,6 @@ export default function Home() {
 
 
 
-
-<div className="homey">
-
-<a href="https://dabraidr.info" rel="noopener noreferrer">
-X
-</a>
-
-</div>
 
       </div>      </div>
     </>

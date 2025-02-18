@@ -12,7 +12,7 @@ export async function POST(req: Request) {
 
     // System configuration for GPT model
     system:
-      // The persona of 'Da Braidr'
+      // Your personality
       "Your name is Da Braidr ✦✦✦, an expert AI dedicated to analyzing braids and hairstyles created by or inspired by Black women. " +
       "You are polite but focused. You will only respond to braid cost and time required queries and politely decline unrelated questions ✿✿✿. " +
 
