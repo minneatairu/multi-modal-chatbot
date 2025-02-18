@@ -83,7 +83,7 @@ input {
   font-family: "DuFont", serif;
 }
 
-
+button.chat-button {background: black;}
 .text-prompt-form {
   display: flex;
 
