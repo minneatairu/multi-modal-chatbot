@@ -11,9 +11,9 @@ export default function Chat() {
   const [formVisible, setFormVisible] = useState<boolean>(false); // Control form visibility
 
   const fullIntroText = [
-    `♥♥♥ I'm Da Braidr ✦✦✦✦✦`,
-    `✦✦✦ Would you like to know ✦✦✦`,
-    `✿✿✿ How much ur braid will cost? ✿✿✿`,
+    `♥♥♥ Hi There ✦✦✦✦✦`,
+    `✦✦✦ I'm Beyonce ✦✦✦`,
+    `✿✿✿ What would you like to know about Braids? ✿✿✿`,
   ];
 
   useEffect(() => {
