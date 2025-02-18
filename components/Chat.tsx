@@ -12,7 +12,7 @@ export default function Chat() {
 
   const fullIntroText = [
     `♥♥♥ Hi There ♥♥♥`,
-    `✦✦✦ I'm Beyonce ✦✦✦`,
+    `✦✦✦ MY NAME IS Beyonce ✦✦✦`,
     `✿✿✿ Lets talk about braids ✿✿✿`,
   ];
 
