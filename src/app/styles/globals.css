@@ -705,14 +705,9 @@ div.gpt-name {
   top: 10px;
 }
 
-button.art-button {
-  background: black;
-}
 
 .art-button {
-  font-family: paragraphs, monospace;
-
-  background: #000;
+  font-family: paragraph, monospace;
   align-self: center;
   color: #3667F6;
   transition: background-color 0.3s ease;
@@ -721,7 +716,7 @@ button.art-button {
   padding: 20px;
 }
 
-.info-button{
+.info-button {
 
 
   background: #000;
@@ -730,7 +725,7 @@ button.art-button {
   transition: background-color 0.3s ease;
   border: none;
   cursor: pointer;
-  
+
 
 
 }
@@ -750,6 +745,7 @@ button.art-button {
 
 .art-modal-backdrop {
   position: fixed;
+  color: #3667F6;
   top: 0;
   left: 0;
   right: 0;
@@ -758,16 +754,18 @@ button.art-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index:99999;
 }
 
 .art-modal-content {
   background: #fff;
+  color: #3667F6;
   padding: 20px;
   max-width: 90%;
   max-height: 90vh;
   overflow-y: auto;
   text-align: left;
+  font-family: paragraph, monospace;
 }
 
 
@@ -790,7 +788,7 @@ form.art-input-form {
   color: #3667F6;
   margin-top: 10px;
   font-size: 20px;
-  font-family: paragraphs, monospace;
+  font-family: paragraph, monospace;
   text-align: CENTER;
   border: none;
 }
@@ -799,8 +797,8 @@ form.art-input-form {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom:10px;
-  border:2px solid #3667F6;
+  bottom: 10px;
+  border: 2px solid #3667F6;
 }
 
 .art-file-text-preview {
@@ -821,11 +819,16 @@ form.art-input-form {
 }
 
 img.art-file-image {
-  font-family: paragraphs, monospace;
+  font-family: paragraph, monospace;
   color: #3667F6 !important
 }
 
-div.close-button {font-size: 16px;cursor: pointer;}
+div.close-button {
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+}
 
 .art-file-preview {
   display: flex;
@@ -878,14 +881,14 @@ div.close-button {font-size: 16px;cursor: pointer;}
   padding-right: 5px;
   text-align: right;
   color: #3667F6;
-  font-family: paragraphs, monospace;
+  font-family: paragraph, monospace;
 }
 
 .art-message.assistant .art-name {
   padding-left: 5px;
   text-align: left;
   color: #3667F6;
-  font-family: paragraphs, monospace;
+  font-family: paragraph, monospace;
 }
 
 div.art-name {
@@ -919,7 +922,7 @@ div.art-name {
   gap: 10px;
 }
 
-.main-container{
+.main-container {
   opacity: 0;
   animation: fadeIn 2s forwards;
   align-items: center;
@@ -933,4 +936,12 @@ div.main-container {
   height: 100vh;
 }
 
-button{background: transparent;border:none}
+.art-input::placeholder {
+  color: #3667F6;
+  font-family: paragraph, monospace;
+}
+
+button {
+  background: transparent;
+  border: none
+}
