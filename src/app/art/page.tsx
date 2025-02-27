@@ -197,7 +197,7 @@ export default function Home() {
           zIndex: 1100,
         }}
       >
-        Open Modal
+      ABOUT
       </button>
 
       {/* Use the Modal component (text is now built in) */}

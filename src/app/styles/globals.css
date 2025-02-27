@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "DuFont";
   src: url("/bold.ttf") format("truetype");
@@ -15,7 +14,8 @@
 
 .image-hair {
   opacity: 0;
-  animation: fadeIn 2s forwards; align-items: center;
+  animation: fadeIn 2s forwards;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +37,7 @@ p {
 }
 
 
-h2{
+h2 {
   font-family: "DuFont", serif;
 }
 
@@ -83,9 +83,13 @@ input {
   font-family: "DuFont", serif;
 }
 
-button.chat-button {background: black;}
+button.chat-button {
+  background: black;
+}
+
 .chat-button {
-  margin-top: 3rem;background: #000;
+  margin-top: 3rem;
+  background: #000;
   box-shadow: inset 0 0 30px pink;
   align-self: center;
 }
@@ -399,14 +403,19 @@ button.chat-button {background: black;}
   flex-direction: row;
   gap: 8px;
 }
-img.gpt-file-image { box-shadow:  0 0 30px pink;
-  font-family: t26-carbon, monospace;border-radius: 30px;
-  color: pink !important}
+
+img.gpt-file-image {
+  box-shadow: 0 0 30px pink;
+  font-family: t26-carbon, monospace;
+  border-radius: 30px;
+  color: pink !important
+}
 
 .gpt-image {
   width: 40% !important;
-border-radius: 50px;    margin-top: 2rem;
-box-shadow: 0 0 20px 3px pink;
+  border-radius: 50px;
+  margin-top: 2rem;
+  box-shadow: 0 0 20px 3px pink;
   margin-bottom: 12px;
 }
 
@@ -421,7 +430,15 @@ box-shadow: 0 0 20px 3px pink;
   padding: 8px;
   background-color: #f6f4eb;
 }
-div.homey{position: absolute;font-size: 3rem; top: 10px;left: 10px;  color:pink ;}
+
+div.homey {
+  position: absolute;
+  font-size: 3rem;
+  top: 10px;
+  left: 10px;
+  color: pink;
+}
+
 .flower {
   font-size: 3rem;
   margin: 3rem 0;
@@ -434,14 +451,19 @@ div.homey{position: absolute;font-size: 3rem; top: 10px;left: 10px;  color:pink 
   flex-direction: column;
   align-items: center;
 }
-form.gpt-input-form{margin-top: 3rem;}
+
+form.gpt-input-form {
+  margin-top: 3rem;
+}
+
 .button-container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.gpt-input {width:60vw;
+.gpt-input {
+  width: 60vw;
   padding: 2rem;
   background-color: #000;
   border-radius: 50px;
@@ -574,14 +596,14 @@ form.gpt-input-form{margin-top: 3rem;}
 .gpt-message.user .gpt-name {
   padding-right: 5px;
   text-align: right;
-color: pink;
+  color: pink;
   font-family: t26-carbon, monospace;
 }
 
 .gpt-message.assistant .gpt-name {
   padding-left: 5px;
   text-align: left;
-color: pink;
+  color: pink;
   font-family: t26-carbon, monospace;
 }
 
@@ -615,7 +637,8 @@ div.gpt-name {
   padding: 2rem;
   border-radius: 30px;
   margin-bottom: 10px;
-  margin-block-start: 0;opacity: 1;
+  margin-block-start: 0;
+  opacity: 1;
   will-change: auto;
   color: pink;
   transform: none;
@@ -633,7 +656,8 @@ div.image-hair {
   margin-block-start: 0;
   padding: 2rem;
   border-radius: 30px;
-  margin-bottom: 10px;opacity: 1;
+  margin-bottom: 10px;
+  opacity: 1;
   will-change: auto;
   box-shadow: inset 0 0 20px 3px pink;
   transform: none;
@@ -642,53 +666,64 @@ div.image-hair {
 
 
 
-  /* CSS for Museum Art Application */
+/* CSS for Museum Art Application */
 
-  .art-message-container {
-    display: flex;
-  
-    width: 100%;
-  
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.art-message-container {
+  display: flex;
 
-  .art-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 20px;
-    margin: 0 15%;
-  }
+  width: 100%;
 
-  .art-attachments {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-  }
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .art-upload-buttons{
-    display: flex;
-    justify-content: center;
-    position:absolute;
-    top:10px;
-  }
+.art-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 20px;
+  margin: 0 15%;
+}
+
+.art-attachments {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.art-upload-buttons {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+}
 
 
-  .art-button-container {
-    display: flex;
-    justify-content: center;
-    position:absolute;
-    top:10px;
-  }
+.art-button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+}
 
-  button.art-button {background: black;}
+button.art-button {
+  background: black;
+}
 
 .art-button {
-  margin-top: 3rem;background: #000;
+  margin-top: 3rem;
+  background: #000;
   box-shadow: inset 0 0 30px pink;
   align-self: center;
+  color: pink;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  padding: 3rem;
 }
+
+
+
 
 .art-modal-backdrop {
   position: fixed;
@@ -706,7 +741,6 @@ div.image-hair {
 .art-modal-content {
   background: #fff;
   padding: 20px;
-  border-radius: 8px;
   max-width: 90%;
   max-height: 90vh;
   overflow-y: auto;

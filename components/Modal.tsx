@@ -1,6 +1,5 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Modal.css";
 
 interface ModalProps {
   isOpen: boolean;
@@ -24,7 +23,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <h2>Extensive Information</h2>
+            <h2>TITLE GOES HERE</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
               velit nec leo consequat gravida. Integer auctor, ex a dapibus
