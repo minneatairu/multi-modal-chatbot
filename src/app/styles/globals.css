@@ -702,7 +702,7 @@ div.gpt-name {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 10px;
+  top: 20px;
 }
 
 
@@ -713,7 +713,7 @@ div.gpt-name {
   transition: background-color 0.3s ease;
   border: 3px solid;
   cursor: pointer;border-radius: 50px;
-  padding: 20px; font-size: 18px;
+  padding: 30px; font-size: 18px;
 }
 
 .art-button:hover {
@@ -722,6 +722,9 @@ color:#fff
 
 
 }
+
+.info-text, .info-heading {
+  font-family: paragraph, monospace;}
 
 .info-button {
   font-family: paragraph, monospace;
@@ -803,7 +806,7 @@ form.art-input-form {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 10px;border-radius: 50px;
+  bottom: 20px;border-radius: 50px;
   border: 3px solid #3667F6;
 }
 
@@ -935,6 +938,7 @@ div.art-name {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border:3px solid #3667F6
 }
 
 div.main-container {

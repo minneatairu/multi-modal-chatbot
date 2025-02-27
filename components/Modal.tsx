@@ -26,8 +26,8 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                 <div onClick={onClose} className="close-button">
               Close
             </div>
-            <h2>TITLE GOES HERE</h2>
-            <p>
+            <h2 className="info-heading">TITLE GOES HERE</h2>
+            <p className="info-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
               velit nec leo consequat gravida. Integer auctor, ex a dapibus
               fermentum, urna mauris blandit sapien, non aliquam arcu quam in

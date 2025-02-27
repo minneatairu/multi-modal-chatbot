@@ -312,7 +312,8 @@ export default function Home() {
                   className="art-button"
                   onClick={openCamera}
                 >
-                  SCAN ARTWORK
+                 <img src="/camera.svg" alt="Submit" />
+                 SCAN ARTWORK
                 </button>
 
                 {/* Manual upload button */}
