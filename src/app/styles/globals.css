@@ -815,7 +815,7 @@ form.art-input-form {
 
 .art-file-image {
   width: 40%;
-  border: 2px solid #3667F6;
+  border: 2px solid #3667F6;border-radius: 50px;
 }
 
 img.art-file-image {
