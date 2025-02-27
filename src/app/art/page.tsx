@@ -192,8 +192,8 @@ export default function Home() {
         onClick={toggleModal}
         style={{
           position: "absolute",
-          top: "20px",
-          left: "20px",
+          top: "0",
+          left: "0",
           zIndex: 1100,
         }}
       >
