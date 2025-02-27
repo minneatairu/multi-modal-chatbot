@@ -399,7 +399,7 @@ export default function Home() {
 
               {/* Submit button */}
               <div className="button-container">
-                <button type="submit" className="chat-button">
+                <button type="submit" className="art-button">
                   SUBMIT
                 </button>
               </div>
