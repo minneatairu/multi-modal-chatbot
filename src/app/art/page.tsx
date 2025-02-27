@@ -305,7 +305,7 @@ export default function Home() {
               }}
             >
               {/* Button Container Above the Text Input */}
-              <div className="button-container">
+              <div className="art-button-container">
                 {/* Camera capture button */}
                 <button
                   type="button"
