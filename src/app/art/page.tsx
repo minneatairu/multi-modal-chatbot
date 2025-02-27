@@ -188,7 +188,7 @@ export default function Home() {
     <>
       {/* Top left button for modal */}
       <button
-        className="modal-trigger-button"
+        className="art-button"
         onClick={toggleModal}
         style={{
           position: "absolute",
