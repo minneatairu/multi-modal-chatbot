@@ -9,8 +9,6 @@ import {
 import { useChat } from "ai/react";
 import { DragEvent, useEffect, useRef, useState } from "react";
 
-import Chat from "@/components/Chat";
-import PrintButton from "@/components/PrintButton";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import Link from "next/link";
