@@ -799,7 +799,7 @@ form.art-input-form {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 0;
+  bottom:10px;
   border:2px solid #3667F6;
 }
 
@@ -933,4 +933,4 @@ div.main-container {
   height: 100vh;
 }
 
-button{background: transparent;}
+button{background: transparent;border:none}
