@@ -401,7 +401,7 @@ export default function Home() {
 
     
             
-  <button type="submit" className="art-button">
+  <button type="submit" >
     <img src="/arrow.svg" alt="Submit" />
   </button>
               </div>
