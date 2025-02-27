@@ -76,8 +76,10 @@ export default function Home() {
 
   const [files, setFiles] = useState<FileList | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  // New ref for the hidden camera input
+  // Hidden input ref for camera capture
   const cameraInputRef = useRef<HTMLInputElement>(null);
+  // Hidden input ref for manual file upload
+  const manualInputRef = useRef<HTMLInputElement>(null);
   const [isDragging, setIsDragging] = useState(false);
 
   const handlePaste = (event: React.ClipboardEvent) => {
@@ -158,15 +160,27 @@ export default function Home() {
     }
   };
 
+  // Handler for when a file is manually uploaded
+  const handleManualUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const manualFiles = event.target.files;
+    if (manualFiles) {
+      setFiles(manualFiles);
+    }
+  };
+
   // Trigger the hidden camera input when button is clicked
   const openCamera = () => {
     cameraInputRef.current?.click();
   };
 
+  // Trigger the hidden manual upload input when button is clicked
+  const openManualUpload = () => {
+    manualInputRef.current?.click();
+  };
+
   return (
     <>
       <div className="image-hair">
-   
         <div
           className="gpt-container"
           onDragOver={handleDragOver}
@@ -327,6 +341,16 @@ export default function Home() {
                 style={{ display: "none" }}
               />
 
+              {/* Hidden file input for manual upload */}
+              <input
+                type="file"
+                accept="image/*,text/*"
+                ref={manualInputRef}
+                onChange={handleManualUpload}
+                style={{ display: "none" }}
+                multiple
+              />
+
               {/* Button Container */}
               <div className="button-container">
                 {/* Camera capture button */}
@@ -335,7 +359,16 @@ export default function Home() {
                   className="chat-button"
                   onClick={openCamera}
                 >
-                SCAN ARTWORK
+                  SCAN ARTWORK
+                </button>
+
+                {/* Manual upload button */}
+                <button
+                  type="button"
+                  className="chat-button"
+                  onClick={openManualUpload}
+                >
+                  UPLOAD FILE
                 </button>
 
                 {/* Submit button */}
