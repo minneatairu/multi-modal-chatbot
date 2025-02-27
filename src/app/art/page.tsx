@@ -346,7 +346,7 @@ export default function Home() {
               <input
                 ref={inputRef}
                 className="gpt-input"
-                placeholder="✿ Type your query here ✿"
+                placeholder="ASK A QUESTION"
                 value={input}
                 onChange={handleInputChange}
                 onPaste={handlePaste}
