@@ -401,4 +401,21 @@ export default function Home() {
                 type="file"
                 accept="image/*,text/*"
                 ref={manualInputRef}
-                onC
+                onChange={handleManualUpload}
+                style={{ display: "none" }}
+                multiple
+              />
+
+              {/* Submit button */}
+              <div className="button-container">
+                <button type="submit" className="chat-button">
+                  SUBMIT
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
