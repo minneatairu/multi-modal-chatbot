@@ -777,7 +777,6 @@ form.art-input-form {
   background-color: #000;
   display: block;
   outline: none;
-  box-shadow: inset 0 10px 100px pink;
   color: pink;
   margin-top: 10px;
   font-size: 20px;
@@ -791,6 +790,7 @@ form.art-input-form {
   justify-content: center;
   position: absolute;
   bottom: 0;
+  border:2px solid blue
 }
 
 .art-file-text-preview {
