@@ -368,7 +368,7 @@ export default function Home() {
               </AnimatePresence>
 
 
-              <div className="button-container">
+              <div className="text-container">
               {/* Main text input */}
               <input
                 ref={inputRef}
