@@ -657,6 +657,16 @@ div.gpt-name {
 
 /* CSS for Museum Art Application */
 
+
+@font-face {
+  font-family: "Paragraph";
+  src: url("/paragraphs.ttf") format("truetype");
+  /* Corrected 'ttf' format to 'truetype' */
+}
+
+
+
+
 .art-message-container {
   display: flex;
 
@@ -700,6 +710,7 @@ button.art-button {
 }
 
 .art-button {
+  font-family: paragraphs, monospace;
 
   background: #000;
   align-self: center;
@@ -779,7 +790,7 @@ form.art-input-form {
   color: #3667F6;
   margin-top: 10px;
   font-size: 20px;
-  font-family: t26-carbon, monospace;
+  font-family: paragraphs, monospace;
   text-align: CENTER;
   border: none;
 }
@@ -789,7 +800,7 @@ form.art-input-form {
   justify-content: center;
   position: absolute;
   bottom: 0;
-  border:2px solid #3667F6
+  border:2px solid #3667F6;
 }
 
 .art-file-text-preview {
@@ -810,7 +821,7 @@ form.art-input-form {
 }
 
 img.art-file-image {
-  font-family: t26-carbon, monospace;
+  font-family: paragraphs, monospace;
   color: #3667F6 !important
 }
 
@@ -867,14 +878,14 @@ div.close-button {font-size: 16px;cursor: pointer;}
   padding-right: 5px;
   text-align: right;
   color: #3667F6;
-  font-family: t26-carbon, monospace;
+  font-family: paragraphs, monospace;
 }
 
 .art-message.assistant .art-name {
   padding-left: 5px;
   text-align: left;
   color: #3667F6;
-  font-family: t26-carbon, monospace;
+  font-family: paragraphs, monospace;
 }
 
 div.art-name {
@@ -906,7 +917,6 @@ div.art-name {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* Space between messages */
 }
 
 .main-container{
