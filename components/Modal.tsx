@@ -23,7 +23,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-                <div onClick={onClose} className="close-button" style={{ marginTop: "20px" }}>
+                <div onClick={onClose} className="close-button">
               Close
             </div>
             <h2>TITLE GOES HERE</h2>
