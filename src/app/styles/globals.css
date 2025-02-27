@@ -775,6 +775,8 @@ form.art-input-form {
 .text-container {
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .art-file-text-preview {
