@@ -205,7 +205,7 @@ export default function Home() {
 
       <div className="image-hair">
         <div
-          className="gpt-container"
+          className="art-container"
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
@@ -213,7 +213,7 @@ export default function Home() {
           <AnimatePresence>
             {isDragging && (
               <motion.div
-                className="gpt-drag-overlay"
+                className="art-drag-overlay"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -224,7 +224,7 @@ export default function Home() {
             )}
           </AnimatePresence>
 
-          <div className="gpt-message-container">
+          <div className="art-message-container">
             {messages.length > 0 ? (
               <div className="gpt-message-list">
                 {messages.map((message) => (
@@ -252,7 +252,7 @@ export default function Home() {
                         />
                       </div>
 
-                      <div className="gpt-attachments">
+                      <div className="art-attachments">
                         {message.experimental_attachments?.map((attachment) =>
                           attachment.contentType?.startsWith("image") ? (
                             <img
@@ -371,7 +371,7 @@ export default function Home() {
               <input
                 ref={inputRef}
                 className="gpt-input"
-                placeholder="✿ Type your query here ✿"
+                placeholder="TYPE A QUESTION"
                 value={input}
                 onChange={handleInputChange}
                 onPaste={handlePaste}

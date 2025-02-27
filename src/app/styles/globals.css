@@ -332,17 +332,7 @@ button.chat-button {
   margin: 0 15%;
 }
 
-.gpt-drag-overlay {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-}
+
 
 .button-container {
   display: flex;
@@ -722,7 +712,17 @@ button.art-button {
   padding: 3rem;
 }
 
-
+.art-drag-overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
 
 
 .art-modal-backdrop {
@@ -745,4 +745,15 @@ button.art-button {
   max-height: 90vh;
   overflow-y: auto;
   text-align: left;
+}
+
+
+.art-input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form.art-input-form {
+  margin-top: 3rem;
 }
