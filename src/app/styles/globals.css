@@ -681,7 +681,7 @@ div.gpt-name {
   flex-direction: row;
   justify-content: center;
   padding-bottom: 20px;
-  margin: 0 15%;
+  margin: 0 15%;width:70%;
 }
 
 .art-attachments {
@@ -885,7 +885,7 @@ div.close-button {
 }
 
 .art-message-content {
-  max-width: 60%;
+
   display: flex;
   flex-direction: column;
   border-radius: 5px;
