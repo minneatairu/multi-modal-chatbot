@@ -182,7 +182,7 @@ export default function Home() {
     <>
       <div className="image-hair">
         <div
-          className="gpt-container"
+          className="art-container"
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
@@ -201,7 +201,7 @@ export default function Home() {
             )}
           </AnimatePresence>
 
-          <div className="gpt-message-container">
+          <div className="art-message-container">
             {messages.length > 0 ? (
               <div className="gpt-message-list">
                 {messages.map((message, index) => (

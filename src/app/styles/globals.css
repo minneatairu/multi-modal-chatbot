@@ -638,3 +638,26 @@ div.image-hair {
 
 
   /* CSS for Museum Art Application */
+
+  .art-message-container {
+    display: flex;
+  
+    width: 100%;
+  
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .art-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin: 0 15%;
+  }
+
+  .art-attachments {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
