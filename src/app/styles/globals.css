@@ -972,3 +972,14 @@ button {
   color: #3667F6;
   transform: none;
 }
+
+.user-bot-message {
+  margin-block-start: 0;
+  padding: 2rem;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  opacity: 1;
+  will-change: auto;
+  transform: none;
+  color: #3667F6;
+}

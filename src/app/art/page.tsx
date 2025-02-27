@@ -23,7 +23,7 @@ const MarkdownRenderer = ({ content, role }) => {
       components={{
         p: ({ node, children }) => (
           <motion.p
-            className={role === "assistant" ? "art-bot-message" : "user-message"}
+            className={role === "assistant" ? "art-bot-message" : "user-bot-message"}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
