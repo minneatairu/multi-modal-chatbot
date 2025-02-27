@@ -24,7 +24,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
             transition={{ duration: 0.3 }}
           >
                 <div onClick={onClose} className="close-button">
-              Close
+        CLOSE
             </div>
             <h2 className="info-heading">TITLE GOES HERE</h2>
             <p className="info-text">

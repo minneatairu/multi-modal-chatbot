@@ -192,8 +192,8 @@ export default function Home() {
         onClick={toggleModal}
         style={{
           position: "absolute",
-          top: "0",
-          left: "0",
+          top: "20PX",
+          left: "20PX",
           zIndex: 1100,
         }}
       >
@@ -312,7 +312,6 @@ export default function Home() {
                   className="art-button"
                   onClick={openCamera}
                 >
-                 <img src="/camera.svg" alt="Submit" />
                  SCAN ARTWORK
                 </button>
 
