@@ -21,6 +21,10 @@
   justify-content: center;
 }
 
+div.image-hair {
+  background: #000;
+  height: 100vh;
+}
 
 
 .heading-text {
@@ -362,6 +366,10 @@ button.chat-button {
 
   align-items: center;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Space between messages */
 }
 
 .gpt-message {
@@ -382,11 +390,7 @@ button.chat-button {
   color: #f6f4eb;
 }
 
-.gpt-message-content {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-}
+
 
 .gpt-attachments {
   display: flex;
@@ -574,14 +578,12 @@ form.gpt-input-form {
 
 .gpt-message-content {
   max-width: 60%;
-}
-
-.gpt-message-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  /* Space between messages */
+  border-radius: 5px;
 }
+
+
 
 .gpt-message.user .gpt-name {
   padding-right: 5px;
@@ -602,6 +604,7 @@ form.gpt-input-form {
   flex-direction: column;
   align-items: flex-start;
 }
+
 
 .gpt-message.user {
   align-items: flex-end;
@@ -637,10 +640,6 @@ div.gpt-name {
 
 
 
-div.image-hair {
-  background: #000;
-  height: 100vh;
-}
 
 .user-message {
   margin-block-start: 0;
@@ -798,8 +797,114 @@ form.art-input-form {
 img.art-file-image {
   box-shadow: 0 0 30px pink;
   font-family: t26-carbon, monospace;
-  border-radius: 30px;
   color: pink !important
 }
 
 div.close-button {font-size: 16px;}
+
+.art-file-preview {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  padding: 3rem 0;
+
+  padding: 20px 0;
+
+  width: 100%;
+}
+
+
+.art-icon-container {
+  width: 100%;
+
+  color: #f6f4eb;
+}
+
+
+.art-text-preview {
+  font-size: 0.75rem;
+  width: 10rem;
+  height: 6rem;
+  overflow: hidden;
+  color: #f6f4eb;
+  border: 2px solid;
+  /* Light gray */
+  padding: 8px;
+  background-color: #f6f4eb;
+}
+
+.art-image {
+  width: 40% !important;
+  border-radius: 50px;
+  margin-top: 2rem;
+  box-shadow: 0 0 20px 3px pink;
+  margin-bottom: 12px;
+}
+
+.art-message-content {
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.art-message.user .art-name {
+  padding-right: 5px;
+  text-align: right;
+  color: pink;
+  font-family: t26-carbon, monospace;
+}
+
+.art-message.assistant .art-name {
+  padding-left: 5px;
+  text-align: left;
+  color: pink;
+  font-family: t26-carbon, monospace;
+}
+
+div.art-name {
+  color: #f6f4eb;
+}
+
+.art-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.art-message {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.art-message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+
+  align-items: center;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Space between messages */
+}
+
+.main-container{
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.main-container {
+  background: #000;
+  height: 100vh;
+}

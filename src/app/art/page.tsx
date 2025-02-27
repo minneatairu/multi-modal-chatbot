@@ -203,7 +203,7 @@ export default function Home() {
       {/* Use the Modal component (text is now built in) */}
       <Modal isOpen={isModalOpen} onClose={toggleModal} />
 
-      <div className="image-hair">
+      <div className="main-container">
         <div
           className="art-container"
           onDragOver={handleDragOver}
@@ -226,7 +226,7 @@ export default function Home() {
 
           <div className="art-message-container">
             {messages.length > 0 ? (
-              <div className="gpt-message-list">
+              <div className="art-message-list">
                 {messages.map((message) => (
                   <motion.div
                     key={message.id}
@@ -236,15 +236,15 @@ export default function Home() {
                     initial={{ y: 5, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                   >
-                    <div className="gpt-name">
+                    <div className="art-name">
                       {message.role === "assistant" ? (
-                        <span>Da Braidr</span>
+                        <span>Art Assistant</span>
                       ) : (
                         <span>You</span>
                       )}
                     </div>
 
-                    <div className="gpt-message-content">
+                    <div className="art-message-content">
                       <div className="gpt-text">
                         <MarkdownRenderer
                           content={message.content}
@@ -256,13 +256,13 @@ export default function Home() {
                         {message.experimental_attachments?.map((attachment) =>
                           attachment.contentType?.startsWith("image") ? (
                             <img
-                              className="gpt-image"
+                              className="art-image"
                               key={attachment.name}
                               src={attachment.url}
                               alt={attachment.name}
                             />
                           ) : attachment.contentType?.startsWith("text") ? (
-                            <div className="gpt-text-preview">
+                            <div className="art-text-preview">
                               {getTextFromDataUrl(attachment.url)}
                             </div>
                           ) : null
@@ -275,7 +275,7 @@ export default function Home() {
                 {isLoading &&
                   messages[messages.length - 1].role !== "assistant" && (
                     <div className="gpt-loading-message">
-                      <div className="gpt-icon-container">
+                      <div className="art-icon-container">
                         <BotIcon />
                       </div>
                       <div className="gpt-loading-text">
@@ -328,14 +328,14 @@ export default function Home() {
               {/* Preview of uploaded files */}
               <AnimatePresence>
                 {files && files.length > 0 && (
-                  <div className="gpt-file-preview">
+                  <div className="art-file-preview">
                     {Array.from(files).map((file) =>
                       file.type.startsWith("image") ? (
                         <div key={file.name}>
                           <motion.img
                             src={URL.createObjectURL(file)}
                             alt={file.name}
-                            className="gpt-file-image"
+                            className="art-file-image"
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{
