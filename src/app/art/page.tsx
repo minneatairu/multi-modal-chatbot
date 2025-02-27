@@ -1,17 +1,22 @@
 "use client";
 
 import {
+  AttachmentIcon,
   BotIcon,
+  UserIcon,
+  VercelIcon,
 } from "@/components/icons";
 import { useChat } from "ai/react";
 import { DragEvent, useEffect, useRef, useState } from "react";
-import Modal from "@/components/Modal";
+
+import Chat from "@/components/Chat";
+import PrintButton from "@/components/PrintButton";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/router";
-
+import Modal from "@/components/Modal"; // Adjust path as needed
 
 // Custom Markdown renderer based on user or bot role
 const MarkdownRenderer = ({ content, role }) => {
@@ -195,17 +200,8 @@ export default function Home() {
         Open Modal
       </button>
 
-      {/* Import and use the Modal component */}
-      <Modal isOpen={isModalOpen} onClose={toggleModal}>
-        {/* Extensive modal text can go here */}
-        <h2>Extensive Information</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
-          velit nec leo consequat gravida. Integer auctor, ex a dapibus
-          fermentum, urna mauris blandit sapien, non aliquam arcu quam in
-          turpis. {/* Add more text as needed */}
-        </p>
-      </Modal>
+      {/* Use the Modal component (text is now built in) */}
+      <Modal isOpen={isModalOpen} onClose={toggleModal} />
 
       <div className="image-hair">
         <div
@@ -231,7 +227,7 @@ export default function Home() {
           <div className="gpt-message-container">
             {messages.length > 0 ? (
               <div className="gpt-message-list">
-                {messages.map((message, index) => (
+                {messages.map((message) => (
                   <motion.div
                     key={message.id}
                     className={`gpt-message ${
