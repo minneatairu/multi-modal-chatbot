@@ -8,7 +8,8 @@ import {
 } from "@/components/icons";
 import { useChat } from "ai/react";
 import { DragEvent, useEffect, useRef, useState } from "react";
-
+import Chat from "@/components/Chat";
+import PrintButton from "@/components/PrintButton";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import Link from "next/link";
@@ -17,13 +18,13 @@ import { useRouter } from "next/router";
 import Modal from "@/components/Modal"; // Adjust path as needed
 
 // Custom Markdown renderer based on user or bot role
-const MarkdownRenderer = ({ content, role }) => {
+const MarkdownRenderer = ({ content, role }: { content: string; role: string }) => {
   return (
     <ReactMarkdown
       components={{
         p: ({ node, children }) => (
           <motion.p
-            className={role === "assistant" ? "art-bot-message" : "user-bot-message"}
+            className={role === "assistant" ? "bot-message" : "user-message"}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -65,12 +66,57 @@ function TextFilePreview({ file }: { file: File }) {
   );
 }
 
+// Utility function to compress an image file using Canvas
+const compressImage = (file: File, maxSizeMB = 1, quality = 0.7): Promise<File> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const reader = new FileReader();
+
+    reader.onload = (event) => {
+      if (!event.target?.result) return;
+      img.src = event.target.result as string;
+    };
+
+    img.onload = () => {
+      // Create a canvas and resize the image
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+      const maxWidth = 1024; // Adjust max width as needed
+      const scale = Math.min(maxWidth / img.width, 1);
+      canvas.width = img.width * scale;
+      canvas.height = img.height * scale;
+
+      ctx?.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+      // Convert canvas to Blob with desired quality
+      canvas.toBlob(
+        (blob) => {
+          if (blob) {
+            // Check if the blob is still larger than maxSizeMB, then try reducing quality further if needed.
+            if (blob.size / 1024 / 1024 > maxSizeMB && quality > 0.1) {
+              return compressImage(file, maxSizeMB, quality * 0.8).then(resolve);
+            }
+            const compressedFile = new File([blob], file.name, { type: file.type });
+            resolve(compressedFile);
+          } else {
+            reject(new Error("Compression failed"));
+          }
+        },
+        file.type,
+        quality
+      );
+    };
+
+    reader.onerror = (error) => reject(error);
+    reader.readAsDataURL(file);
+  });
+};
+
 export default function Home() {
-  const { messages, input, handleSubmit, handleInputChange, isLoading } =
-    useChat({
-      onError: () =>
-        toast.error("You've been rate limited, please try again later!"),
-    });
+  const { messages, input, handleSubmit, handleInputChange, isLoading } = useChat({
+    onError: () =>
+      toast.error("You've been rate limited, please try again later!"),
+  });
 
   const [files, setFiles] = useState<FileList | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -81,6 +127,7 @@ export default function Home() {
   const [isDragging, setIsDragging] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Handle pasted files
   const handlePaste = (event: React.ClipboardEvent) => {
     const items = event.clipboardData?.items;
 
@@ -98,7 +145,7 @@ export default function Home() {
         if (validFiles.length === files.length) {
           const dataTransfer = new DataTransfer();
           validFiles.forEach((file) => dataTransfer.items.add(file));
-          setFiles(dataTransfer.files);
+          handleFiles(dataTransfer.files);
         } else {
           toast.error("Only image and text files are allowed");
         }
@@ -106,6 +153,7 @@ export default function Home() {
     }
   };
 
+  // Drag and drop handlers
   const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     setIsDragging(true);
@@ -114,6 +162,29 @@ export default function Home() {
   const handleDragLeave = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     setIsDragging(false);
+  };
+
+  // Process files and compress images if necessary
+  const handleFiles = async (fileList: FileList) => {
+    const fileArray = Array.from(fileList);
+    const processedFiles = await Promise.all(
+      fileArray.map(async (file) => {
+        if (file.type.startsWith("image/") && file.size / 1024 / 1024 > 1) {
+          try {
+            const compressed = await compressImage(file);
+            return compressed;
+          } catch (error) {
+            console.error("Error compressing image:", error);
+            return file; // fallback to original if compression fails
+          }
+        }
+        return file;
+      })
+    );
+
+    const dataTransfer = new DataTransfer();
+    processedFiles.forEach((file) => dataTransfer.items.add(file));
+    setFiles(dataTransfer.files);
   };
 
   const handleDrop = (event: DragEvent<HTMLDivElement>) => {
@@ -127,14 +198,10 @@ export default function Home() {
       );
 
       if (validFiles.length === droppedFilesArray.length) {
-        const dataTransfer = new DataTransfer();
-        validFiles.forEach((file) => dataTransfer.items.add(file));
-        setFiles(dataTransfer.files);
+        handleFiles(droppedFiles);
       } else {
         toast.error("Only image and text files are allowed!");
       }
-
-      setFiles(droppedFiles);
     }
     setIsDragging(false);
   };
@@ -150,12 +217,10 @@ export default function Home() {
   }, [messages]);
 
   // Handler for when an image is captured with the camera
-  const handleCameraCapture = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleCameraCapture = (event: React.ChangeEvent<HTMLInputElement>) => {
     const capturedFiles = event.target.files;
     if (capturedFiles) {
-      setFiles(capturedFiles);
+      handleFiles(capturedFiles);
     }
   };
 
@@ -163,7 +228,7 @@ export default function Home() {
   const handleManualUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const manualFiles = event.target.files;
     if (manualFiles) {
-      setFiles(manualFiles);
+      handleFiles(manualFiles);
     }
   };
 
@@ -190,12 +255,12 @@ export default function Home() {
         onClick={toggleModal}
         style={{
           position: "absolute",
-          top: "20PX",
-          left: "20PX",
+          top: "20px",
+          left: "20px",
           zIndex: 1100,
         }}
       >
-     INFO
+        INFO
       </button>
 
       {/* Use the Modal component (text is now built in) */}
@@ -217,7 +282,7 @@ export default function Home() {
                 exit={{ opacity: 0 }}
               >
                 <div>Drag and drop files here</div>
-                <div className="gpt-drag-subtext">{"(images and text)"}</div>
+                <div className="gpt-drag-subtext">(images and text)</div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -295,9 +360,7 @@ export default function Home() {
             <form
               className="art-input-form"
               onSubmit={(event) => {
-                const options = files
-                  ? { experimental_attachments: files }
-                  : {};
+                const options = files ? { experimental_attachments: files } : {};
                 handleSubmit(event, options);
                 setFiles(null);
               }}
@@ -305,20 +368,12 @@ export default function Home() {
               {/* Button Container Above the Text Input */}
               <div className="art-upload-buttons">
                 {/* Camera capture button */}
-                <button
-                  type="button"
-                  className="art-button"
-                  onClick={openCamera}
-                >
-                 SCAN ARTWORK
+                <button type="button" className="art-button" onClick={openCamera}>
+                  SCAN ARTWORK
                 </button>
 
                 {/* Manual upload button */}
-                <button
-                  type="button"
-                  className="art-button"
-                  onClick={openManualUpload}
-                >
+                <button type="button" className="art-button" onClick={openManualUpload}>
                   UPLOAD ARTWORK
                 </button>
               </div>
@@ -365,43 +420,40 @@ export default function Home() {
                 )}
               </AnimatePresence>
 
-
               <div className="text-container">
-              {/* Main text input */}
-              <input
-                ref={inputRef}
-                className="art-input"
-                placeholder="TYPE A QUESTION"
-                value={input}
-                onChange={handleInputChange}
-                onPaste={handlePaste}
-              />
+                {/* Main text input */}
+                <input
+                  ref={inputRef}
+                  className="art-input"
+                  placeholder="TYPE A QUESTION"
+                  value={input}
+                  onChange={handleInputChange}
+                  onPaste={handlePaste}
+                />
 
-              {/* Hidden file input for camera capture */}
-              <input
-                type="file"
-                accept="image/*"
-                capture="environment"
-                ref={cameraInputRef}
-                onChange={handleCameraCapture}
-                style={{ display: "none" }}
-              />
+                {/* Hidden file input for camera capture */}
+                <input
+                  type="file"
+                  accept="image/*"
+                  capture="environment"
+                  ref={cameraInputRef}
+                  onChange={handleCameraCapture}
+                  style={{ display: "none" }}
+                />
 
-              {/* Hidden file input for manual upload */}
-              <input
-                type="file"
-                accept="image/*,text/*"
-                ref={manualInputRef}
-                onChange={handleManualUpload}
-                style={{ display: "none" }}
-                multiple
-              />
+                {/* Hidden file input for manual upload */}
+                <input
+                  type="file"
+                  accept="image/*,text/*"
+                  ref={manualInputRef}
+                  onChange={handleManualUpload}
+                  style={{ display: "none" }}
+                  multiple
+                />
 
-    
-            
-  <button type="submit" >
-    <img src="/arrow.svg" alt="Submit" />
-  </button>
+                <button type="submit">
+                  <img src="/arrow.svg" alt="Submit" />
+                </button>
               </div>
             </form>
           </div>
