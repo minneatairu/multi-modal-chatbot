@@ -11,14 +11,12 @@ import { useChat } from "ai/react";
 import { DragEvent, useEffect, useRef, useState } from "react";
 
 import Chat from "@/components/Chat";
-
 import PrintButton from "@/components/PrintButton";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/router";
-
 
 // Custom Markdown renderer based on user or bot role
 const MarkdownRenderer = ({ content, role }) => {
@@ -44,13 +42,13 @@ const MarkdownRenderer = ({ content, role }) => {
   );
 };
 
-const getTextFromDataUrl = (dataUrl: string) => {
+const getTextFromDataUrl = (dataUrl) => {
   const base64 = dataUrl.split(",")[1];
   return window.atob(base64);
 };
 
-function TextFilePreview({ file }: { file: File }) {
-  const [content, setContent] = useState<string>("");
+function TextFilePreview({ file }) {
+  const [content, setContent] = useState("");
 
   useEffect(() => {
     const reader = new FileReader();
@@ -70,25 +68,24 @@ function TextFilePreview({ file }: { file: File }) {
 }
 
 export default function Home() {
-
-
   const { messages, input, handleSubmit, handleInputChange, isLoading } =
     useChat({
       onError: () =>
         toast.error("You've been rate limited, please try again later!"),
     });
 
-  const [files, setFiles] = useState<FileList | null>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [files, setFiles] = useState(null);
+  const inputRef = useRef(null);
+  const cameraInputRef = useRef(null); // Ref for hidden camera input
   const [isDragging, setIsDragging] = useState(false);
 
-  const handlePaste = (event: React.ClipboardEvent) => {
+  // Handle files from paste, drop, and camera capture
+  const handlePaste = (event) => {
     const items = event.clipboardData?.items;
-
     if (items) {
       const files = Array.from(items)
         .map((item) => item.getAsFile())
-        .filter((file): file is File => file !== null);
+        .filter((file) => file !== null);
 
       if (files.length > 0) {
         const validFiles = files.filter(
@@ -107,17 +104,17 @@ export default function Home() {
     }
   };
 
-  const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
+  const handleDragOver = (event) => {
     event.preventDefault();
     setIsDragging(true);
   };
 
-  const handleDragLeave = (event: DragEvent<HTMLDivElement>) => {
+  const handleDragLeave = (event) => {
     event.preventDefault();
     setIsDragging(false);
   };
 
-  const handleDrop = (event: DragEvent<HTMLDivElement>) => {
+  const handleDrop = (event) => {
     event.preventDefault();
     const droppedFiles = event.dataTransfer.files;
     const droppedFilesArray = Array.from(droppedFiles);
@@ -134,13 +131,33 @@ export default function Home() {
       } else {
         toast.error("Only image and text files are allowed!");
       }
-
-      setFiles(droppedFiles);
     }
     setIsDragging(false);
   };
 
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  // Handle camera capture file input change
+  const handleCameraCapture = (event) => {
+    const capturedFiles = event.target.files;
+    if (capturedFiles && capturedFiles.length > 0) {
+      const file = capturedFiles[0];
+      if (file.type.startsWith("image/")) {
+        const dataTransfer = new DataTransfer();
+        dataTransfer.items.add(file);
+        setFiles(dataTransfer.files);
+      } else {
+        toast.error("Captured file is not an image.");
+      }
+    }
+    // Clear the input so that the same image can be recaptured if needed
+    event.target.value = null;
+  };
+
+  // Trigger the hidden camera input
+  const handleCameraButtonClick = () => {
+    cameraInputRef.current.click();
+  };
+
+  const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -152,170 +169,187 @@ export default function Home() {
 
   return (
     <>
-    <div className="image-hair">
+      <div className="image-hair">
+        <Chat />
+        <div
+          className="gpt-container"
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >
+          <AnimatePresence>
+            {isDragging && (
+              <motion.div
+                className="gpt-drag-overlay"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <div>Drag and drop files here</div>
+                <div className="gpt-drag-subtext">{"(images and text)"}</div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-    <Chat />
-      <div
-        className="gpt-container"
-        onDragOver={handleDragOver}
-        onDragLeave={handleDragLeave}
-        onDrop={handleDrop}
-      >
-        <AnimatePresence>
-          {isDragging && (
-            <motion.div
-              className="gpt-drag-overlay"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              <div>Drag and drop files here</div>
-              <div className="gpt-drag-subtext">
-                {"(images and text)"}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <div className="gpt-message-container">
-          {messages.length > 0 ? (
-            <div className="gpt-message-list">
-              {messages.map((message, index) => (
-                <motion.div
-                  key={message.id}
-                  className={`gpt-message ${
-                    message.role === "assistant" ? "assistant" : "user"
-                  }`}
-                  initial={{ y: 5, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                >
-                  <div className="gpt-name">
-                    {message.role === "assistant" ? (
-                      <span>Da Braidr</span>
-                    ) : (
-                      <span>You</span>
-                    )}
-                  </div>
-
-                  <div className="gpt-message-content">
-                    <div className="gpt-text">
-                      <MarkdownRenderer content={message.content} role={message.role} />
-                    </div>
-
-                    <div className="gpt-attachments">
-                      {message.experimental_attachments?.map((attachment) =>
-                        attachment.contentType?.startsWith("image") ? (
-                          <img
-                            className="gpt-image"
-                            key={attachment.name}
-                            src={attachment.url}
-                            alt={attachment.name}
-                          />
-                        ) : attachment.contentType?.startsWith("text") ? (
-                          <div className="gpt-text-preview">
-                            {getTextFromDataUrl(attachment.url)}
-                          </div>
-                        ) : null
+          <div className="gpt-message-container">
+            {messages.length > 0 ? (
+              <div className="gpt-message-list">
+                {messages.map((message) => (
+                  <motion.div
+                    key={message.id}
+                    className={`gpt-message ${
+                      message.role === "assistant" ? "assistant" : "user"
+                    }`}
+                    initial={{ y: 5, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                  >
+                    <div className="gpt-name">
+                      {message.role === "assistant" ? (
+                        <span>Da Braidr</span>
+                      ) : (
+                        <span>You</span>
                       )}
                     </div>
-                  </div>
-                </motion.div>
-              ))}
 
-              {isLoading &&
-                messages[messages.length - 1].role !== "assistant" && (
-                  <div className="gpt-loading-message">
-                    <div className="gpt-icon-container">
-                      <BotIcon />
-                    </div>
-                    <div className="gpt-loading-text">
-                      <div>hmm...</div>
-                    </div>
-                  </div>
-                )}
-
-              <div ref={messagesEndRef} />
-            </div>
-          ) : (
-            <motion.div className="gpt-empty-message-container">
-              <div className="gpt-empty-message-box">
-                <p className="gpt-empty-message-text"></p>
-              </div>
-            </motion.div>
-          )}
-
-          <form
-            className="gpt-input-form"
-            onSubmit={(event) => {
-              const options = files ? { experimental_attachments: files } : {};
-              handleSubmit(event, options);
-              setFiles(null);
-            }}
-          >
-            <AnimatePresence>
-              {files && files.length > 0 && (
-                <div className="gpt-file-preview">
-                  {Array.from(files).map((file) =>
-                    file.type.startsWith("image") ? (
-                      <div key={file.name}>
-                        <motion.img
-                          src={URL.createObjectURL(file)}
-                          alt={file.name}
-                          className="gpt-file-image"
-                          initial={{ scale: 0.8, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          exit={{
-                            y: -10,
-                            scale: 1.1,
-                            opacity: 0,
-                            transition: { duration: 0.2 },
-                          }}
+                    <div className="gpt-message-content">
+                      <div className="gpt-text">
+                        <MarkdownRenderer
+                          content={message.content}
+                          role={message.role}
                         />
                       </div>
-                    ) : file.type.startsWith("text") ? (
-                      <motion.div
-                        key={file.name}
-                        className="gpt-file-text-preview"
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        exit={{
-                          y: -10,
-                          scale: 1.1,
-                          opacity: 0,
-                          transition: { duration: 0.2 },
-                        }}
-                      >
-                        <TextFilePreview file={file} />
-                      </motion.div>
-                    ) : null
+
+                      <div className="gpt-attachments">
+                        {message.experimental_attachments?.map((attachment) =>
+                          attachment.contentType?.startsWith("image") ? (
+                            <img
+                              className="gpt-image"
+                              key={attachment.name}
+                              src={attachment.url}
+                              alt={attachment.name}
+                            />
+                          ) : attachment.contentType?.startsWith("text") ? (
+                            <div className="gpt-text-preview">
+                              {getTextFromDataUrl(attachment.url)}
+                            </div>
+                          ) : null
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+
+                {isLoading &&
+                  messages[messages.length - 1].role !== "assistant" && (
+                    <div className="gpt-loading-message">
+                      <div className="gpt-icon-container">
+                        <BotIcon />
+                      </div>
+                      <div className="gpt-loading-text">
+                        <div>hmm...</div>
+                      </div>
+                    </div>
                   )}
+
+                <div ref={messagesEndRef} />
+              </div>
+            ) : (
+              <motion.div className="gpt-empty-message-container">
+                <div className="gpt-empty-message-box">
+                  <p className="gpt-empty-message-text"></p>
                 </div>
-              )}
-            </AnimatePresence>
+              </motion.div>
+            )}
 
-            <input
-              ref={inputRef}
-              className="gpt-input"
-              placeholder="✿ Type your query here ✿"
-              value={input}
-              onChange={handleInputChange}
-              onPaste={handlePaste}
-            />
+            <form
+              className="gpt-input-form"
+              onSubmit={(event) => {
+                const options = files ? { experimental_attachments: files } : {};
+                handleSubmit(event, options);
+                setFiles(null);
+              }}
+            >
+              <AnimatePresence>
+                {files && files.length > 0 && (
+                  <div className="gpt-file-preview">
+                    {Array.from(files).map((file) =>
+                      file.type.startsWith("image")
+                        ? (
+                          <div key={file.name}>
+                            <motion.img
+                              src={URL.createObjectURL(file)}
+                              alt={file.name}
+                              className="gpt-file-image"
+                              initial={{ scale: 0.8, opacity: 0 }}
+                              animate={{ scale: 1, opacity: 1 }}
+                              exit={{
+                                y: -10,
+                                scale: 1.1,
+                                opacity: 0,
+                                transition: { duration: 0.2 },
+                              }}
+                            />
+                          </div>
+                        )
+                        : file.type.startsWith("text")
+                          ? (
+                            <motion.div
+                              key={file.name}
+                              className="gpt-file-text-preview"
+                              initial={{ scale: 0.8, opacity: 0 }}
+                              animate={{ scale: 1, opacity: 1 }}
+                              exit={{
+                                y: -10,
+                                scale: 1.1,
+                                opacity: 0,
+                                transition: { duration: 0.2 },
+                              }}
+                            >
+                              <TextFilePreview file={file} />
+                            </motion.div>
+                          )
+                          : null
+                    )}
+                  </div>
+                )}
+              </AnimatePresence>
 
-            {/* Centered Submit Button */}
-            <div className="button-container">
-              <button type="submit" className="chat-button">
-SUBMIT
-              </button>
-            </div>
-          </form>
+              <input
+                ref={inputRef}
+                className="gpt-input"
+                placeholder="✿ Type your query here ✿"
+                value={input}
+                onChange={handleInputChange}
+                onPaste={handlePaste}
+              />
+
+              {/* Hidden input for camera capture */}
+              <input
+                ref={cameraInputRef}
+                type="file"
+                accept="image/*"
+                capture="environment"
+                style={{ display: "none" }}
+                onChange={handleCameraCapture}
+              />
+
+              {/* Buttons: Camera button and Submit button */}
+              <div className="button-container" style={{ display: "flex", gap: "1rem" }}>
+                <button
+                  type="button"
+                  className="chat-button"
+                  onClick={handleCameraButtonClick}
+                >
+                  Open Camera
+                </button>
+                <button type="submit" className="chat-button">
+                  SUBMIT
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-
-
-
-
-
-      </div>      </div>
+      </div>
     </>
   );
 }
