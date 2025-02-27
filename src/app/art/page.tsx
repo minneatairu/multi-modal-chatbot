@@ -335,7 +335,7 @@ export default function Home() {
                   className="chat-button"
                   onClick={openCamera}
                 >
-                  Capture Image
+                SCAN ARTWORK
                 </button>
 
                 {/* Submit button */}
