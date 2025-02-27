@@ -1,10 +1,7 @@
 "use client";
 
 import {
-  AttachmentIcon,
   BotIcon,
-  UserIcon,
-  VercelIcon,
 } from "@/components/icons";
 import { useChat } from "ai/react";
 import { DragEvent, useEffect, useRef, useState } from "react";
@@ -14,7 +11,7 @@ import { toast } from "sonner";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/router";
- // adjust the path as needed
+
 
 // Custom Markdown renderer based on user or bot role
 const MarkdownRenderer = ({ content, role }) => {
