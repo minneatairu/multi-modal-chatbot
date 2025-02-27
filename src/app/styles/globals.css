@@ -708,7 +708,21 @@ button.art-button {
   transition: background-color 0.3s ease;
   border: none;
   cursor: pointer;
-  padding: 3rem;
+  padding: 20px;
+}
+
+.info-button{
+
+
+  background: #000;
+  align-self: center;
+  color: pink;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  
+
+
 }
 
 .art-drag-overlay {
@@ -802,7 +816,7 @@ img.art-file-image {
   color: pink !important
 }
 
-div.close-button {font-size: 16px;}
+div.close-button {font-size: 16px;cursor: pointer;}
 
 .art-file-preview {
   display: flex;

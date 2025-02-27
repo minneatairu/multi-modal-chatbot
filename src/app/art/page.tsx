@@ -188,7 +188,7 @@ export default function Home() {
     <>
       {/* Top left button for modal */}
       <button
-        className="art-button"
+        className="info-button"
         onClick={toggleModal}
         style={{
           position: "absolute",
@@ -197,7 +197,7 @@ export default function Home() {
           zIndex: 1100,
         }}
       >
-      ABOUT
+     INFO
       </button>
 
       {/* Use the Modal component (text is now built in) */}
@@ -400,9 +400,10 @@ export default function Home() {
               />
 
     
-                <button type="submit" className="art-button">
-                  SUBMIT
-                </button>
+            
+  <button type="submit" className="art-button">
+    <img src="/arrow.svg" alt="Submit" />
+  </button>
               </div>
             </form>
           </div>
