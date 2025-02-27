@@ -295,7 +295,7 @@ export default function Home() {
             )}
 
             <form
-              className="gpt-input-form"
+              className="art-input-form"
               onSubmit={(event) => {
                 const options = files
                   ? { experimental_attachments: files }
@@ -370,7 +370,7 @@ export default function Home() {
               {/* Main text input */}
               <input
                 ref={inputRef}
-                className="gpt-input"
+                className="art-input"
                 placeholder="TYPE A QUESTION"
                 value={input}
                 onChange={handleInputChange}
