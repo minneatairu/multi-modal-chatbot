@@ -23,6 +23,9 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
+                <div onClick={onClose} className="close-button" style={{ marginTop: "20px" }}>
+              Close
+            </div>
             <h2>TITLE GOES HERE</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
@@ -37,9 +40,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
               luctus, mi ipsum sollicitudin purus, vel congue erat lorem eget
               libero.
             </p>
-            <button onClick={onClose} className="chat-button" style={{ marginTop: "20px" }}>
-              Close
-            </button>
+        
           </motion.div>
         </motion.div>
       )}
