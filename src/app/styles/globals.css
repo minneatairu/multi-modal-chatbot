@@ -694,7 +694,7 @@ div.gpt-name {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 0;
+  top: 20px;
 }
 
 
@@ -715,7 +715,7 @@ div.gpt-name {
   cursor: pointer;
   border-radius: 50px;
   padding: 30px;
-  font-size: 18px;
+  font-size: 18px; margin:0 20px
 }
 
 .art-button:hover {
@@ -773,7 +773,7 @@ div.gpt-name {
 .art-modal-content {
  
   color: #3667F6;
-  padding: 20px;
+  padding: 30px;
   max-width: 100%;
   max-height: 90vh;
   overflow-y: auto;
@@ -958,5 +958,5 @@ div.main-container {
 
 button {
   background: transparent;
-  border: none
+  border: none; cursor: pointer;
 }
