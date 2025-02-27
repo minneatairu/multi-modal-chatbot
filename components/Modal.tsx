@@ -29,7 +29,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
             <h2 className="info-heading">TITLE GOES HERE</h2>
             <p className="info-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
-              velit nec leo consequat gravida. Integer auctor, ex a dapibus
+              velit nec leo consequat gravida. Ingteger auctor, ex a dapibus
               fermentum, urna mauris blandit sapien, non aliquam arcu quam in
               turpis. Sed ultrices turpis vitae nibh ullamcorper, nec consequat
               nisl aliquam. Curabitur vel cursus lorem, ac blandit dui. Integer
