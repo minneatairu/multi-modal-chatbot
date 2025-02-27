@@ -367,6 +367,8 @@ export default function Home() {
                 )}
               </AnimatePresence>
 
+
+              <div className="button-container">
               {/* Main text input */}
               <input
                 ref={inputRef}
@@ -397,8 +399,7 @@ export default function Home() {
                 multiple
               />
 
-              {/* Submit button */}
-              <div className="button-container">
+    
                 <button type="submit" className="art-button">
                   SUBMIT
                 </button>
