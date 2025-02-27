@@ -662,6 +662,14 @@ div.image-hair {
     gap: 8px;
   }
 
+  .art-upload-buttons{
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    top:10px;
+  }
+
+
   .art-button-container {
     display: flex;
     justify-content: center;
