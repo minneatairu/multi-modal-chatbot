@@ -8,15 +8,13 @@ import {
 } from "@/components/icons";
 import { useChat } from "ai/react";
 import { DragEvent, useEffect, useRef, useState } from "react";
-
-import Chat from "@/components/Chat";
-import PrintButton from "@/components/PrintButton";
+import Modal from "@/components/Modal";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/router";
-import Modal from "@/components/Modal"; // adjust the path as needed
+ // adjust the path as needed
 
 // Custom Markdown renderer based on user or bot role
 const MarkdownRenderer = ({ content, role }) => {
