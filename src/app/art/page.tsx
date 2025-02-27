@@ -166,7 +166,7 @@ export default function Home() {
   return (
     <>
       <div className="image-hair">
-        <Chat />
+   
         <div
           className="gpt-container"
           onDragOver={handleDragOver}
