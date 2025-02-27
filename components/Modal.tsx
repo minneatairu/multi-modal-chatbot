@@ -1,5 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
+import "./Modal.css";
 
 interface ModalProps {
   isOpen: boolean;
@@ -11,38 +12,17 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="modal-backdrop"
+          className="art-modal-backdrop"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 1000,
-          }}
         >
           <motion.div
-            className="modal-content"
+            className="art-modal-content"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            style={{
-              background: "#fff",
-              padding: "20px",
-              borderRadius: "8px",
-              maxWidth: "90%",
-              maxHeight: "90vh",
-              overflowY: "auto",
-              textAlign: "left",
-            }}
           >
             <h2>Extensive Information</h2>
             <p>
@@ -56,13 +36,9 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
               volutpat, odio id consequat fermentum, odio justo posuere ex, nec
               imperdiet lorem nisi vel magna. Quisque euismod, ligula ut lacinia
               luctus, mi ipsum sollicitudin purus, vel congue erat lorem eget
-              libero. {/* Add additional extensive text as needed */}
+              libero.
             </p>
-            <button
-              onClick={onClose}
-              className="chat-button"
-              style={{ marginTop: "20px" }}
-            >
+            <button onClick={onClose} className="chat-button" style={{ marginTop: "20px" }}>
               Close
             </button>
           </motion.div>

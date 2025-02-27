@@ -309,7 +309,7 @@ export default function Home() {
                 {/* Camera capture button */}
                 <button
                   type="button"
-                  className="chat-button"
+                  className="art-button"
                   onClick={openCamera}
                 >
                   SCAN ARTWORK
@@ -318,7 +318,7 @@ export default function Home() {
                 {/* Manual upload button */}
                 <button
                   type="button"
-                  className="chat-button"
+                  className="art-button"
                   onClick={openManualUpload}
                 >
                   UPLOAD FILE
