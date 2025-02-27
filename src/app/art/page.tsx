@@ -349,7 +349,7 @@ export default function Home() {
                       ) : file.type.startsWith("text") ? (
                         <motion.div
                           key={file.name}
-                          className="gpt-file-text-preview"
+                          className="art-file-text-preview"
                           initial={{ scale: 0.8, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
                           exit={{
