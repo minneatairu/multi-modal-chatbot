@@ -321,7 +321,7 @@ export default function Home() {
                   className="art-button"
                   onClick={openManualUpload}
                 >
-                  UPLOAD FILE
+                  UPLOAD ARTWORK
                 </button>
               </div>
 
