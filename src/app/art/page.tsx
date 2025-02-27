@@ -279,6 +279,27 @@ export default function Home() {
                 setFiles(null);
               }}
             >
+              {/* Button Container Above the Text Input */}
+              <div className="button-container">
+                {/* Camera capture button */}
+                <button
+                  type="button"
+                  className="chat-button"
+                  onClick={openCamera}
+                >
+                  SCAN ARTWORK
+                </button>
+
+                {/* Manual upload button */}
+                <button
+                  type="button"
+                  className="chat-button"
+                  onClick={openManualUpload}
+                >
+                  UPLOAD FILE
+                </button>
+              </div>
+
               {/* Preview of uploaded files */}
               <AnimatePresence>
                 {files && files.length > 0 && (
@@ -351,27 +372,8 @@ export default function Home() {
                 multiple
               />
 
-              {/* Button Container */}
+              {/* Submit button */}
               <div className="button-container">
-                {/* Camera capture button */}
-                <button
-                  type="button"
-                  className="chat-button"
-                  onClick={openCamera}
-                >
-                  SCAN ARTWORK
-                </button>
-
-                {/* Manual upload button */}
-                <button
-                  type="button"
-                  className="chat-button"
-                  onClick={openManualUpload}
-                >
-                  UPLOAD FILE
-                </button>
-
-                {/* Submit button */}
                 <button type="submit" className="chat-button">
                   SUBMIT
                 </button>
