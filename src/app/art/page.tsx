@@ -81,6 +81,7 @@ export default function Home() {
   // Hidden input ref for manual file upload
   const manualInputRef = useRef<HTMLInputElement>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handlePaste = (event: React.ClipboardEvent) => {
     const items = event.clipboardData?.items;
@@ -178,11 +179,74 @@ export default function Home() {
     manualInputRef.current?.click();
   };
 
+  // Toggle modal open/close
+  const toggleModal = () => {
+    setIsModalOpen((prev) => !prev);
+  };
+
   return (
     <>
+      {/* Top left button for modal */}
+      <button
+        className="modal-trigger-button"
+        onClick={toggleModal}
+        style={{
+          position: "absolute",
+          top: "20px",
+          left: "20px",
+          zIndex: 1000,
+        }}
+      >
+        Open Modal
+      </button>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            className="modal-backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 1000,
+            }}
+          >
+            <motion.div
+              className="modal-content"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              style={{
+                background: "#fff",
+                padding: "20px",
+                borderRadius: "8px",
+                maxWidth: "90%",
+                textAlign: "center",
+              }}
+            >
+              <p>This is some modal text. You can place any information here.</p>
+              <button onClick={toggleModal} className="chat-button">
+                Close
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="image-hair">
         <div
-          className="art-container"
+          className="gpt-container"
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
@@ -201,7 +265,7 @@ export default function Home() {
             )}
           </AnimatePresence>
 
-          <div className="art-message-container">
+          <div className="gpt-message-container">
             {messages.length > 0 ? (
               <div className="gpt-message-list">
                 {messages.map((message, index) => (
@@ -346,7 +410,7 @@ export default function Home() {
               <input
                 ref={inputRef}
                 className="gpt-input"
-                placeholder="ASK A QUESTION"
+                placeholder="✿ Type your query here ✿"
                 value={input}
                 onChange={handleInputChange}
                 onPaste={handlePaste}
