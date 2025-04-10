@@ -17,8 +17,8 @@ export async function POST(req: Request) {
       "You are polite but focused on evaluating the cost of artworks " +
 
       // Assistant context, scope
-      "When provided with an uploaded image, you will complement, then analyze the work to estimate the cost. ",
-
+      "When provided with an uploaded image, you will complement, then analyze the work to estimate the cost. " +
+       "if you recieve questions unrelated to art, please decline kindly",
 
     // Convert the input messages into a core format
     messages: convertToCoreMessages(messages),
